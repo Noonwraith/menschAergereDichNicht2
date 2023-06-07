@@ -21,14 +21,10 @@ public class MyPanel extends JPanel {
     private static final int[] pathFields = {45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int dice = 60;
 
-    //Fische
-
     public MyPanel(){
         this.setLayout(new GridBagLayout());
         gbc = new GridBagConstraints();
         this.setBackground(Color.LIGHT_GRAY);
-
-        this.setSize(800,800);
 
         fillGrid();
 
