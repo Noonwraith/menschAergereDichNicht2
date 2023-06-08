@@ -8,8 +8,8 @@ import java.util.Arrays;
  */
 public class Board {
     private Piece[] field = new Piece[40];//positions between 0-39
-    private Piece[] start = new Piece[16];//positions between 40-56 -> Team 0: 40-43 -> Team 1: 44-47 -> Team 2: 48-51 -> Team 3: 52-56
-    private Piece[] house = new Piece[16];//positions between 57-73 -> Team 0: 57-60 -> Team 1: 61-64 -> Team 2: 65-69 -> Team 3: 70-73
+    private Piece[] start = new Piece[16];//positions between 40-56 -> Team 0: 40-43 -> Team 1: 44-47 -> Team 2: 48-51 -> Team 3: 52-55
+    private Piece[] house = new Piece[16];//positions between 56-72 -> Team 0: 56-59 -> Team 1: 60-63 -> Team 2: 64-67 -> Team 3: 68-71
 
 
     public Board(){
@@ -29,20 +29,20 @@ public class Board {
         if(futurePosition < 40){
             field[futurePosition] = piece;
         }
-        else if(futurePosition < 57){
+        else if(futurePosition < 56){
             start[futurePosition-39] = piece;
         }
-        else if(futurePosition < 74){
-            house[futurePosition-56] = piece;
+        else if(futurePosition < 72){
+            house[futurePosition-55] = piece;
         }
         if(currentPosition < 40){
             field[currentPosition] = null;
         }
-        else if(currentPosition < 57){
+        else if(currentPosition < 56){
             start[currentPosition-40] = null;
         }
-        else if(currentPosition < 74){
-            house[currentPosition-57] = null;
+        else if(currentPosition < 72){
+            house[currentPosition-56] = null;
         }
 
     }
@@ -61,7 +61,7 @@ public class Board {
         }
         for(int i=0; i< house.length;i++){
             if(house[i] == piece){
-                return i+57;
+                return i+56;
             }
         }
         return -1;
@@ -71,10 +71,10 @@ public class Board {
         if(position <= 39){
             return field[position];
         }
-        else if(position <= 56){
+        else if(position <= 55){
             return start[position-40];
         }
-        else if(position <= 73){
+        else if(position <= 71){
             return start[position-56];
         }
         return null;

@@ -28,7 +28,7 @@ public class Human extends Player{
     public int clickOnPiece(Piece piece){
         if(piece.isSelected()){
             if(piece.move(this.getSteps())){
-
+                this.getControl().displayMove();
                 return 1;
             }
             return -1;

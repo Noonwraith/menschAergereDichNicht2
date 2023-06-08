@@ -24,6 +24,11 @@ public class Control {
      * @param futurePosition
      */
     public void displayFuturePiecePosition(Player player, int futurePosition) {
+        translate.boardPositionToGuiPosition(panel, player.getColor(), futurePosition);
+    }
+
+    public void displayMove(){
+
     }
 
     /**

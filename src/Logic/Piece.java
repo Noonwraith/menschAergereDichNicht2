@@ -31,12 +31,6 @@ public class Piece {
      * @return
      */
     public boolean move(int steps) {
-        boolean returnvalue = movePiece(steps);
-
-
-        return returnvalue;
-    }
-    public boolean movePiece(int steps){
         int currentPosition = board.getPositionOfPiece(this);
         int futurePosition = futureMove(steps);
         Piece pieceOnFuturePosition = board.getField()[futurePosition];
@@ -44,9 +38,6 @@ public class Piece {
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece move to: "+ futurePosition);
             System.out.println(board.toString());
-
-
-
 
             //isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
             return true;

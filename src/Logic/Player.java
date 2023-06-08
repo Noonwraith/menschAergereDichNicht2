@@ -44,4 +44,8 @@ public abstract class Player{
     public Control getControl() {
         return control;
     }
+
+    public int getColor() {
+        return color;
+    }
 }
