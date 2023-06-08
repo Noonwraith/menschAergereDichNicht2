@@ -39,7 +39,7 @@ public class Piece {
             System.out.println("Piece move to: "+ futurePosition);
             System.out.println(board.toString());
 
-            //isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
+            isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
             return true;
         }
         else{

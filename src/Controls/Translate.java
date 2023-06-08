@@ -66,6 +66,10 @@ public class Translate {
         return -1;
     }
 
+    public int GuiPositionToBoardPosition(int position){
+        System.out.println("-----------------Click on Position"+ position);
+        return translateField[position];
+    }
 
 
 }

@@ -88,6 +88,7 @@ public class GameManager {
                         }
                     }
                     System.out.println("player "+(currentPlayer)+" starts");
+                    control.playerTurn(currentPlayer);
                     //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;
                     dice.unlockDice();

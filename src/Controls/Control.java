@@ -56,6 +56,7 @@ public class Control {
     }
 
     public void fieldSelected(int field){
+        gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
 
     }
 
