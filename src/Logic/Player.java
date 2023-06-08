@@ -10,6 +10,7 @@ import Controls.Receive;
 public abstract class Player{
     private Control control;
     private Piece pieces[] = new Piece[4];
+    private Board board;
 
 
     private int color;
@@ -18,6 +19,7 @@ public abstract class Player{
     public Player(int color,Board board, Control control){
         this.control = control;
         this.color = color;
+        this.board = board;
         for(int i=0; i<4;i++){
             pieces[i] = new Piece(board, color);
             board.setPieceToStart(pieces[i]);
@@ -47,5 +49,9 @@ public abstract class Player{
 
     public int getColor() {
         return color;
+    }
+
+    public Board getBoard() {
+        return board;
     }
 }

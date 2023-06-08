@@ -32,6 +32,7 @@ public class GameManager {
         }
 
         control.playerTurn(currentPlayer);
+        control.updateBoard(board);
 
     }
 
@@ -171,4 +172,7 @@ public class GameManager {
         return dice.getNumbers();
     }
 
+    public Board getBoard() {
+        return board;
+    }
 }

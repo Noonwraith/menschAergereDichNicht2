@@ -2,20 +2,22 @@ package Controls;
 
 import GUI.V2.MyFrame;
 import GUI.V2.MyPanel;
+import Logic.Board;
 import Logic.GameManager;
-import Logic.Human;
 import Logic.Player;
 
 public class Control {
 
-    private MyFrame gui = new MyFrame(this);
+    private final MyFrame gui = new MyFrame(this);
     private GameManager gameManager;
-    private MyPanel panel = gui.getPanel();
-    private Translate translate = new Translate();
+    private final MyPanel panel = gui.getPanel();
+    private final Translate translate = new Translate(this);
 
 
     public Control(){
+        //panel.playerTurn(3);
         startGame(4);
+
     }
 
     /**
@@ -24,11 +26,11 @@ public class Control {
      * @param futurePosition
      */
     public void displayFuturePiecePosition(Player player, int futurePosition) {
-        translate.boardPositionToGuiPosition(panel, player.getColor(), futurePosition);
+        panel.updateField(translate.boardPositionToGuiPosition(futurePosition), player.getColor());
     }
 
-    public void displayMove(){
-
+    public void updateBoard(Board board){
+        translate.updateBoard(panel, board);
     }
 
 
@@ -56,5 +58,6 @@ public class Control {
     public void fieldSelected(int field){
 
     }
+
 
 }

@@ -88,6 +88,10 @@ public class Board {
         return start;
     }
 
+    public Piece[] getHouse() {
+        return house;
+    }
+
     @Override
     public String toString() {
         return "Board{" +
