@@ -92,8 +92,8 @@ public class MyPanel extends JPanel {
         int x = 0;
         for(int i=0; i<rows; i++){
             for(int j=0; j<cols; j++){
-                gbc.gridx = i;
-                gbc.gridy = j;
+                gbc.gridx = j;
+                gbc.gridy = i;
                 allFields[x] = new JButton();
                 allFields[x].setPreferredSize(new Dimension(boardSize/(rows+buttonGab/2),boardSize/(cols+buttonGab/2)));
                 this.add(allFields[x],gbc);
