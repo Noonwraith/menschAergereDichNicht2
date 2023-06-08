@@ -46,9 +46,9 @@ public class MyPanel extends JPanel {
 
         setUpEmptyFields();
         setUpStarts();
-        setUpHomes();
-        setUpEntryFields();
-        setUpPath();
+        setUpHomes(false);
+        setUpEntryFields(false);
+        setUpPath(false);
         setUpDice(Color.BLACK);
         addActionListenerToSelectableFields();
     }
@@ -132,32 +132,39 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void setUpHomes(){
+    private void setUpHomes(boolean onlySetBorder){
         for (int i=0; i<homeFields.length; i++){
             for (int j=0; j<homeFields[i].length; j++){
-                allFields[homeFields[i][j]].setEnabled(true);
-                allFields[homeFields[i][j]].setVisible(true);
-                allFields[homeFields[i][j]].setBackground(backgroundColor);
+                if(onlySetBorder == false) {
+                    allFields[homeFields[i][j]].setEnabled(true);
+                    allFields[homeFields[i][j]].setVisible(true);
+                    allFields[homeFields[i][j]].setBackground(backgroundColor);
+                }
                 allFields[homeFields[i][j]].setBorder(new LineBorder(playerColors[i], borderThickness));
             }
         }
     }
-    private void setUpEntryFields(){
+    private void setUpEntryFields(boolean onlySetBorder){
         for (int i = 0; i< entryFields.length; i++){
             for (int j = 0; j< entryFields[i].length; j++){
-                allFields[entryFields[i][j]].setEnabled(true);
-                allFields[entryFields[i][j]].setVisible(true);
-                allFields[entryFields[i][j]].setBackground(backgroundColor);
+                if(onlySetBorder == false) {
+                    allFields[entryFields[i][j]].setEnabled(true);
+                    allFields[entryFields[i][j]].setVisible(true);
+                    allFields[entryFields[i][j]].setBackground(backgroundColor);
+                }
                 allFields[entryFields[i][j]].setBorder(new LineBorder(playerColors[i], borderThickness));
+
             }
         }
     }
 
-    private void setUpPath(){
+    private void setUpPath(boolean onlySetBorder){
         for (int pathField : pathFields) {
-            allFields[pathField].setEnabled(true);
-            allFields[pathField].setVisible(true);
-            allFields[pathField].setBackground(backgroundColor);
+            if(onlySetBorder == false) {
+                allFields[pathField].setEnabled(true);
+                allFields[pathField].setVisible(true);
+                allFields[pathField].setBackground(backgroundColor);
+            }
             allFields[pathField].setBorder(new LineBorder(pathBoarderColor, borderThickness));
         }
     }
@@ -185,9 +192,9 @@ public class MyPanel extends JPanel {
             ActionListener fieldListener = new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    setUpHomes();
-                    setUpEntryFields();
-                    setUpPath();
+                    setUpHomes(true);
+                    setUpEntryFields(true);
+                    setUpPath(true);
                     control.fieldSelected(finalI); //Method for Controls
                     allFields[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
                 }
