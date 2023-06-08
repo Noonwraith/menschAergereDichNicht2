@@ -39,9 +39,7 @@ public class Control {
 
     public int throwDice(){
         int steps = gameManager.throwsDice();
-        if(steps != -1){
-            return steps;
-        }
+        return steps;
     }
 
 }

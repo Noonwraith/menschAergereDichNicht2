@@ -196,7 +196,7 @@ public class MyPanel extends JPanel {
         ActionListener diceListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                control.throwDice();
+                allFields[dice].setText(String.valueOf(control.throwDice()));
             }
         };
         allFields[dice].addActionListener(diceListener);
