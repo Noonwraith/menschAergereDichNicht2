@@ -15,14 +15,15 @@ public class Board {
     public Board(){
     }
 
-    public void setPieceToStart(Piece piece){
+    public int setPieceToStart(Piece piece){
         int color = piece.getColor();
         for(int i=color*4; i<color*4+4; i++){
             if(start[i] == null){
                 start[i] = piece;
-                return;
+                return i+56;
             }
         }
+        return -1;
     }
 
     public void setPiecePosition(Piece piece, int currentPosition, int futurePosition){

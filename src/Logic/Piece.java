@@ -1,5 +1,7 @@
 package Logic;
 
+import Controls.Control;
+
 import java.util.concurrent.FutureTask;
 
 /**
@@ -8,6 +10,7 @@ import java.util.concurrent.FutureTask;
  */
 public class Piece {
     private Board board;
+    private Control control;
     private int color;
 
     private static int zaehler = 0;
@@ -17,9 +20,10 @@ public class Piece {
     private boolean isSelected = false;
 
 
-    public Piece(Board board, int color){
+    public Piece(Board board, Control control, int color){
         this.board = board;
         this.color = color;
+        this.control = control;
         nr = zaehler;
         zaehler++;
     }
@@ -38,6 +42,10 @@ public class Piece {
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece move to: "+ futurePosition);
             System.out.println(board.toString());
+            control.movePiece(currentPosition, -1);
+            control.movePiece(currentPosition, color);
+
+
 
             isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
             return true;
@@ -48,9 +56,16 @@ public class Piece {
             }
             else{//There stand another Player
                 board.setPiecePosition(this, currentPosition, futurePosition);
-                board.setPieceToStart(pieceOnFuturePosition);
+                int cickPieceboardposition = board.setPieceToStart(pieceOnFuturePosition);
                 System.out.println("Piece move to: "+ futurePosition);
                 System.out.println("Kick Piece from: "+ futurePosition);
+
+
+
+                control.movePiece(currentPosition, -1);
+                control.movePiece(currentPosition, color);
+                control.movePiece(cickPieceboardposition, pieceOnFuturePosition.getColor());
+
                 return true;
             }
         }

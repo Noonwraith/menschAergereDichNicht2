@@ -56,12 +56,15 @@ public class Translate {
             }
         }
 
-        System.out.println("start"+ Arrays.toString(start));
+        System.out.println("start-----"+ Arrays.toString(start));
         System.out.println("Board start"+Arrays.toString(board.getStart()));
 
         field = board.getField();
         start = board.getStart();
         house = board.getHouse();
+
+
+        System.out.println("start-----"+ Arrays.toString(start));
     }
 
 

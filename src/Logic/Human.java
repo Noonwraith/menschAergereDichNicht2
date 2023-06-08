@@ -28,7 +28,7 @@ public class Human extends Player{
     public int clickOnPiece(Piece piece){
         if(piece.isSelected()){
             if(piece.move(this.getSteps())){
-                this.getControl().updateBoard(this.getBoard());
+                //this.getControl().updateBoard(this.getBoard());//--------------------------------funkuniert nicht
                 return 1;
             }
             return -1;

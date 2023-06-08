@@ -33,6 +33,9 @@ public class Control {
         translate.updateBoard(panel, board);
     }
 
+    public void movePiece(int position, int color){
+        panel.updateField(translate.boardPositionToGuiPosition(position), color);
+    }
 
     public void playerTurn(int color){
         panel.playerTurn(color);

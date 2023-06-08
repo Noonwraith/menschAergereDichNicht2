@@ -21,7 +21,7 @@ public abstract class Player{
         this.color = color;
         this.board = board;
         for(int i=0; i<4;i++){
-            pieces[i] = new Piece(board, color);
+            pieces[i] = new Piece(board, control, color);
             board.setPieceToStart(pieces[i]);
         }
     }
