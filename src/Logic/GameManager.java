@@ -75,8 +75,6 @@ public class GameManager {
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
 
-
-
             if(!startGame){ //Looks which of the players rolls the highest number
                 startNumbers[currentPlayer] = steps;
                 if(currentPlayer == 3){

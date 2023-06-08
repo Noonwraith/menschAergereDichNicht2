@@ -41,10 +41,10 @@ public class Piece {
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece move to: "+ futurePosition);
+            System.out.println("Peice come from: "+currentPosition);
             //System.out.println(board.toString());
             control.movePiece(currentPosition, -1);
-            control.movePiece(currentPosition, color);
-
+            control.movePiece(futurePosition, color);
 
 
             isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.

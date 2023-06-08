@@ -34,6 +34,7 @@ public class Control {
     }
 
     public void movePiece(int position, int color){
+        System.out.println("psoition: "+position);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
     }
 

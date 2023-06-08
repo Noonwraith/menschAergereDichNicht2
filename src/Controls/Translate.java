@@ -12,17 +12,17 @@ public class Translate {
 
 
     private int[] translateField = {
-            56, 57, -1, -1, 8, 9, 10, -1, -1, 60, 61,
-            58, 59, -1, -1, 7, 44, 11, -1, -1, 62, 63,
-            -1, -1, -1, -1, 6, 45, 12, -1, -1, -1, -1,
-            -1, -1, -1, -1, 5, 46, 13, -1, -1, -1, -1,
-            0, 1, 2, 3, 4, 47, 14, 15, 16, 17, 18,
-            39, 40, 41, 42, 43, 60, 51, 50, 49, 48, 19,
-            38, 37, 36, 35, 34, 55, 24, 23, 22, 21, 20,
-            -1, -1, -1, -1, 33, 54, 25, -1, -1, -1, -1,
-            -1, -1, -1, -1, 32, 53, 26, -1, -1, -1, -1,
-            68, 69, -1, -1, 31, 52, 27, -1, -1, 64, 65,
-            70, 71, -1, -1, 30, 29, 28, -1, -1, 66, 67
+            40, 41, -1, -1, 8, 9, 10, -1, -1, 44, 45,
+            42, 43, -1, -1, 7, 60, 11, -1, -1, 46, 47,
+            -1, -1, -1, -1, 6, 61, 12, -1, -1, -1, -1,
+            -1, -1, -1, -1, 5, 62, 13, -1, -1, -1, -1,
+            0, 1, 2, 3, 4, 63, 14, 15, 16, 17, 18,
+            39, 56, 57, 58, 59, -1, 67, 66, 65, 64, 19,
+            38, 37, 36, 35, 34, 71, 24, 23, 22, 21, 20,
+            -1, -1, -1, -1, 33, 70, 25, -1, -1, -1, -1,
+            -1, -1, -1, -1, 32, 69, 26, -1, -1, -1, -1,
+            52, 53, -1, -1, 31, 68, 27, -1, -1, 48, 49,
+            54, 55, -1, -1, 30, 29, 28, -1, -1, 50, 51
     };
 
     private Piece[] field = new Piece[40];//positions between 0-39
@@ -45,14 +45,14 @@ public class Translate {
         }
         for(int i=0; i<start.length;i++){
             if(start[i] != board.getStart()[i]){
-                //System.out.println("Feld wird an der Psoition: "+i);
-                panel.updateField(boardPositionToGuiPosition(i+56), board.getStart()[i].getColor());
+                System.out.println("Feld wird an der Psoition: "+(i+40));
+                panel.updateField(boardPositionToGuiPosition(i+40), board.getStart()[i].getColor());
             }
         }
         for(int i=0; i<house.length;i++){
             if(house[i] != board.getHouse()[i]){
-                System.out.println("Feld wird an der Psoition: "+i);
-                panel.updateField(i, board.getHouse()[i].getColor());
+                System.out.println("Feld wird an der Psoition: "+(i+55));
+                panel.updateField(boardPositionToGuiPosition(i+55), board.getHouse()[i].getColor());
             }
         }
 

@@ -55,8 +55,9 @@ public class Board {
             }
         }
         for(int i=0; i<start.length;i++){
-            //System.out.println("Durch dasn Feld Start: "+i);
+            //System.out.println("i: "+i);
             if(start[i] == piece){
+                //System.out.println("Es kommt aus dem Start feld: "+i);
                 return i+40;
             }
         }
