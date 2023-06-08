@@ -26,7 +26,7 @@ public class MyPanel extends JPanel {
     private int borderThickness = 8;
     private JButton[] allFields = new JButton[rows*cols];
     private static final int[] emptyFields = {2,3,7,8,13,14,18,19,22,23,24,25,29,30,31,32,33,34,35,36,40,41,42,43,77,78,79,80,84,85,86,87,88,89,90,91,95,96,97,98,101,102,106,107,112,113,117,118};
-    private static final int[][] startFields = {{0,1,11,12}, {9,10,20,21}, {108,109,119,120}, {99,100,110,111} };
+    private static final int[][] startFields = {{0,1,11,12}, {9,10,20,21}, {108,109,119,120}, {99,100,110,111}};
     private static final int[][] homeFields = {{56,57,58,59},{16,27,38,49},{61,62,63,64},{71,82,93,104}};
     private static final int[][] entryFields = {{44},{6},{76},{114}};
     private static final int[] pathFields = {45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
