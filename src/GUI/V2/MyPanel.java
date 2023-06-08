@@ -30,6 +30,7 @@ public class MyPanel extends JPanel {
     private static final int[][] homeFields = {{56,57,58,59},{16,27,38,49},{61,62,63,64},{71,82,93,104}};
     private static final int[][] entryFields = {{44},{6},{76},{114}};
     private static final int[] pathFields = {45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
+    private static final int[] selectableFields = {56,57,58,59,16,27,38,49,61,62,63,64,71,82,93,104,44,6,76,114,45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int dice = 60;
 
     public MyPanel(Control control){
@@ -48,6 +49,7 @@ public class MyPanel extends JPanel {
         setUpEntryFields(borderThickness);
         setUpPath(borderThickness, Color.DARK_GRAY);
         setUpDice(borderThickness, Color.BLACK);
+        addActionListenerToSelectableFields();
     }
 
     /*
@@ -90,8 +92,8 @@ public class MyPanel extends JPanel {
         gbc.weightx = buttonGab;
         gbc.weighty = buttonGab;
         int x = 0;
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<cols; j++){
+        for (int i=0; i<rows; i++){
+            for (int j=0; j<cols; j++){
                 gbc.gridx = j;
                 gbc.gridy = i;
                 allFields[x] = new JButton();
@@ -119,8 +121,8 @@ public class MyPanel extends JPanel {
     }
 
     private void setUpStarts(int borderThickness){
-        for(int i=0; i<startFields.length; i++){
-            for(int j=0; j<startFields[i].length; j++){
+        for (int i=0; i<startFields.length; i++){
+            for (int j=0; j<startFields[i].length; j++){
                 allFields[startFields[i][j]].setEnabled(true);
                 allFields[startFields[i][j]].setVisible(true);
                 allFields[startFields[i][j]].setBackground(backgroundColor);
@@ -130,8 +132,8 @@ public class MyPanel extends JPanel {
     }
 
     private void setUpHomes(int borderThickness){
-        for(int i=0; i<homeFields.length; i++){
-            for(int j=0; j<homeFields[i].length; j++){
+        for (int i=0; i<homeFields.length; i++){
+            for (int j=0; j<homeFields[i].length; j++){
                 allFields[homeFields[i][j]].setEnabled(true);
                 allFields[homeFields[i][j]].setVisible(true);
                 allFields[homeFields[i][j]].setBackground(backgroundColor);
@@ -140,8 +142,8 @@ public class MyPanel extends JPanel {
         }
     }
     private void setUpEntryFields(int borderThickness){
-        for(int i = 0; i< entryFields.length; i++){
-            for(int j = 0; j< entryFields[i].length; j++){
+        for (int i = 0; i< entryFields.length; i++){
+            for (int j = 0; j< entryFields[i].length; j++){
                 allFields[entryFields[i][j]].setEnabled(true);
                 allFields[entryFields[i][j]].setVisible(true);
                 allFields[entryFields[i][j]].setBackground(backgroundColor);
@@ -174,6 +176,17 @@ public class MyPanel extends JPanel {
             }
         };
         allFields[dice].addActionListener(diceListener);
+    }
+
+    public void addActionListenerToSelectableFields(){
+        for(int i=0; i<selectableFields.length; i++){
+            ActionListener fieldListener = new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                }
+            };
+        }
     }
 
     /**
