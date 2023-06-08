@@ -222,4 +222,9 @@ public class MyPanel extends JPanel {
             allFields[dice].setBorder(new LineBorder(playerColors[color], borderThickness));
     }
 
+    public void futureMovePosition(int position){
+        allFields[position].setFont(new Font("Bodoni MT Black", Font.PLAIN, 40));
+        allFields[position].setText("X");
+    }
+
 }
