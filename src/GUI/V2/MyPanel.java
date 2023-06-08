@@ -195,6 +195,10 @@ public class MyPanel extends JPanel {
                     setUpHomes(true);
                     setUpEntryFields(true);
                     setUpPath(true);
+                    for (int x=0; x<allFields.length; x++){
+                        if(x != dice)
+                        allFields[x].setText("");
+                    }
                     control.fieldSelected(selectableFields[finalI]); //Method for Controls
                     allFields[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
                 }
