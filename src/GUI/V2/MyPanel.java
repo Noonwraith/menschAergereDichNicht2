@@ -10,8 +10,6 @@ import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
 
-    //Fische
-
     private Control control;
     private GridBagLayout gridBagLayout;
 
@@ -113,6 +111,7 @@ public class MyPanel extends JPanel {
         }
     }
      */
+
 
     private void setUpEmptyFields(){
         for (int emptyField : emptyFields) {
