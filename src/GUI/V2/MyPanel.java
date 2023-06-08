@@ -193,10 +193,13 @@ public class MyPanel extends JPanel {
         allFields[dice].setVisible(true);
         allFields[dice].setBackground(backgroundColor);
         allFields[dice].setBorder(new LineBorder(borderColor, borderThickness));
+        allFields[dice].setFont(new Font("Bodoni MT Black", Font.PLAIN, 40));
         ActionListener diceListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                allFields[dice].setText(String.valueOf(control.throwDice()));
+                int steps = control.throwDice();
+                if(steps != -1)
+                    allFields[dice].setText(String.valueOf(steps));
             }
         };
         allFields[dice].addActionListener(diceListener);
