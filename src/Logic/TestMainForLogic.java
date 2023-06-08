@@ -1,5 +1,6 @@
 package Logic;
 
+import Controls.Control;
 import Controls.Receive;
 
 import java.util.Scanner;
@@ -7,8 +8,8 @@ import java.util.Scanner;
 public class TestMainForLogic {
     public static void main(String[] args) {
         Board board = new Board();
-        Receive guiReceive = new Receive();
-        GameManager gameManager = new GameManager(4,board, guiReceive);
+        Control control = new Control();
+        GameManager gameManager = new GameManager(4, control);
 
         int input = 0;
 

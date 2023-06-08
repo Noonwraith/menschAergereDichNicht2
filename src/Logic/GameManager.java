@@ -1,5 +1,6 @@
 package Logic;
 
+import Controls.Control;
 import Controls.Receive;
 
 import java.util.ArrayList;
@@ -12,9 +13,9 @@ import java.util.List;
  */
 
 public class GameManager {
-    private Receive guiReceive;
+    private Control control;
     private Dice dice = new Dice();
-    private Board board;
+    private Board board = new Board();
     private Human players[] = new Human[4];
 
     private int currentPlayer = 0;
@@ -23,12 +24,11 @@ public class GameManager {
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
 
-    public GameManager(int numbersOfPlayer, Board board, Receive guiReceive){
+    public GameManager(int numbersOfPlayer, Control control){
         this.numbersOfPlayer = numbersOfPlayer;
-        this.board = board;
-        this.guiReceive = guiReceive;
+        this.control = control;
         for(int i=0; i<numbersOfPlayer;i++){
-            players[i] = new Logic.Human(i, board, guiReceive);
+            players[i] = new Logic.Human(i, board, control);
         }
 
     }

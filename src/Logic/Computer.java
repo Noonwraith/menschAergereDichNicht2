@@ -1,5 +1,6 @@
 package Logic;
 
+import Controls.Control;
 import Controls.Receive;
 
 /**
@@ -9,7 +10,7 @@ import Controls.Receive;
 public class Computer extends Player{
 
 
-    public Computer(int color, Board board, Receive guiReceive) {
-        super(color, board, guiReceive);
+    public Computer(int color, Board board, Control control) {
+        super(color, board, control);
     }
 }

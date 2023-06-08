@@ -1,6 +1,7 @@
 package Logic;
 
 
+import Controls.Control;
 import Controls.Receive;
 
 /**
@@ -10,8 +11,8 @@ import Controls.Receive;
 public class Human extends Player{
 
 
-    public Human(int color, Board board, Receive guiReceive) {
-        super(color, board, guiReceive);
+    public Human(int color, Board board, Control control) {
+        super(color, board, control);
     }
 
 
@@ -34,7 +35,7 @@ public class Human extends Player{
         }
         else {
             piece.selected();
-            this.getGuiReceive().displayFuturePiecePosition(this, piece.futureMove(this.getSteps()), "");
+            this.getControl().displayFuturePiecePosition(this, piece.futureMove(this.getSteps()));
             return 0;
 
         }

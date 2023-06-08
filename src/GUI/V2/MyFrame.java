@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class MyFrame extends JFrame {
 
+    private MyPanel panel = new MyPanel();
+
     private int boardSize = 1000;
 
     private JDialog jDialog = new JDialog();
@@ -17,7 +19,7 @@ public class MyFrame extends JFrame {
 
         this.setJMenuBar(setUpMenuBar());
 
-        this.add(new MyPanel());
+        this.add(panel);
         pack();
         this.setSize(boardSize, boardSize);
         this.setResizable(false);
@@ -91,5 +93,9 @@ public class MyFrame extends JFrame {
      */
     public int getBoardSize() {
         return boardSize;
+    }
+
+    public MyPanel getPanel() {
+        return panel;
     }
 }

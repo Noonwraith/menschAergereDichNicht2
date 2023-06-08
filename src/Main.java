@@ -1,7 +1,10 @@
+import Controls.Control;
 import GUI.V2.MyFrame;
+import Logic.GameManager;
 
 public class Main {
     public static void main(String[] args) {
-        MyFrame guiTest = new MyFrame();
+
+        Control control = new Control();
     }
 }
