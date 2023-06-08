@@ -38,6 +38,10 @@ public class Piece {
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece move to: "+ futurePosition);
             System.out.println(board.toString());
+
+
+
+
             //isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
             return true;
         }
@@ -53,6 +57,9 @@ public class Piece {
                 return true;
             }
         }
+        //System.out.println("Piece move from: "+ currentPosition);
+        //System.out.println("Piece move to: "+futurePosition);
+
     }
 
     /**

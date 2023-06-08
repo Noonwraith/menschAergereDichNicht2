@@ -11,6 +11,7 @@ public class Control {
     private MyFrame gui = new MyFrame(this);
     private GameManager gameManager;
     private MyPanel panel = gui.getPanel();
+    private Translate translate = new Translate();
 
 
     public Control(){
@@ -37,7 +38,10 @@ public class Control {
     }
 
     public void throwDice(){
-        gameManager.throwsDice();
+        int steps = gameManager.throwsDice();
+        if(steps != -1){
+            //Gui Aufrufe
+        }
     }
 
 }

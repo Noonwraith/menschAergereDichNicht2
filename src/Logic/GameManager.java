@@ -65,7 +65,7 @@ public class GameManager {
      * Comes from the GUI. Throw the Dice and select the current Player.
      * Checks if the player has thrown the dice before
      */
-    public void throwsDice(){
+    public int throwsDice(){
         int steps = dice.throwsDice();
 
 
@@ -93,7 +93,7 @@ public class GameManager {
                 else {
                     nextPlayer();
                 }
-                return;
+                return -1;
             }
 
 
@@ -113,6 +113,8 @@ public class GameManager {
         else {
             System.out.println("This player has already rolled the dice");
         }
+
+        return steps;
 
     }
 
