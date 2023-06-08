@@ -116,6 +116,7 @@ public class MyPanel extends JPanel {
 
     private void setUpEmptyFields(){
         for (int emptyField : emptyFields) {
+            //this.remove(allFields[emptyField]);
             allFields[emptyField].setEnabled(false);
             allFields[emptyField].setVisible(false);
         }
