@@ -5,6 +5,7 @@ import Logic.Board;
 import Logic.Piece;
 
 import java.awt.*;
+import java.util.Arrays;
 
 public class Translate {
     private Control control;
@@ -35,21 +36,29 @@ public class Translate {
 
 
     public void updateBoard(MyPanel panel, Board board){
+        System.out.println("Suche nach unterschieden im board");
         for(int i=0; i<field.length;i++){
             if(field[i] != board.getField()[i]){
-                panel.updateField(i, board.getField()[i].getColor());
+                System.out.println("Feld wird an der Psoition: "+i);
+                panel.updateField(boardPositionToGuiPosition(i), board.getField()[i].getColor());
             }
         }
         for(int i=0; i<start.length;i++){
             if(start[i] != board.getStart()[i]){
+                System.out.println("Feld wird an der Psoition: "+i);
                 panel.updateField(boardPositionToGuiPosition(i+56), board.getStart()[i].getColor());
             }
         }
         for(int i=0; i<house.length;i++){
             if(house[i] != board.getHouse()[i]){
+                System.out.println("Feld wird an der Psoition: "+i);
                 panel.updateField(i, board.getHouse()[i].getColor());
             }
         }
+
+        System.out.println("start"+ Arrays.toString(start));
+        System.out.println("Board start"+Arrays.toString(board.getStart()));
+
         field = board.getField();
         start = board.getStart();
         house = board.getHouse();
