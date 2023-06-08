@@ -207,10 +207,23 @@ public class MyPanel extends JPanel {
         allFields[dice].addActionListener(diceListener);
     }
 
+    /**
+     * Changes a Fields background to either the playerColors 0-3 or to the default backgroundColor
+     * @param fieldPosition
+     * @param color
+     */
     public void updateField(int fieldPosition, int color){
         if(color == -1)
             allFields[fieldPosition].setBackground(backgroundColor);
         else
         allFields[fieldPosition].setBackground(playerColors[color]);
     }
+
+    public void playerTurn(int color){
+        if(color == -1)
+            allFields[dice].setBorder(new LineBorder(Color.BLACK, borderThickness));
+        else
+            allFields[dice].setBorder(new LineBorder(playerColors[color], borderThickness));
+    }
+
 }
