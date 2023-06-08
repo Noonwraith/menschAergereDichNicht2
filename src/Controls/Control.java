@@ -31,7 +31,13 @@ public class Control {
 
     }
 
-    /**
+
+    public void playerTurn(int color){
+        panel.playerTurn(color);
+    }
+
+
+   /**
      * Called by the GUI when the game is started.
      * ----------------------------Only if there is a button to restart the game. Otherwise the method is unnecessary.
      * ----------------------------If something has to happen to the GUI at game start, it can also be called here
