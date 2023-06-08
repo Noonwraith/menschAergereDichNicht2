@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 public class MyPanel extends JPanel {
 
     private Control control;
+    private GridBagLayout gridBagLayout;
 
     private int boardSize = 1000;
     private static final int rows = 11;
@@ -32,7 +33,8 @@ public class MyPanel extends JPanel {
     public MyPanel(Control control){
         this.control = control;
 
-        this.setLayout(new GridBagLayout());
+        gridBagLayout = new GridBagLayout();
+        this.setLayout(gridBagLayout);
         gbc = new GridBagConstraints();
         this.setBackground(Color.LIGHT_GRAY);
 
@@ -203,5 +205,12 @@ public class MyPanel extends JPanel {
             }
         };
         allFields[dice].addActionListener(diceListener);
+    }
+
+    public void updateField(int fieldPosition, int color){
+        if(color == -1)
+            allFields[fieldPosition].setBackground(backgroundColor);
+        else
+        allFields[fieldPosition].setBackground(playerColors[color]);
     }
 }
