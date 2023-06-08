@@ -23,6 +23,7 @@ public class MyPanel extends JPanel {
 
     private Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
     private Color backgroundColor = Color.GRAY;
+    private Color pathBoarderColor = Color.DARK_GRAY;
     private int borderThickness = 8;
     private JButton[] allFields = new JButton[rows*cols];
     private static final int[] emptyFields = {2,3,7,8,13,14,18,19,22,23,24,25,29,30,31,32,33,34,35,36,40,41,42,43,77,78,79,80,84,85,86,87,88,89,90,91,95,96,97,98,101,102,106,107,112,113,117,118};
@@ -44,11 +45,11 @@ public class MyPanel extends JPanel {
         fillGrid();
 
         setUpEmptyFields();
-        setUpStarts(borderThickness);
-        setUpHomes(borderThickness);
-        setUpEntryFields(borderThickness);
-        setUpPath(borderThickness, Color.DARK_GRAY);
-        setUpDice(borderThickness, Color.BLACK);
+        setUpStarts();
+        setUpHomes();
+        setUpEntryFields();
+        setUpPath();
+        setUpDice(Color.BLACK);
         addActionListenerToSelectableFields();
     }
 
@@ -120,7 +121,7 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void setUpStarts(int borderThickness){
+    private void setUpStarts(){
         for (int i=0; i<startFields.length; i++){
             for (int j=0; j<startFields[i].length; j++){
                 allFields[startFields[i][j]].setEnabled(true);
@@ -131,7 +132,7 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void setUpHomes(int borderThickness){
+    private void setUpHomes(){
         for (int i=0; i<homeFields.length; i++){
             for (int j=0; j<homeFields[i].length; j++){
                 allFields[homeFields[i][j]].setEnabled(true);
@@ -141,7 +142,7 @@ public class MyPanel extends JPanel {
             }
         }
     }
-    private void setUpEntryFields(int borderThickness){
+    private void setUpEntryFields(){
         for (int i = 0; i< entryFields.length; i++){
             for (int j = 0; j< entryFields[i].length; j++){
                 allFields[entryFields[i][j]].setEnabled(true);
@@ -152,20 +153,20 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void setUpPath(int borderThickness, Color borderColor){
+    private void setUpPath(){
         for (int pathField : pathFields) {
             allFields[pathField].setEnabled(true);
             allFields[pathField].setVisible(true);
             allFields[pathField].setBackground(backgroundColor);
-            allFields[pathField].setBorder(new LineBorder(borderColor, borderThickness));
+            allFields[pathField].setBorder(new LineBorder(pathBoarderColor, borderThickness));
         }
     }
 
-    private void setUpDice(int borderThickness, Color borderColor){
+    private void setUpDice(Color borderColor){
         allFields[dice].setEnabled(true);
         allFields[dice].setVisible(true);
         allFields[dice].setBackground(backgroundColor);
-        allFields[dice].setBorder(new LineBorder(borderColor, borderThickness));
+        allFields[dice].setBorder(new LineBorder(borderColor));
         allFields[dice].setFont(new Font("Bodoni MT Black", Font.PLAIN, 40));
         ActionListener diceListener = new ActionListener() {
             @Override
@@ -180,12 +181,18 @@ public class MyPanel extends JPanel {
 
     public void addActionListenerToSelectableFields(){
         for(int i=0; i<selectableFields.length; i++){
+            int finalI = i;
             ActionListener fieldListener = new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    setUpHomes();
+                    setUpEntryFields();
+                    setUpPath();
+                    control.fieldSelected(finalI); //Method for Controls
+                    allFields[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
                 }
             };
+            allFields[selectableFields[i]].addActionListener(fieldListener);
         }
     }
 
