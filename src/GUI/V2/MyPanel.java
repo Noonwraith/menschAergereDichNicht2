@@ -1,13 +1,21 @@
 package GUI.V2;
 
+import Controls.Control;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
 
+    private Control control;
+
+    private int boardSize = 1000;
     private static final int rows = 11;
     private static final int cols = 11;
+    private static final int buttonGab = 5;
     GridBagConstraints gbc;
 
     private Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
@@ -21,7 +29,9 @@ public class MyPanel extends JPanel {
     private static final int[] pathFields = {45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int dice = 60;
 
-    public MyPanel(){
+    public MyPanel(Control control){
+        this.control = control;
+
         this.setLayout(new GridBagLayout());
         gbc = new GridBagConstraints();
         this.setBackground(Color.LIGHT_GRAY);
@@ -34,7 +44,6 @@ public class MyPanel extends JPanel {
         setUpEntryFields(borderThickness);
         setUpPath(borderThickness, Color.DARK_GRAY);
         setUpDice(borderThickness, Color.BLACK);
-
     }
 
     /*
@@ -74,16 +83,15 @@ public class MyPanel extends JPanel {
      */
 
     private void fillGrid(){
-        int z = 5;
-        gbc.weightx = z;
-        gbc.weighty = z;
+        gbc.weightx = buttonGab;
+        gbc.weighty = buttonGab;
         int x = 0;
         for(int i=0; i<rows; i++){
             for(int j=0; j<cols; j++){
                 gbc.gridx = i;
                 gbc.gridy = j;
                 allFields[x] = new JButton();
-                allFields[x].setPreferredSize(new Dimension(1000/(rows+z/2),1000/(cols+z/2)));
+                allFields[x].setPreferredSize(new Dimension(boardSize/(rows+buttonGab/2),boardSize/(cols+buttonGab/2)));
                 this.add(allFields[x],gbc);
                 x++;
             }
@@ -185,5 +193,12 @@ public class MyPanel extends JPanel {
         allFields[dice].setVisible(true);
         allFields[dice].setBackground(backgroundColor);
         allFields[dice].setBorder(new LineBorder(borderColor, borderThickness));
+        ActionListener diceListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                control.throwDice();
+            }
+        };
+        allFields[dice].addActionListener(diceListener);
     }
 }

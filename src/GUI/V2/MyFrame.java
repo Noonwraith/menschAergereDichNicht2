@@ -1,17 +1,21 @@
 package GUI.V2;
+import Controls.Control;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
 
-    private MyPanel panel = new MyPanel();
+    private MyPanel panel;
 
     private int boardSize = 1000;
 
     private JDialog jDialog = new JDialog();
 
-    public MyFrame(){
+    public MyFrame(Control control){
+
+        panel = new MyPanel(control);
+
         setUpLookAndFeel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -72,6 +76,7 @@ public class MyFrame extends JFrame {
 
     private JMenuBar setUpMenuBar(){
         JMenuBar jMenuBar = new JMenuBar();
+        jMenuBar.add(setUpMenuGame());
         jMenuBar.add(setUpMenuFile());
         jMenuBar.add(setUpJMenuView());
         return jMenuBar;
@@ -88,11 +93,10 @@ public class MyFrame extends JFrame {
         return jMenu;
     }
 
-    /**
-     * Getter & Setter
-     */
-    public int getBoardSize() {
-        return boardSize;
+    private JMenu setUpMenuGame(){
+        JMenu jMenu = new JMenu("Game");
+        jMenu.add(new JMenuItem("New Game"));
+        return jMenu;
     }
 
     public MyPanel getPanel() {

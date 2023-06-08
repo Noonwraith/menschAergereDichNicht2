@@ -8,7 +8,7 @@ import Logic.Player;
 
 public class Control {
 
-    private MyFrame gui = new MyFrame();
+    private MyFrame gui = new MyFrame(this);
     private GameManager gameManager;
     private MyPanel panel = gui.getPanel();
 
@@ -34,6 +34,10 @@ public class Control {
     public void startGame(int numbersOfPlayer){
         gameManager = new GameManager(numbersOfPlayer, this);
 
+    }
+
+    public void throwDice(){
+        gameManager.throwsDice();
     }
 
 }
