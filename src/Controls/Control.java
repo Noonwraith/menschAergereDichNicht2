@@ -53,4 +53,8 @@ public class Control {
         return steps;
     }
 
+    public void fieldSelected(int field){
+
+    }
+
 }
