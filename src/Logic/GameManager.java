@@ -93,7 +93,7 @@ public class GameManager {
                 else {
                     nextPlayer();
                 }
-                return -1;
+                return steps;
             }
 
 

@@ -34,7 +34,7 @@ public class Piece {
         boolean returnvalue = movePiece(steps);
 
 
-
+        return returnvalue;
     }
     public boolean movePiece(int steps){
         int currentPosition = board.getPositionOfPiece(this);
