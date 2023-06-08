@@ -195,7 +195,7 @@ public class MyPanel extends JPanel {
                     setUpHomes(true);
                     setUpEntryFields(true);
                     setUpPath(true);
-                    control.fieldSelected(finalI); //Method for Controls
+                    control.fieldSelected(selectableFields[finalI]); //Method for Controls
                     allFields[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
                 }
             };
