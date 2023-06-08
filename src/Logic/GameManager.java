@@ -73,7 +73,7 @@ public class GameManager {
 
 
         if(steps != -1) {
-            System.out.println("Dice throw: " + steps);
+            //System.out.println("Dice throw: " + steps);
 
 
 
@@ -155,7 +155,7 @@ public class GameManager {
                 currentPlayer = 0;
             }
 
-            System.out.println(currentPlayer);
+            //System.out.println(currentPlayer);
             control.playerTurn(currentPlayer);
         }
         else{

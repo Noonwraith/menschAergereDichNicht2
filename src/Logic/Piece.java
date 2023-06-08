@@ -41,7 +41,7 @@ public class Piece {
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece move to: "+ futurePosition);
-            System.out.println(board.toString());
+            //System.out.println(board.toString());
             control.movePiece(currentPosition, -1);
             control.movePiece(currentPosition, color);
 

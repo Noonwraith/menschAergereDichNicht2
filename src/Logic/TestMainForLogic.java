@@ -16,7 +16,7 @@ public class TestMainForLogic {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Player: "+gameManager.getCurrentPlayer());
-            System.out.println(board.toString());
+            //System.out.println(board.toString());
             System.out.println(gameManager.getNumbers());
             //gameManager.throwsDice();
 
