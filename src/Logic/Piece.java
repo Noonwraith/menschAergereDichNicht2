@@ -30,7 +30,13 @@ public class Piece {
      * @param steps
      * @return
      */
-    public boolean move(int steps){
+    public boolean move(int steps) {
+        boolean returnvalue = movePiece(steps);
+
+
+
+    }
+    public boolean movePiece(int steps){
         int currentPosition = board.getPositionOfPiece(this);
         int futurePosition = futureMove(steps);
         Piece pieceOnFuturePosition = board.getField()[futurePosition];

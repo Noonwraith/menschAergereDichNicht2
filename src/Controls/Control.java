@@ -37,10 +37,10 @@ public class Control {
 
     }
 
-    public void throwDice(){
+    public int throwDice(){
         int steps = gameManager.throwsDice();
         if(steps != -1){
-            //Gui Aufrufe
+            return steps;
         }
     }
 
