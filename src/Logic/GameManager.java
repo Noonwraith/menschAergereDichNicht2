@@ -31,6 +31,8 @@ public class GameManager {
             players[i] = new Logic.Human(i, board, control);
         }
 
+        control.playerTurn(currentPlayer);
+
     }
 
     /**
@@ -150,6 +152,9 @@ public class GameManager {
             if (currentPlayer == 4) {
                 currentPlayer = 0;
             }
+
+            System.out.println(currentPlayer);
+            control.playerTurn(currentPlayer);
         }
         else{
             dice.unlockDice();
