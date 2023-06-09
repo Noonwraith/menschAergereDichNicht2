@@ -9,7 +9,7 @@ import Logic.Player;
 
 public class Control {
 
-    private boolean debugOn = true;
+    private boolean debugOn;
     private Debug debug = new Debug(this);
 
 
@@ -20,7 +20,8 @@ public class Control {
     private final Translate translate = new Translate(this);
 
 
-    public Control(){
+    public Control(boolean debugOn){
+        this.debugOn = debugOn;
         //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {

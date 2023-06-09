@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TestMainForLogic {
     public static void main(String[] args) {
         Board board = new Board();
-        Control control = new Control();
+        Control control = new Control(true);
         GameManager gameManager = new GameManager(4, control);
 
         int input = 0;
