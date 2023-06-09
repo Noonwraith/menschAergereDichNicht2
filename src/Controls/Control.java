@@ -24,7 +24,7 @@ public class Control {
         //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {
-            System.out.println("game is simulated\n");
+            System.out.println("Control: game is simulated\n");
             debug.simulateGame();
         }
 
@@ -44,7 +44,7 @@ public class Control {
     }
 
     public void movePiece(int position, int color){
-        System.out.println("psoition: "+position);
+        System.out.println("Control: position: "+position);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
 
         if(debugOn) {
@@ -72,7 +72,9 @@ public class Control {
     public int throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
         debug.addMethode("throwDice", steps);
-        panel.setDiceNumber(steps);
+        if(debugOn) {
+            panel.setDiceNumber(steps);
+        }
         System.out.println("Dice throw: "+steps);
         return steps;
     }

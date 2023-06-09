@@ -20,7 +20,7 @@ public class Board {
         for(int i=color*4; i<color*4+4; i++){
             if(start[i] == null){
                 start[i] = piece;
-                return i+56;
+                return i+40;
             }
         }
         return -1;
