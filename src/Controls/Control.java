@@ -46,6 +46,11 @@ public class Control {
     public void movePiece(int position, int color){
         System.out.println("psoition: "+position);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
+
+        if(debugOn) {
+            panel.removeAllX();
+        }
+
     }
 
     public void playerTurn(int color){
@@ -67,6 +72,7 @@ public class Control {
     public int throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
         debug.addMethode("throwDice", steps);
+        panel.setDiceNumber(steps);
         System.out.println("Dice throw: "+steps);
         return steps;
     }

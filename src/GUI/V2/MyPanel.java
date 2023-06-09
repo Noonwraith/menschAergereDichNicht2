@@ -231,4 +231,18 @@ public class MyPanel extends JPanel {
         allFields[position].setText("X");
     }
 
+    public void setDiceNumber(int number){
+        allFields[dice].setText(String.valueOf(number));
+    }
+
+    public void removeAllX(){
+        setUpHomes(true);
+        setUpEntryFields(true);
+        setUpPath(true);
+        for (int x=0; x<allFields.length; x++){
+            if(x != dice)
+                allFields[x].setText("");
+        }
+    }
+
 }
