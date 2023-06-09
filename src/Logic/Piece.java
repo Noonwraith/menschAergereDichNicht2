@@ -91,9 +91,11 @@ public class Piece {
             }
             if(futurePosition > color*10-1 && currentPosition <= color*10-1){
                 //(steps-(currentPosition-(color*10-1))) -> gibt an wie viele Felder in das Haus gegangen werden.
-                int stepsInHouse = (steps-(currentPosition-(color*10-1)));
+                System.out.println("Piece: steps: "+steps);
+                System.out.println("Piece: color: "+color);
+                int stepsInHouse = (steps-((color*10-1)-currentPosition));
                 if(stepsInHouse <= 4){
-                    System.out.println("Piece: Piece can go in house");
+                    System.out.println("Piece: Piece can go in house: "+stepsInHouse);
                     futurePosition = color*4+56+stepsInHouse;
                     System.out.println("Piece: last Position : "+currentPosition);
                     System.out.println("Piece: nextPosition: "+futurePosition);

@@ -49,6 +49,8 @@ public class Control {
         System.out.println("Control: position: "+position);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
 
+        panel.setDiceNumber(0);
+
         if(debugOn) {
             panel.removeAllX();
         }
