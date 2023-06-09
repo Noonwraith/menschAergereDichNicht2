@@ -24,7 +24,7 @@ public class Control {
         //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {
-            System.out.println("Control: game is simulated\n");
+            System.out.println("Control: Game is simulated\n");
             debug.simulateGame();
         }
 
