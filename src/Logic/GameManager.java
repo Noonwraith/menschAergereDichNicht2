@@ -51,15 +51,15 @@ public class GameManager {
                 if (code == 1) {
                     nextPlayer();
                 } else if (code == -1) {
-                    System.out.println("This place is already occupied by its own piece. Choose another piece");
+                    System.out.println("Gamemanager: This place is already occupied by its own piece. Choose another piece");
                 }
             }
             else {
-                System.out.println("Falsche Farbe oder noch nicht gewürfelt.");
+                System.out.println("Gamemanager: Falsche Farbe oder noch nicht gewürfelt.");
             }
         }
         else {
-            System.out.println("No Piece selected");
+            System.out.println("Gamemanager: No Piece selected");
         }
 
     }
@@ -85,7 +85,7 @@ public class GameManager {
                             currentPlayer = i;
                         }
                     }
-                    System.out.println("player "+(currentPlayer)+" starts");
+                    System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
                     control.playerTurn(currentPlayer);
                     //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;
@@ -107,14 +107,14 @@ public class GameManager {
                 nextPlayer();
             }
             else if (goOutPosition != 0) {
-                System.out.println("Can go out of the house: " + goOutPosition);
+                System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
                 clickOnPiece(goOutPosition);
                 clickOnPiece(goOutPosition);//is called twice, so that it is marked once and then moved.
 
             }
         }
         else {
-            System.out.println("This player has already rolled the dice");
+            System.out.println("Gamemanager: This player has already rolled the dice");
         }
 
         return steps;
@@ -149,6 +149,8 @@ public class GameManager {
     public void nextPlayer(){
         if(dice.getSteps() != 6 || !startGame) {
             currentPlayer++;
+            System.out.println("Gamemanager: --------------------------------------next Player------------------");
+            System.out.println("Gamemanager: currentPlayer: "+ currentPlayer);
             dice.unlockDice();
             if (currentPlayer == 4) {
                 currentPlayer = 0;
@@ -159,7 +161,7 @@ public class GameManager {
         }
         else{
             dice.unlockDice();
-            System.out.println("Throw again");
+            System.out.println("Gamemanager(nextplayer): Throw again");
         }
     }
 
