@@ -178,7 +178,7 @@ public class MyPanel extends JPanel {
         ActionListener diceListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int steps = control.throwDice();
+                int steps = control.throwDice(-1);
                 if(steps != -1)
                     allFields[dice].setText(String.valueOf(steps));
             }

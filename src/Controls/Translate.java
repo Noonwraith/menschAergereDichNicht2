@@ -39,19 +39,19 @@ public class Translate {
         //System.out.println("Suche nach unterschieden im board");
         for(int i=0; i<field.length;i++){
             if(field[i] != board.getField()[i]){
-                System.out.println("Feld wird an der Psoition: "+i);
+                //System.out.println("Feld wird an der Psoition: "+i);
                 panel.updateField(boardPositionToGuiPosition(i), board.getField()[i].getColor());
             }
         }
         for(int i=0; i<start.length;i++){
             if(start[i] != board.getStart()[i]){
-                System.out.println("Feld wird an der Psoition: "+(i+40));
+                //System.out.println("Feld wird an der Psoition: "+(i+40));
                 panel.updateField(boardPositionToGuiPosition(i+40), board.getStart()[i].getColor());
             }
         }
         for(int i=0; i<house.length;i++){
             if(house[i] != board.getHouse()[i]){
-                System.out.println("Feld wird an der Psoition: "+(i+55));
+                //System.out.println("Feld wird an der Psoition: "+(i+55));
                 panel.updateField(boardPositionToGuiPosition(i+55), board.getHouse()[i].getColor());
             }
         }

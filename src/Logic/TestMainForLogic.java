@@ -24,7 +24,7 @@ public class TestMainForLogic {
             input = scanner.nextInt();
 
             if(input == 99){
-                gameManager.throwsDice();
+                gameManager.throwsDice(-1);
             }else{
                 gameManager.clickOnPiece(input);
             }

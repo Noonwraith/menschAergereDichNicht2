@@ -1,5 +1,6 @@
 package Controls;
 
+import Debuging.Debug;
 import GUI.V2.MyFrame;
 import GUI.V2.MyPanel;
 import Logic.Board;
@@ -7,6 +8,11 @@ import Logic.GameManager;
 import Logic.Player;
 
 public class Control {
+
+    private boolean debugOn = false;
+    private Debug debug = new Debug(this);
+
+
 
     private final MyFrame gui = new MyFrame(this);
     private GameManager gameManager;
@@ -17,6 +23,7 @@ public class Control {
     public Control(){
         //panel.playerTurn(3);
         startGame(4);
+        debug.simulateGame();
 
     }
 
@@ -54,15 +61,21 @@ public class Control {
 
     }
 
-    public int throwDice(){
-        int steps = gameManager.throwsDice();
+    public int throwDice(int debugSteps){
+        int steps = gameManager.throwsDice(debugSteps);
+        debug.addMethode("throwDice", steps);
+        System.out.println("Dice throw: "+steps);
         return steps;
     }
 
     public void fieldSelected(int field){
+        debug.addMethode("fieldSelected", field);
         gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
-
+        System.out.println("Click on Field: "+translate.GuiPositionToBoardPosition(field));
     }
 
 
+    public boolean isDebugOn(){
+        return debugOn;
+    }
 }
