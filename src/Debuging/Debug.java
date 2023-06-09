@@ -12,7 +12,7 @@ public class Debug {
 
     public Debug(Control control){
         this.control = control;
-        if(control.isDebugOn() == false){
+        if(!control.isDebugOn()){
             jsonHandler.clearJsonFile();
         }
     }
@@ -21,24 +21,30 @@ public class Debug {
     public void simulateGame(){
         if (control.isDebugOn()) {
             List<MethodCall> methodCalls = jsonHandler.loadMethodCallsFromJson();
+            System.out.println(methodCalls);
             for (MethodCall methodCall : methodCalls) {
                 String methodName = methodCall.getMethodName();
                 Object[] params = methodCall.getParams();
                 simulateMethodCall(methodName, params);
 
-
                 //Wait for an input with the next move
-                Scanner scanner = new Scanner(System.in);
-                int x = scanner.nextInt();
-
-                //Waits 500 ms for the next move
-                /*try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
-
+                boolean manuel = false;
+                if(manuel) {
+                    System.out.println("wait on input...");
+                    Scanner scanner = new Scanner(System.in);
+                    int x = scanner.nextInt();
+                }
+                else {
+                    //Waits 500 ms for the next move
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
+            System.out.println("End of simulation!!!");
+            control.setDebugOn(false);
         }
     }
 
@@ -47,7 +53,6 @@ public class Debug {
             int x = convertParamsToInt(params[0]);
             control.throwDice(x);
         }else if(methodName.equals("fieldSelected")){
-            System.out.println("--------------------------------");
             int x = convertParamsToInt(params[0]);
             control.fieldSelected(x);
         }
@@ -57,7 +62,7 @@ public class Debug {
 
 
     public void addMethode(String methodName, Object... params){
-        if(control.isDebugOn() == false) {
+        if(!control.isDebugOn()) {
             jsonHandler.addMethod(methodName, params);
         }
     }

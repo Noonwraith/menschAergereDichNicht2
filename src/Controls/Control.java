@@ -9,7 +9,7 @@ import Logic.Player;
 
 public class Control {
 
-    private boolean debugOn = false;
+    private boolean debugOn = true;
     private Debug debug = new Debug(this);
 
 
@@ -23,7 +23,10 @@ public class Control {
     public Control(){
         //panel.playerTurn(3);
         startGame(4);
-        debug.simulateGame();
+        if(debugOn) {
+            System.out.println("game is simulated\n");
+            debug.simulateGame();
+        }
 
     }
 
@@ -77,5 +80,9 @@ public class Control {
 
     public boolean isDebugOn(){
         return debugOn;
+    }
+
+    public void setDebugOn(boolean debugOn) {
+        this.debugOn = debugOn;
     }
 }

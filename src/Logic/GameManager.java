@@ -69,11 +69,8 @@ public class GameManager {
      * Checks if the player has thrown the dice before
      */
     public int throwsDice(int debugSteps){
-        int steps;
-        if(debugSteps == -1) {
-            steps = dice.throwsDice();
-        }
-        else {steps = debugSteps;}
+        int steps = dice.throwsDice(debugSteps);;
+
 
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
@@ -100,6 +97,7 @@ public class GameManager {
                 }
                 return steps;
             }
+            //End: Looks which of the players rolls the highest number
 
 
             players[currentPlayer].setSteps(steps);
@@ -170,9 +168,6 @@ public class GameManager {
     }
 
 
-    public ArrayList<Integer> getNumbers() {
-        return dice.getNumbers();
-    }
 
     public Board getBoard() {
         return board;

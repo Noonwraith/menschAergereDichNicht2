@@ -17,7 +17,7 @@ public class TestMainForLogic {
         while (true) {
             System.out.println("Player: "+gameManager.getCurrentPlayer());
             //System.out.println(board.toString());
-            System.out.println(gameManager.getNumbers());
+            //System.out.println(gameManager.getNumbers());
             //gameManager.throwsDice();
 
             System.out.print("Input: ");
