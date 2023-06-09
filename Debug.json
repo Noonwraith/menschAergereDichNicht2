@@ -1,7 +1,7 @@
 [
   {
     "methodName": "throwDice",
-    "params": [
+    "params":  [
       2.0
     ]
   },
@@ -2473,7 +2473,7 @@
   },
   {
     "methodName": "throwDice",
-    "params": [
+    "params":  [
       -1
     ]
   },
