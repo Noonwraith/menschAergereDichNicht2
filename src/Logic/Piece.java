@@ -37,7 +37,14 @@ public class Piece {
     public boolean move(int steps) {
         int currentPosition = board.getPositionOfPiece(this);
         int futurePosition = futureMove(steps);
-        Piece pieceOnFuturePosition = board.getField()[futurePosition];
+        Piece pieceOnFuturePosition;
+        if(futurePosition <= 39) {
+            pieceOnFuturePosition = board.getField()[futurePosition];
+
+        }else {//Piece is in House
+            pieceOnFuturePosition = board.getHouse()[futurePosition-56];
+        }
+
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
             System.out.println("Piece: Piece move to: "+ futurePosition);
@@ -71,8 +78,6 @@ public class Piece {
                 return true;
             }
         }
-        //System.out.println("Piece move from: "+ currentPosition);
-        //System.out.println("Piece move to: "+futurePosition);
 
     }
 
@@ -91,9 +96,7 @@ public class Piece {
             }
             if(futurePosition > color*10-1 && currentPosition <= color*10-1){
                 //(steps-(currentPosition-(color*10-1))) -> gibt an wie viele Felder in das Haus gegangen werden.
-                System.out.println("Piece: steps: "+steps);
-                System.out.println("Piece: color: "+color);
-                int stepsInHouse = (steps-((color*10-1)-currentPosition));
+                int stepsInHouse = (steps-((color*10-1)-currentPosition))-1;
                 if(stepsInHouse <= 4){
                     System.out.println("Piece: Piece can go in house: "+stepsInHouse);
                     futurePosition = color*4+56+stepsInHouse;
