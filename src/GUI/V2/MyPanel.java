@@ -79,7 +79,7 @@ public class MyPanel extends JPanel {
     public void paint(Graphics g) {
         Dimension d = this.getSize();
         if(d.height > d.width){
-            this.setSize(d.width, d.width);
+            this.setSize(dA.width, d.width);
         } else {
             this.setSize(d.height, d.height);
         }
@@ -115,9 +115,9 @@ public class MyPanel extends JPanel {
 
     private void setUpEmptyFields(){
         for (int emptyField : emptyFields) {
-            //this.remove(allFields[emptyField]);
-            allFields[emptyField].setEnabled(false);
-            allFields[emptyField].setVisible(false);
+            this.remove(allFields[emptyField]);
+            //allFields[emptyField].setEnabled(false);
+            //allFields[emptyField].setVisible(false);
         }
     }
 
