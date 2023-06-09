@@ -74,12 +74,12 @@ public class Translate {
                 return i;
             }
         }
-        System.out.println("Error: THis Position dosn't exist: "+position);
+        System.out.println("Error: Translate: This Position dosn't exist: "+position);
         return -1;
     }
 
     public int GuiPositionToBoardPosition(int position){
-        System.out.println("-----------------Click on Position"+ position);
+        //System.out.println("Translate: -----------------Click on Position"+ position);
         return translateField[position];
     }
 

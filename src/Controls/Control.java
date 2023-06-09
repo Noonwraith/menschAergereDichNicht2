@@ -46,8 +46,10 @@ public class Control {
     }
 
     public void movePiece(int position, int color){
-        System.out.println("Control: position: "+position);
+        System.out.println("Control: move to position: "+position+" with color: "+color);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
+
+        panel.setDiceNumber(0);
 
         if(debugOn) {
             panel.removeAllX();
@@ -77,14 +79,14 @@ public class Control {
         if(debugOn) {
             panel.setDiceNumber(steps);
         }
-        System.out.println("Dice throw: "+steps);
+        System.out.println("Control: Dice throw: "+steps);
         return steps;
     }
 
     public void fieldSelected(int field){
         debug.addMethode("fieldSelected", field);
         gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
-        System.out.println("Click on Field: "+translate.GuiPositionToBoardPosition(field));
+        System.out.println("Control: Click on Field: "+field+" position: "+translate.GuiPositionToBoardPosition(field));
     }
 
 
