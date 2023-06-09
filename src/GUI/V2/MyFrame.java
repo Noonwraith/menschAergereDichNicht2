@@ -1,7 +1,6 @@
 package GUI.V2;
 import Controls.Control;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
-
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
@@ -13,16 +12,14 @@ public class MyFrame extends JFrame {
     private JDialog jDialog = new JDialog();
 
     public MyFrame(Control control){
-
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new MyPanel(control);
 
         setUpLookAndFeel();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         this.setTitle("Mensche ärgere Dich nicht");
 
         this.setJMenuBar(setUpMenuBar());
-
         this.add(panel);
         pack();
         this.setSize(boardSize, boardSize);
@@ -72,6 +69,7 @@ public class MyFrame extends JFrame {
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
+
     }
 
     private JMenuBar setUpMenuBar(){

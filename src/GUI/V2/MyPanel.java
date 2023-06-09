@@ -74,6 +74,15 @@ public class MyPanel extends JPanel {
         return new Dimension(s,s);
     }
 
+        private void setUpLookAndFeel(){
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+    }
+     */
+
     /*
     @Override
     public void paint(Graphics g) {
