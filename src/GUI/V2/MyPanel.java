@@ -232,7 +232,11 @@ public class MyPanel extends JPanel {
     }
 
     public void setDiceNumber(int number){
-        allFields[dice].setText(String.valueOf(number));
+        if(number == 0)
+            allFields[dice].setText("");
+        else if(number == -1){}
+        else
+            allFields[dice].setText(String.valueOf(number));
     }
 
     public void removeAllX(){
