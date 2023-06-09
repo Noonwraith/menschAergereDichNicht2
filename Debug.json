@@ -1,0 +1,104 @@
+[
+  {
+    "methodName": "throwDice",
+    "params": [
+      1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1
+    ]
+  }
+]
