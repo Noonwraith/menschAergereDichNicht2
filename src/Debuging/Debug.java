@@ -10,6 +10,8 @@ public class Debug {
     private JsonHandler jsonHandler = new JsonHandler();
     private Control control;
 
+    boolean manuel = false;
+
     public Debug(Control control){
         this.control = control;
         if(!control.isDebugOn()){
@@ -28,7 +30,7 @@ public class Debug {
                 simulateMethodCall(methodName, params);
 
                 //Wait for an input with the next move
-                boolean manuel = false;
+
                 if(manuel) {
                     System.out.println("wait on input...");
                     Scanner scanner = new Scanner(System.in);
