@@ -10,7 +10,7 @@ import Logic.Player;
 public class Control {
 
     private boolean debugOn;
-    private Debug debug = new Debug(this);
+    private Debug debug;
 
 
 
@@ -22,6 +22,7 @@ public class Control {
 
     public Control(boolean debugOn){
         this.debugOn = debugOn;
+        debug  = new Debug(this);
         //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {

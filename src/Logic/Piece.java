@@ -94,7 +94,9 @@ public class Piece {
                 int stepsInHouse = (steps-(currentPosition-(color*10-1)));
                 if(stepsInHouse <= 4){
                     System.out.println("Piece: Piece can go in house");
-                    futurePosition = color*4+57+stepsInHouse;
+                    futurePosition = color*4+56+stepsInHouse;
+                    System.out.println("Piece: last Position : "+currentPosition);
+                    System.out.println("Piece: nextPosition: "+futurePosition);
                 }
                 else{
                     futurePosition = -1;
