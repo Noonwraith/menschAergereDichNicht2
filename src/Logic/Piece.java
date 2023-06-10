@@ -91,6 +91,8 @@ public class Piece {
      */
     public int futureMove(int steps){
         int currentPosition = board.getPositionOfPiece(this);
+        //System.out.println("Piece -> futureMove: Piece: "+this);
+        //System.out.println("Piece -> futureMove: currentPosition of Piece: "+currentPosition);
         int futurePosition = -1;
         if(currentPosition <= 39) {
             futurePosition = currentPosition + steps;
@@ -116,8 +118,15 @@ public class Piece {
                 }
             }
         }
-        else if(currentPosition <= 56){
+        else if(currentPosition <= 56){//Can leave the start
             futurePosition = 10*color;
+        }
+        else if(currentPosition >= 56){ //Moves around the house
+            futurePosition = currentPosition+steps;
+            if(futurePosition >= ((color*4+56)+3)){//When the futurePosition is higher than the house((color*4+56)+3)
+                System.out.println("Piece: The futurePosition is higher than the house.");
+                futurePosition = -1;
+            }
         }
         System.out.println("Piece: future Position: "+futurePosition);
         return futurePosition;
@@ -131,9 +140,13 @@ public class Piece {
         return isSelected;
     }
 
-    public void selected() {
-        isSelected = true;
+    public void setSelected(boolean selected) {
+        isSelected = selected;
     }
+
+    /*public void selected() {
+        isSelected = true;
+    }*/
 
     public int getColor() {
         return color;

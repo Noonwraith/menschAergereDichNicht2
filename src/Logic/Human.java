@@ -34,7 +34,12 @@ public class Human extends Player{
             return -1;
         }
         else {
-            piece.selected();
+            for(int i=0; i<this.getPieces().length;i++){//Set all Piece to not selected
+                this.getPieces()[i].setSelected(false);
+            }
+
+
+            piece.setSelected(true);
             this.getControl().displayFuturePiecePosition(this, piece.futureMove(this.getSteps()));
             return 0;
 

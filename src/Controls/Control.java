@@ -58,6 +58,8 @@ public class Control {
     }
 
     public void playerTurn(int color){
+        System.out.println("Control: --------------------------------------next Player------------------");
+        System.out.println("Control: currentPlayer: "+color);
         panel.playerTurn(color);
     }
 
@@ -75,20 +77,24 @@ public class Control {
 
     public int throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
+        //System.out.println("Control: Dice throw: "+steps);
         debug.addMethode("throwDice", steps);
         if(debugOn) {
             panel.setDiceNumber(steps);
         }
-        System.out.println("Control: Dice throw: "+steps);
         return steps;
     }
 
     public void fieldSelected(int field){
+        System.out.println("Control: Click on Field: "+field+" position: "+translate.GuiPositionToBoardPosition(field));
         debug.addMethode("fieldSelected", field);
         gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
-        System.out.println("Control: Click on Field: "+field+" position: "+translate.GuiPositionToBoardPosition(field));
     }
 
+
+    public void clearDice(){
+        panel.setDiceNumber(0);
+    }
 
     public boolean isDebugOn(){
         return debugOn;
