@@ -50,8 +50,8 @@ public class Piece {
 
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
-            System.out.println("Piece: Piece move to: "+ futurePosition);
-            System.out.println("Piece: Piece come from: "+currentPosition);
+            //System.out.println("Piece: Piece move to: "+ futurePosition);
+            //System.out.println("Piece: Piece come from: "+currentPosition);
             //System.out.println(board.toString());
             control.movePiece(currentPosition, -1);
             control.movePiece(futurePosition, color);
@@ -107,10 +107,10 @@ public class Piece {
                 }
                 System.out.println("Piece: steps in House: "+stepsInHouse);
                 if(stepsInHouse <= 4){
-                    System.out.println("Piece: Piece can go in house: "+stepsInHouse);
+                    //System.out.println("Piece: Piece can go in house: "+stepsInHouse);
                     futurePosition = color*4+56+stepsInHouse;
-                    System.out.println("Piece: last Position : "+currentPosition);
-                    System.out.println("Piece: nextPosition: "+futurePosition);
+                    //System.out.println("Piece: last Position : "+currentPosition);
+                    //System.out.println("Piece: nextPosition: "+futurePosition);
                 }
                 else{
                     futurePosition = -1;
@@ -128,7 +128,7 @@ public class Piece {
                 futurePosition = -1;
             }
         }
-        System.out.println("Piece: future Position: "+futurePosition);
+        //System.out.println("Piece: future Position: "+futurePosition);
         return futurePosition;
     }
 

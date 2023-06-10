@@ -75,14 +75,13 @@ public class Control {
 
     }
 
-    public int throwDice(int debugSteps){
+    public void throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
         //System.out.println("Control: Dice throw: "+steps);
         debug.addMethode("throwDice", steps);
-        if(debugOn) {
-            panel.setDiceNumber(steps);
-        }
-        return steps;
+
+        panel.setDiceNumber(steps);
+
     }
 
     public void fieldSelected(int field){
@@ -94,6 +93,11 @@ public class Control {
 
     public void clearDice(){
         panel.setDiceNumber(0);
+    }
+
+
+    public void removeAllX(){
+        panel.removeAllX();
     }
 
     public boolean isDebugOn(){

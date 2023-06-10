@@ -43,7 +43,7 @@ public class GameManager {
      */
     public void clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
-        System.out.println("Gamemanager -> clieck on Piece: Piece: "+ piece);
+        //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
             int color = piece.getColor();
             if (color == currentPlayer && dice.isLock()) {
@@ -54,6 +54,7 @@ public class GameManager {
                 } else if (code == -1) {
 
                     if(playerCanMove()) {
+                        control.removeAllX();
                         System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
                     }
                     else{
@@ -70,6 +71,7 @@ public class GameManager {
         else {
             System.out.println("Gamemanager: No Piece selected");
         }
+
 
     }
 
@@ -172,6 +174,7 @@ public class GameManager {
         }
         else{
             dice.unlockDice();
+            control.removeAllX();
             System.out.println("Gamemanager(nextplayer): Throw again");
         }
     }
