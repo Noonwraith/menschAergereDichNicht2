@@ -75,15 +75,6 @@ public class MyPanel extends JPanel {
         return new Dimension(s,s);
     }
 
-        private void setUpLookAndFeel(){
-        try {
-            UIManager.setLookAndFeel(new FlatDarculaLaf());
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
-    }
-     */
-
     /*
     @Override
     public void paint(Graphics g) {
@@ -189,9 +180,10 @@ public class MyPanel extends JPanel {
         ActionListener diceListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int steps = control.throwDice(-1);
+                control.throwDice(-1);
+                /*int steps = control.throwDice(-1);
                 if(steps != -1)
-                    allFields[dice].setText(String.valueOf(steps));
+                    allFields[dice].setText(String.valueOf(steps));*/
             }
         };
         allFields[dice].addActionListener(diceListener);
@@ -243,11 +235,15 @@ public class MyPanel extends JPanel {
     }
 
     public void setDiceNumber(int number){
-        if(number == 0)
+        if(number == 0) {
+            System.out.println("Panel: Rest Dice");
             allFields[dice].setText("");
+        }
         else if(number == -1){}
-        else
+        else {
+            System.out.println("Panel: set Dice");
             allFields[dice].setText(String.valueOf(number));
+        }
     }
 
     public void removeAllX(){

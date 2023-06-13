@@ -43,6 +43,7 @@ public class GameManager {
      */
     public void clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
+        //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
             int color = piece.getColor();
             if (color == currentPlayer && dice.isLock()) {
@@ -51,16 +52,26 @@ public class GameManager {
                 if (code == 1) {
                     nextPlayer();
                 } else if (code == -1) {
-                    System.out.println("Gamemanager: This place is already occupied by its own piece. Choose another piece");
+
+                    if(playerCanMove()) {
+                        control.removeAllX();
+                        System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
+                    }
+                    else{
+                        System.out.println("Gamemanager: This player has no Piece that can be moved.");
+                        control.clearDice();
+                        nextPlayer();
+                    }
                 }
             }
             else {
-                System.out.println("Gamemanager: Falsche Farbe oder noch nicht gewürfelt.");
+                System.out.println("Gamemanager: Wrong color or not yet rolled.");
             }
         }
         else {
             System.out.println("Gamemanager: No Piece selected");
         }
+
 
     }
 
@@ -70,7 +81,7 @@ public class GameManager {
      */
     public int throwsDice(int debugSteps){
         int steps = dice.throwsDice(debugSteps);;
-
+        System.out.println("Gamemanager: Dice throw: "+steps);
 
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
@@ -104,6 +115,10 @@ public class GameManager {
 
             int goOutPosition = playerCanGoOut();
             if(goOutPosition == -1) { //If no piece can leave the start and there is no piece in the field.
+
+                /*control.clearDice();
+                System.out.println("Wait");
+                waitTime(1000);*/
                 nextPlayer();
             }
             else if (goOutPosition != 0) {
@@ -149,8 +164,6 @@ public class GameManager {
     public void nextPlayer(){
         if(dice.getSteps() != 6 || !startGame) {
             currentPlayer++;
-            System.out.println("Gamemanager: --------------------------------------next Player------------------");
-            System.out.println("Gamemanager: currentPlayer: "+ currentPlayer);
             dice.unlockDice();
             if (currentPlayer == 4) {
                 currentPlayer = 0;
@@ -161,8 +174,37 @@ public class GameManager {
         }
         else{
             dice.unlockDice();
+            control.removeAllX();
             System.out.println("Gamemanager(nextplayer): Throw again");
         }
+    }
+
+
+    /**
+     * See if a player has a Piece to move.
+     * @return
+     */
+    public boolean playerCanMove(){
+        Piece[] field = board.getField();
+        for(int i=0; i<field.length; i++){
+            if(field[i] != null) {
+                if (field[i].getColor() == currentPlayer) {
+                    return true;
+                }
+            }
+        }
+        waitTime(500);
+        return false;
+    }
+
+
+    public void waitTime(int time){
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public int getCurrentPlayer() {
