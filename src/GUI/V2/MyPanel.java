@@ -14,8 +14,9 @@ public class MyPanel extends JPanel {
     private GridBagLayout gridBagLayout;
 
     private int boardSize = 1000;
+    private int buttonSize = 74;//(boardSize/rows)-buttonGab*2;
     private static final int rows = 11;
-    private static final int cols = 11;
+    private static final int cols = rows;
     private static final int buttonGab = 5;
     GridBagConstraints gbc;
 
@@ -105,7 +106,8 @@ public class MyPanel extends JPanel {
                 gbc.gridx = j;
                 gbc.gridy = i;
                 allFields[x] = new JButton();
-                allFields[x].setPreferredSize(new Dimension(boardSize/(rows+buttonGab/2),boardSize/(cols+buttonGab/2)));
+                allFields[x].setPreferredSize(new Dimension(buttonSize,buttonSize));
+                //allFields[x].setPreferredSize(new Dimension(boardSize/(rows+buttonGab/2), boardSize/(rows+buttonGab/2)));
                 this.add(allFields[x],gbc);
                 x++;
             }
