@@ -6,6 +6,7 @@ import Controls.Receive;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Who's turn is it?
@@ -53,7 +54,11 @@ public class GameManager {
                     nextPlayer();
                 } else if (code == -1) {
 
-                    if(playerCanMove()) {
+
+                    control.removeAllX();
+                    System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
+
+                    /*if(playerCanMove()) {
                         control.removeAllX();
                         System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
                     }
@@ -61,7 +66,7 @@ public class GameManager {
                         System.out.println("Gamemanager: This player has no Piece that can be moved.");
                         control.clearDice();
                         nextPlayer();
-                    }
+                    }*/
                 }
             }
             else {
@@ -86,7 +91,7 @@ public class GameManager {
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
 
-            if(!startGame){ //Looks which of the players rolls the highest number
+            if(!startGame){ //Start: Looks which of the players rolls the highest number
                 startNumbers[currentPlayer] = steps;
                 if(currentPlayer == 3){
                     currentPlayer = 0;
@@ -107,9 +112,7 @@ public class GameManager {
                     nextPlayer();
                 }
                 return steps;
-            }
-            //End: Looks which of the players rolls the highest number
-
+            }//End: Looks which of the players rolls the highest number
 
             players[currentPlayer].setSteps(steps);
 
@@ -125,8 +128,21 @@ public class GameManager {
                 System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
                 clickOnPiece(goOutPosition);
                 clickOnPiece(goOutPosition);//is called twice, so that it is marked once and then moved.
+                return -1;
 
             }
+
+
+
+            else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
+                System.out.println("Gamemanager: This player has no Piece that can be moved.");
+                control.setDice(steps);
+                waitTime(500);
+                control.clearDice();
+                nextPlayer();
+                return -1;
+            }
+
         }
         else {
             System.out.println("Gamemanager: This player has already rolled the dice");
@@ -151,7 +167,7 @@ public class GameManager {
 
         for(int i=0;i<4;i++){
             Piece piece = board.getStart()[currentPlayer*4+i];
-            if(piece != null && dice.getSteps() == 6){ //A Piece is in the start at it was rolled a 6
+            if(piece != null && dice.getSteps() == 6){ //A Piece is in the start and it was rolled a 6
                 return board.getPositionOfPiece(piece);
             }
             if(piece == null){
@@ -193,17 +209,19 @@ public class GameManager {
                 }
             }
         }
-        waitTime(500);
         return false;
     }
 
 
     public void waitTime(int time){
         try {
-            Thread.sleep(time);
+            //Thread.sleep(time);
+            TimeUnit.MILLISECONDS.sleep(time);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
 
     }
 

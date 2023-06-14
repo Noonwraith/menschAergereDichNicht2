@@ -5,6 +5,7 @@ import Controls.Control;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Debug {
     private JsonHandler jsonHandler = new JsonHandler();
@@ -39,7 +40,7 @@ public class Debug {
                 else {
                     //Waits 500 ms for the next move
                     try {
-                        Thread.sleep(10);
+                        TimeUnit.MILLISECONDS.sleep(10);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

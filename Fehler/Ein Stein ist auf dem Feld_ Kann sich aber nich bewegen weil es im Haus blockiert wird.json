@@ -1,0 +1,4904 @@
+[
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      37.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      37.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      37.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      53.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      53.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      61.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      70.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      70.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      67.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      67.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      83.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      94.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      94.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      52.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      52.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      116.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      116.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      116.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      116.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      104.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      104.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      75.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      75.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      104.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      104.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      70.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      57.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      57.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      93.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      93.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      59.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      59.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      28.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      28.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      47.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      16.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      16.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      53.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      53.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      39.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      76.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      54.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      94.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      94.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      74.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      17.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      65.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      105.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      50.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      75.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      75.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      52.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      52.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      52.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      71.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      73.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      103.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      37.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      37.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      70.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      70.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      55.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      26.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      72.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      51.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      68.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      115.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      69.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      48.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      44.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      1.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      92.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      15.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      45.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      81.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      -1.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      46.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      38.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      28.0
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      28.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5.0
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      66
+    ]
+  }
+]

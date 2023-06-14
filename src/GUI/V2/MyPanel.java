@@ -241,7 +241,7 @@ public class MyPanel extends JPanel {
         }
         else if(number == -1){}
         else {
-            System.out.println("Panel: set Dice");
+            //System.out.println("Panel: set Dice");
             allFields[dice].setText(String.valueOf(number));
         }
     }

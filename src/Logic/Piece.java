@@ -121,9 +121,9 @@ public class Piece {
         else if(currentPosition <= 56){//Can leave the start
             futurePosition = 10*color;
         }
-        else if(currentPosition >= 56){ //Moves around the house
+        else if(currentPosition >= 56){ //Moves in the house
             futurePosition = currentPosition+steps;
-            if(futurePosition >= ((color*4+56)+3)){//When the futurePosition is higher than the house((color*4+56)+3)
+            if(futurePosition > ((color*4+56)+3)){//When the futurePosition is higher than the house((color*4+56)+3)
                 System.out.println("Piece: The futurePosition is higher than the house.");
                 futurePosition = -1;
             }

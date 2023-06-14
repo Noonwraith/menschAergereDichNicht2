@@ -95,6 +95,10 @@ public class Control {
         panel.setDiceNumber(0);
     }
 
+    public void setDice(int steps){
+        panel.setDiceNumber(steps);
+    }
+
 
     public void removeAllX(){
         panel.removeAllX();
