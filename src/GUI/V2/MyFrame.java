@@ -22,8 +22,8 @@ public class MyFrame extends JFrame {
         this.setJMenuBar(setUpMenuBar());
         this.add(panel);
         pack();
-        this.setSize(boardSize, boardSize);
-        this.setResizable(false);
+        //this.setSize(boardSize, boardSize);
+        //this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
