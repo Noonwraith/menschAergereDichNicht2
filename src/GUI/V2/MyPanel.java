@@ -12,6 +12,7 @@ public class MyPanel extends JPanel {
 
     private Control control;
     private GridBagLayout gridBagLayout;
+    GridBagConstraints gbc;
 
     private int boardSize = 1000;
     private int buttonSize = 74;//(boardSize/rows)-buttonGab*2;
@@ -19,7 +20,6 @@ public class MyPanel extends JPanel {
     private static final int cols = rows;
     private static final int buttonGab = 5;
     private static final int preferrdSize = (buttonSize+buttonGab)*rows;
-    GridBagConstraints gbc;
 
     private Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
     private Color backgroundColor = Color.GRAY;
