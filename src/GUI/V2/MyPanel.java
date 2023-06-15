@@ -18,6 +18,7 @@ public class MyPanel extends JPanel {
     private static final int rows = 11;
     private static final int cols = rows;
     private static final int buttonGab = 5;
+    private static final int preferrdSize = (buttonSize+buttonGab)*rows;
     GridBagConstraints gbc;
 
     private Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
@@ -50,6 +51,11 @@ public class MyPanel extends JPanel {
         setUpPath(false);
         setUpDice(Color.BLACK);
         addActionListenerToSelectableFields();
+    }
+
+    @Override
+    public Dimension getPreferredSize(){
+        return new Dimension(preferrdSize, preferrdSize);
     }
 
     /*
