@@ -92,11 +92,11 @@ public class Control {
     }
 
 
-    public void playerWin(int player){
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" win this Game!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    public void playerWin(int player, int place){
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" has the "+place+" place!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
-    public void saveDiceNumberinDebug(int number){
+    public void saveDiceNumberInDebug(int number){
         debug.addMethode("throwDice", number);
     }
 

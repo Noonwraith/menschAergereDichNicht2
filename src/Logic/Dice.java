@@ -23,7 +23,7 @@ public class Dice {
                 steps = debugSteps;
             }
 
-            control.saveDiceNumberinDebug(steps);
+            control.saveDiceNumberInDebug(steps);
 
             return steps;
         }
