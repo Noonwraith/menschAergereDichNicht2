@@ -22,6 +22,8 @@ public class GameManager {
     private int currentPlayer = 0;
     private int numbersOfPlayer;
 
+    private int playerRoll3Times = 3;
+
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
     private int[] winningSequence = new int[4];
@@ -138,7 +140,24 @@ public class GameManager {
                 /*control.clearDice();
                 System.out.println("Wait");
                 waitTime(1000);*/
-                nextPlayer();
+
+
+                //--------------------------------------For test with old Issues comment next out--------------------------------
+                //playerRoll3Times = 1;
+
+
+                if(playerRoll3Times == 1) {
+                    playerRoll3Times = 3;
+                    nextPlayer();
+                }
+                else{
+                    dice.unlockDice();
+                    control.removeAllX();
+                    playerRoll3Times--;
+                    System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
+                }
+
+
             }
             else if (goOutPosition != 0) {
                 System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
