@@ -51,6 +51,9 @@ public class GameManager {
 
                 int code = players[color].clickOnPiece(piece);
                 if (code == 1) {
+                    if(playerWin()){
+                        control.playerWin(currentPlayer);
+                    }
                     nextPlayer();
                     return true;
                 } else if (code == -1) {
@@ -143,7 +146,7 @@ public class GameManager {
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
                 control.setDice(steps);
-                waitTime(500);
+                waitTime(100);
                 control.clearDice();
                 nextPlayer();
                 return -1;
@@ -217,6 +220,17 @@ public class GameManager {
         }
         return false;
     }
+
+    public boolean playerWin(){
+        for (int i=0; i<4;i++){
+            //System.out.println("GM: Piece: "+board.getHouse()[currentPlayer*4+i]);
+            if(board.getHouse()[currentPlayer*4+i] == null){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
     public void waitTime(int time){
