@@ -140,7 +140,12 @@ public class GameManager {
                 /*control.clearDice();
                 System.out.println("Wait");
                 waitTime(1000);*/
-                //--------------------------------------For test with old Issues comment--------------------------------
+
+
+                //--------------------------------------For test with old Issues comment next out--------------------------------
+                //playerRoll3Times = 1;
+
+
                 if(playerRoll3Times == 1) {
                     playerRoll3Times = 3;
                     nextPlayer();
@@ -151,7 +156,6 @@ public class GameManager {
                     playerRoll3Times--;
                     System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
                 }
-                //---------------------------------------^^^^^^^^^------------------------------------------------------
 
 
             }
