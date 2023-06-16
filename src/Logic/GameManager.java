@@ -143,7 +143,7 @@ public class GameManager {
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
                 control.setDice(steps);
-                waitTime(1000);
+                waitTime(500);
                 control.clearDice();
                 nextPlayer();
                 return -1;

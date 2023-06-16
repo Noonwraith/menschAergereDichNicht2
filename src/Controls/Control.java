@@ -107,6 +107,7 @@ public class Control {
 
 
     public void removeAllX(){
+        System.out.println("Control: Remove all X");
         panel.removeAllX();
     }
 

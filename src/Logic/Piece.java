@@ -57,8 +57,6 @@ public class Piece {
             control.movePiece(futurePosition, color);
 
 
-            isSelected = false;//---------------------------------------------------------Zum Debuggen auskommentiern. Dann muss man es nicht zweimal anklicken.
-            return true;
         }
         else{
             if(pieceOnFuturePosition.getColor() == this.color){ //On this Position stands Piece from the same Color
@@ -78,10 +76,12 @@ public class Piece {
                 control.movePiece(futurePosition, color);
                 control.movePiece(cickPieceBoardPosition, pieceOnFuturePosition.getColor());
 
-                return true;
+                //return true;
             }
         }
-
+        //System.out.println("Piece: Set selected after Move to false.");
+        isSelected = false;
+        return true;
     }
 
     /**
@@ -99,16 +99,17 @@ public class Piece {
             if (futurePosition > board.getField().length-1) {
                 futurePosition -= board.getField().length;
             }
-            if(futurePosition > color*10-1 && currentPosition <= color*10-1 || color == 0 && futurePosition <= 10 && currentPosition >= 32){
+            if(color != 0 && futurePosition > color*10-1 && currentPosition <= color*10-1 || color == 0 && futurePosition <= 10 && currentPosition >= 32){
                 //(steps-(currentPosition-(color*10-1))) -> gibt an wie viele Felder in das Haus gegangen werden.
-                int stepsInHouse = (steps-((color*10-1)-currentPosition))-1;
+                int stepsInHouse = (steps-((color*10-1)-currentPosition));
+
                 if(color == 0){
                     stepsInHouse -= 40;
                 }
                 System.out.println("Piece: steps in House: "+stepsInHouse);
                 if(stepsInHouse <= 4){
                     //System.out.println("Piece: Piece can go in house: "+stepsInHouse);
-                    futurePosition = color*4+56+stepsInHouse;
+                    futurePosition = color*4+55+stepsInHouse;
                     //System.out.println("Piece: last Position : "+currentPosition);
                     //System.out.println("Piece: nextPosition: "+futurePosition);
                 }

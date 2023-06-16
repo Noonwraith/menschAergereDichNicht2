@@ -242,12 +242,12 @@ public class MyPanel extends JPanel {
 
     public void setDiceNumber(int number){
         if(number == 0) {
-            System.out.println("Panel: Rest Dice");
+            //System.out.println("Panel: Rest Dice");
             allFields[dice].setText("");
         }
         else if(number == -1){}
         else {
-            System.out.println("Panel: set Dice");
+            //System.out.println("Panel: set Dice");
             allFields[dice].setText(String.valueOf(number));
         }
     }
