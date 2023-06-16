@@ -2,14 +2,17 @@ package GUI.V2;
 import Controls.Control;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame {
 
     private MyPanel panel;
-
     private JDialog jDialog = new JDialog();
+    private Control control;
 
     public MyFrame(Control control){
+        this.control = control;
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new MyPanel(control);
 
@@ -20,7 +23,6 @@ public class MyFrame extends JFrame {
         this.setJMenuBar(setUpMenuBar());
         this.add(panel);
         pack();
-        //this.setSize(boardSize, boardSize);
         //this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -92,8 +94,24 @@ public class MyFrame extends JFrame {
     private JMenu setUpMenuGame(){
         JMenu jMenu = new JMenu("Game");
         jMenu.add(new JMenuItem("New Game"));
+        jMenu.add(addJMenuItemNextPlayer());
         return jMenu;
     }
+
+    private JMenuItem addJMenuItemNextPlayer(){
+        JMenuItem jMenuItem = new JMenuItem("Next Player");
+        jMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                control.nextPlayer();
+            }
+        });
+        return jMenuItem;
+    }
+
+
+
+
 
     public MyPanel getPanel() {
         return panel;

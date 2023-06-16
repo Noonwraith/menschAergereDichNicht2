@@ -123,4 +123,8 @@ public class Control {
     public void setDebugOn(boolean debugOn) {
         this.debugOn = debugOn;
     }
+
+    public void nextPlayer(){
+        gameManager.nextPlayer();
+    }
 }
