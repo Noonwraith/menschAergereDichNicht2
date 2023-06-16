@@ -40,7 +40,7 @@ public class MyPanel extends JPanel {
         preferredSize = (buttonSize+buttonGab)*rows;
          */
 
-        preferredSize = calculateScreenHeight()-200;
+        preferredSize = (int) (calculateScreenHeight()-(calculateScreenHeight()*0.15));
         buttonSize = (preferredSize/rows)-buttonGab;
 
 
@@ -65,10 +65,10 @@ public class MyPanel extends JPanel {
         return new Dimension(preferredSize, preferredSize);
     }
 
-    public int calculateScreenHeight(){
+    public double calculateScreenHeight(){
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double height = screenSize.getHeight();
-        return (int) height;
+        return height;
     }
 
 
