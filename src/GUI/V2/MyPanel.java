@@ -14,12 +14,11 @@ public class MyPanel extends JPanel {
     private GridBagLayout gridBagLayout;
     GridBagConstraints gbc;
 
-    //private int boardSize = 700;
-    private static int buttonSize = 50;//(boardSize/rows)-buttonGab*2;
     private static final int rows = 11;
     private static final int cols = rows;
     private static final int buttonGab = 5;
-    private static final int preferrdSize = (buttonSize+buttonGab)*rows;
+    private static int buttonSize ;
+    private static int preferredSize;
 
     private Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
     private Color backgroundColor = Color.GRAY;
@@ -36,6 +35,14 @@ public class MyPanel extends JPanel {
 
     public MyPanel(Control control){
         this.control = control;
+        /*
+        buttonSize = calculateButtonSizeRelativeToScreen();
+        preferredSize = (buttonSize+buttonGab)*rows;
+         */
+
+        preferredSize = calculateScreenHeight()-200;
+        buttonSize = (preferredSize/rows)-buttonGab;
+
 
         gridBagLayout = new GridBagLayout();
         this.setLayout(gridBagLayout);
@@ -55,8 +62,15 @@ public class MyPanel extends JPanel {
 
     @Override
     public Dimension getPreferredSize(){
-        return new Dimension(preferrdSize, preferrdSize);
+        return new Dimension(preferredSize, preferredSize);
     }
+
+    public int calculateScreenHeight(){
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double height = screenSize.getHeight();
+        return (int) height;
+    }
+
 
     /*
     @Override
