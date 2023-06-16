@@ -1,5 +1,7 @@
 package Logic;
 
+import Controls.Control;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,14 +14,16 @@ public class Dice {
 
 
 
-    public int throwsDice(int debugSteps){
+    public int throwsDice(int debugSteps, Control control){
         if(!lock) {
             lock = true;
             Random random = new Random();
             steps = random.nextInt(6) + 1;
-            if(debugSteps != -1){
+            if(debugSteps != 0){// If it does not come from the GUI
                 steps = debugSteps;
             }
+
+            control.saveDiceNumberinDebug(steps);
 
             return steps;
         }

@@ -186,7 +186,7 @@ public class MyPanel extends JPanel {
         ActionListener diceListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                control.throwDice(-1);
+                control.throwDice(0); //0 stands for no Debug mode
                 /*int steps = control.throwDice(-1);
                 if(steps != -1)
                     allFields[dice].setText(String.valueOf(steps));*/
@@ -247,7 +247,7 @@ public class MyPanel extends JPanel {
         }
         else if(number == -1){}
         else {
-            //System.out.println("Panel: set Dice");
+            System.out.println("Panel: set Dice");
             allFields[dice].setText(String.valueOf(number));
         }
     }

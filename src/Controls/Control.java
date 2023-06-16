@@ -78,7 +78,8 @@ public class Control {
     public void throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
         //System.out.println("Control: Dice throw: "+steps);
-        debug.addMethode("throwDice", steps);
+
+        //debug.addMethode("throwDice", steps);
 
         panel.setDiceNumber(steps);
 
@@ -88,6 +89,10 @@ public class Control {
         System.out.println("Control: Click on Field: "+field+" position: "+translate.GuiPositionToBoardPosition(field));
         debug.addMethode("fieldSelected", field);
         gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
+    }
+
+    public void saveDiceNumberinDebug(int number){
+        debug.addMethode("throwDice", number);
     }
 
 

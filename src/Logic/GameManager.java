@@ -42,7 +42,7 @@ public class GameManager {
      * Checks if the piece has been moved.
      * @param position
      */
-    public void clickOnPiece(int position){
+    public boolean clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
         //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
@@ -52,6 +52,7 @@ public class GameManager {
                 int code = players[color].clickOnPiece(piece);
                 if (code == 1) {
                     nextPlayer();
+                    return true;
                 } else if (code == -1) {
 
 
@@ -77,7 +78,7 @@ public class GameManager {
             System.out.println("Gamemanager: No Piece selected");
         }
 
-
+        return false;
     }
 
     /**
@@ -85,7 +86,7 @@ public class GameManager {
      * Checks if the player has thrown the dice before
      */
     public int throwsDice(int debugSteps){
-        int steps = dice.throwsDice(debugSteps);;
+        int steps = dice.throwsDice(debugSteps, control);;
         System.out.println("Gamemanager: Dice throw: "+steps);
 
         if(steps != -1) {
@@ -114,6 +115,10 @@ public class GameManager {
                 return steps;
             }//End: Looks which of the players rolls the highest number
 
+
+
+
+
             players[currentPlayer].setSteps(steps);
 
             int goOutPosition = playerCanGoOut();
@@ -126,9 +131,10 @@ public class GameManager {
             }
             else if (goOutPosition != 0) {
                 System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
-                clickOnPiece(goOutPosition);
                 clickOnPiece(goOutPosition);//is called twice, so that it is marked once and then moved.
-                return -1;
+                if(clickOnPiece(goOutPosition)) {//Only if it could be moved
+                    return -1;
+                }
 
             }
 
