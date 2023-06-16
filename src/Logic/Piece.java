@@ -119,7 +119,7 @@ public class Piece {
                 }
             }
         }
-        else if(currentPosition <= 56){//Can leave the start
+        else if(currentPosition < 56){//Can leave the start
             futurePosition = 10*color;
         }
         else if(currentPosition >= 56){ //Moves in the house
