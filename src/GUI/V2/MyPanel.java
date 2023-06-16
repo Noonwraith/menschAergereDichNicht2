@@ -45,8 +45,14 @@ public class MyPanel extends JPanel {
         this.setBackground(Color.LIGHT_GRAY);
 
         setUpButtons();
+
+
     }
 
+    /**
+     * Overwrites getPreferredSize
+     * @return
+     */
     @Override
     public Dimension getPreferredSize(){
         return new Dimension(preferredSize, preferredSize);
@@ -179,7 +185,7 @@ public class MyPanel extends JPanel {
     }
 
     /**
-     *
+     * customizes entry Fields
      * @param onlySetBorder
      */
     private void setUpEntryFields(boolean onlySetBorder){
@@ -196,6 +202,10 @@ public class MyPanel extends JPanel {
         }
     }
 
+    /**
+     * customizes path fields
+     * @param onlySetBorder
+     */
     private void setUpPath(boolean onlySetBorder){
         for (int pathField : pathFields) {
             if(onlySetBorder == false) {
@@ -207,6 +217,11 @@ public class MyPanel extends JPanel {
         }
     }
 
+    /**
+     * customizes dice field
+     * and adds action listener by calling following method {@link #addActionListenerToSelectableFields()}
+     * @param borderColor
+     */
     private void setUpDice(Color borderColor){
         allButtons[dice].setEnabled(true);
         allButtons[dice].setVisible(true);
@@ -225,19 +240,18 @@ public class MyPanel extends JPanel {
         allButtons[dice].addActionListener(diceListener);
     }
 
+    /**
+     * adds an action listener to {@link #selectableFields}
+     * action listener calls {@link #removeAllX()} and {@link Control#fieldSelected(int)}
+     * and sets the border of the selected button to black
+     */
     public void addActionListenerToSelectableFields(){
         for(int i=0; i<selectableFields.length; i++){
             int finalI = i;
             ActionListener fieldListener = new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    setUpHomes(true);
-                    setUpEntryFields(true);
-                    setUpPath(true);
-                    for (int x = 0; x< allButtons.length; x++){
-                        if(x != dice)
-                        allButtons[x].setText("");
-                    }
+                    removeAllX();
                     control.fieldSelected(selectableFields[finalI]); //Method for Controls
                     allButtons[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
                 }
@@ -308,5 +322,4 @@ public class MyPanel extends JPanel {
             allButtons[dice].setText(String.valueOf(number));
         }
     }
-
 }
