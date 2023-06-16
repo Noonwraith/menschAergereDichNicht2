@@ -24,6 +24,7 @@ public class GameManager {
 
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
+    private int[] winningSequence = new int[4];
 
     public GameManager(int numbersOfPlayer, Control control){
         this.numbersOfPlayer = numbersOfPlayer;
@@ -52,7 +53,14 @@ public class GameManager {
                 int code = players[color].clickOnPiece(piece);
                 if (code == 1) {
                     if(playerWin()){
-                        control.playerWin(currentPlayer);
+                        int place = 0;
+                        System.out.println("Control: winningSequence: "+ Arrays.toString(winningSequence));
+                        for(int i=0;i< winningSequence.length;i++){
+                            if(winningSequence[i] == currentPlayer){
+                                place = i+1;
+                            }
+                        }
+                        control.playerWin(currentPlayer, place);
                     }
                     nextPlayer();
                     return true;
@@ -228,7 +236,13 @@ public class GameManager {
                 return false;
             }
         }
-        return true;
+        for(int i=0;i<winningSequence.length;i++){
+            if(winningSequence[i] == 0){
+                winningSequence[i] = currentPlayer;
+                return true;
+            }
+        }
+        return false;
     }
 
 
