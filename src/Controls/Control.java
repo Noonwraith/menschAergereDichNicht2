@@ -96,6 +96,7 @@ public class Control {
     }
 
     public void setDice(int steps){
+        System.out.println("Control: setDice: "+steps);
         panel.setDiceNumber(steps);
     }
 

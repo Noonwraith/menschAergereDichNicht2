@@ -14,8 +14,8 @@ public class MyPanel extends JPanel {
     private GridBagLayout gridBagLayout;
     GridBagConstraints gbc;
 
-    private int boardSize = 1000;
-    private int buttonSize = 74;//(boardSize/rows)-buttonGab*2;
+    //private int boardSize = 700;
+    private static int buttonSize = 50;//(boardSize/rows)-buttonGab*2;
     private static final int rows = 11;
     private static final int cols = rows;
     private static final int buttonGab = 5;

@@ -7,7 +7,7 @@ public class MyFrame extends JFrame {
 
     private MyPanel panel;
 
-    private int boardSize = 1000;
+    private int boardSize = 650;
 
     private JDialog jDialog = new JDialog();
 
