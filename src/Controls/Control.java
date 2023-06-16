@@ -91,6 +91,11 @@ public class Control {
         gameManager.clickOnPiece(translate.GuiPositionToBoardPosition(field));
     }
 
+
+    public void playerWin(int player){
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" win this Game!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    }
+
     public void saveDiceNumberinDebug(int number){
         debug.addMethode("throwDice", number);
     }
