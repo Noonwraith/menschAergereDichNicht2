@@ -98,7 +98,7 @@ public class MyPanel extends JPanel {
     /**
      * Sets a Button on every field
      * Calls following methods afterwards to customise buttons:
-     * {@link #setUpEmptyFields()}
+     * {@link #removeButtons()}
      * {@link #setUpStarts()}
      * {@link #setUpHomes(boolean)}
      * {@link #setUpEntryFields(boolean)}
@@ -120,7 +120,7 @@ public class MyPanel extends JPanel {
                 x++;
             }
         }
-        setUpEmptyFields();
+        removeButtons();
         setUpStarts();
         setUpHomes(false);
         setUpEntryFields(false);
@@ -141,12 +141,15 @@ public class MyPanel extends JPanel {
     /**
      * removes Buttons form coordinates {@link #fieldsWithoutButton}
      */
-    private void setUpEmptyFields(){
+    private void removeButtons(){
         for (int emptyField : fieldsWithoutButton) {
             this.remove(allButtons[emptyField]);
         }
     }
 
+    /**
+     * customizes starting fields
+     */
     private void setUpStarts(){
         for (int i=0; i<startFields.length; i++){
             for (int j=0; j<startFields[i].length; j++){
@@ -158,6 +161,10 @@ public class MyPanel extends JPanel {
         }
     }
 
+    /**
+     * customizes home fields
+     * @param onlySetBorder
+     */
     private void setUpHomes(boolean onlySetBorder){
         for (int i=0; i<homeFields.length; i++){
             for (int j=0; j<homeFields[i].length; j++){
@@ -170,6 +177,11 @@ public class MyPanel extends JPanel {
             }
         }
     }
+
+    /**
+     *
+     * @param onlySetBorder
+     */
     private void setUpEntryFields(boolean onlySetBorder){
         for (int i = 0; i< entryFields.length; i++){
             for (int j = 0; j< entryFields[i].length; j++){
