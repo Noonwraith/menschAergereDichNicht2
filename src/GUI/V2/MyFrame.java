@@ -1,16 +1,12 @@
 package GUI.V2;
 import Controls.Control;
 import com.formdev.flatlaf.FlatDarculaLaf;
-import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame {
 
-    private MyPanel panel;
-    private JDialog jDialog = new JDialog();
-    private Control control;
+    private final MyPanel panel;
+    private final Control control;
 
     public MyFrame(Control control){
         this.control = control;
@@ -19,7 +15,7 @@ public class MyFrame extends JFrame {
 
         setUpLookAndFeel();
 
-        this.setTitle("Mensche ärgere Dich nicht");
+        this.setTitle("Mensch ärgere Dich nicht");
 
         this.setJMenuBar(setUpMenuBar());
         this.add(panel);
@@ -81,8 +77,7 @@ public class MyFrame extends JFrame {
     }
 
     private JMenu setUpMenuFile(){
-        JMenu jMenu = new JMenu("File");
-        return  jMenu;
+        return new JMenu("File");
     }
 
     private JMenu setUpJMenuView(){
@@ -100,12 +95,7 @@ public class MyFrame extends JFrame {
 
     private JMenuItem addJMenuItemNextPlayer(){
         JMenuItem jMenuItem = new JMenuItem("Next Player");
-        jMenuItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                control.nextPlayer();
-            }
-        });
+        jMenuItem.addActionListener(e -> control.nextPlayer());
         return jMenuItem;
     }
 

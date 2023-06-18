@@ -45,8 +45,6 @@ public class MyPanel extends JPanel {
         this.setBackground(Color.LIGHT_GRAY);
 
         setUpButtons();
-
-
     }
 
     /**
@@ -60,8 +58,7 @@ public class MyPanel extends JPanel {
 
     public double calculateScreenHeight(){
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        double height = screenSize.getHeight();
-        return height;
+        return screenSize.getHeight();
     }
 
 
@@ -174,7 +171,7 @@ public class MyPanel extends JPanel {
     private void setUpHomes(boolean onlySetBorder){
         for (int i=0; i<homeFields.length; i++){
             for (int j=0; j<homeFields[i].length; j++){
-                if(onlySetBorder == false) {
+                if(!onlySetBorder) {
                     allButtons[homeFields[i][j]].setEnabled(true);
                     allButtons[homeFields[i][j]].setVisible(true);
                     allButtons[homeFields[i][j]].setBackground(backgroundColor);
@@ -191,7 +188,7 @@ public class MyPanel extends JPanel {
     private void setUpEntryFields(boolean onlySetBorder){
         for (int i = 0; i< entryFields.length; i++){
             for (int j = 0; j< entryFields[i].length; j++){
-                if(onlySetBorder == false) {
+                if(!onlySetBorder) {
                     allButtons[entryFields[i][j]].setEnabled(true);
                     allButtons[entryFields[i][j]].setVisible(true);
                     allButtons[entryFields[i][j]].setBackground(backgroundColor);
@@ -208,7 +205,7 @@ public class MyPanel extends JPanel {
      */
     private void setUpPath(boolean onlySetBorder){
         for (int pathField : pathFields) {
-            if(onlySetBorder == false) {
+            if(!onlySetBorder) {
                 allButtons[pathField].setEnabled(true);
                 allButtons[pathField].setVisible(true);
                 allButtons[pathField].setBackground(backgroundColor);
@@ -228,14 +225,11 @@ public class MyPanel extends JPanel {
         allButtons[dice].setBackground(backgroundColor);
         allButtons[dice].setBorder(new LineBorder(borderColor));
         allButtons[dice].setFont(new Font("Bodoni MT Black", Font.PLAIN, 40));
-        ActionListener diceListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                control.throwDice(0); //0 stands for no Debug mode
-                /*int steps = control.throwDice(-1);
-                if(steps != -1)
-                    allFields[dice].setText(String.valueOf(steps));*/
-            }
+        ActionListener diceListener = e -> {
+            control.throwDice(0); //0 stands for no Debug mode
+            /*int steps = control.throwDice(-1);
+            if(steps != -1)
+                allFields[dice].setText(String.valueOf(steps));*/
         };
         allButtons[dice].addActionListener(diceListener);
     }
@@ -248,13 +242,10 @@ public class MyPanel extends JPanel {
     public void addActionListenerToSelectableFields(){
         for(int i=0; i<selectableFields.length; i++){
             int finalI = i;
-            ActionListener fieldListener = new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    removeAllX();
-                    control.fieldSelected(selectableFields[finalI]); //Method for Controls
-                    allButtons[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
-                }
+            ActionListener fieldListener = e -> {
+                removeAllX();
+                control.fieldSelected(selectableFields[finalI]); //Method for Controls
+                allButtons[selectableFields[finalI]].setBorder(new LineBorder(Color.BLACK, borderThickness)); //select
             };
             allButtons[selectableFields[i]].addActionListener(fieldListener);
         }
