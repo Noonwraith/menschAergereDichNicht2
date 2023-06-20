@@ -313,6 +313,7 @@ public class MyPanel extends JPanel {
         else {
             //System.out.println("Panel: set Dice");
             allButtons[dice].setText(String.valueOf(number));
+            lastDiceThrowJLabel[control.getCurrentPlayerFromGameManager()].setText("Last Throw: "+number);
         }
     }
 
@@ -350,7 +351,7 @@ public class MyPanel extends JPanel {
             jLabel.setHorizontalAlignment(SwingConstants.LEFT);
         jLabel.setVerticalAlignment(SwingConstants.CENTER);
         jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, 20));
-        jLabel.setText("Fische");
+        jLabel.setText("Last Throw: 0");
         return jLabel;
     }
 }

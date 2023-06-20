@@ -127,4 +127,8 @@ public class Control {
     public void nextPlayer(){
         gameManager.nextPlayer();
     }
+
+    public int getCurrentPlayerFromGameManager(){
+        return gameManager.getCurrentPlayer();
+    }
 }
