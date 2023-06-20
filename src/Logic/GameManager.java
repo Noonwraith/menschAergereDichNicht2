@@ -129,7 +129,7 @@ public class GameManager {
                         }
                     }
                     System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
-                    sendMessageToPlayer("You start", currentPlayer);
+                    sendMessageToPlayer("you have to start", currentPlayer);
                     control.playerTurn(currentPlayer);
                     //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;

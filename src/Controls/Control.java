@@ -104,6 +104,7 @@ public class Control {
         }
         sendMessageToPlayer("Place: "+place, player);
          */
+
         sendMessageToPlayer("You got "+place+" place", player);
     }
 
