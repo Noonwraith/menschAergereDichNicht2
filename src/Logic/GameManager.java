@@ -47,6 +47,7 @@ public class GameManager {
      */
     public boolean clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
+
         //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
             int color = piece.getColor();
@@ -64,7 +65,7 @@ public class GameManager {
                         }
                         control.playerWin(currentPlayer, place);
                     }
-                    nextPlayer();
+                    nextPlayer(false);
                     return true;
                 } else if (code == -1) {
 
@@ -90,12 +91,14 @@ public class GameManager {
                     sendMessageToPlayer("not yet rolled", currentPlayer);
                 }
                 else {
+                    players[currentPlayer].restAllSelects();
                     System.out.println("Gamemanager: Wrong color");
                     sendMessageToPlayer("wrong color", currentPlayer);
                 }
             }
         }
         else {
+            players[currentPlayer].restAllSelects();
             System.out.println("Gamemanager: No Piece selected");
             sendMessageToPlayer("no piece selected", currentPlayer);
         }
@@ -106,6 +109,7 @@ public class GameManager {
     /**
      * Comes from the GUI. Throw the Dice and select the current Player.
      * Checks if the player has thrown the dice before
+     * Looks which player can start.
      */
     public int throwsDice(int debugSteps){
         int steps = dice.throwsDice(debugSteps, control);;
@@ -133,7 +137,7 @@ public class GameManager {
                 }
 
                 else {
-                    nextPlayer();
+                    nextPlayer(false);
                 }
                 return steps;
             }//End: Looks which of the players rolls the highest number
@@ -158,7 +162,7 @@ public class GameManager {
 
                 if(playerRoll3Times == 1) {
                     playerRoll3Times = 3;
-                    nextPlayer();
+                    nextPlayer(false);
                 }
                 else{
                     dice.unlockDice();
@@ -187,7 +191,7 @@ public class GameManager {
                 control.setDice(steps);
                 waitTime(100);
                 control.clearDice();
-                nextPlayer();
+                nextPlayer(false);
                 return -1;
             }
 
@@ -226,8 +230,13 @@ public class GameManager {
         return code;
     }
 
-    public void nextPlayer(){
-        if(dice.getSteps() != 6 || !startGame) {
+    /**
+     * Reset the next player and the Dice.
+     * inAnyCase is True when the player presses the next player button.
+     * @param inAnyCase
+     */
+    public void nextPlayer(boolean inAnyCase){
+        if(dice.getSteps() != 6 || !startGame || inAnyCase) {
             currentPlayer++;
             dice.unlockDice();
             if (currentPlayer == 4) {

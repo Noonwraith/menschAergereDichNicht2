@@ -138,7 +138,8 @@ public class Control {
     }
 
     public void nextPlayer(){
-        gameManager.nextPlayer();
+        debug.addMethode("nextPlayer");
+        gameManager.nextPlayer(true);
     }
 
     public int getCurrentPlayerFromGameManager(){

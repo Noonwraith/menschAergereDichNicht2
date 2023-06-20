@@ -58,6 +58,8 @@ public class Debug {
         }else if(methodName.equals("fieldSelected")){
             int x = convertParamsToInt(params[0]);
             control.fieldSelected(x);
+        }else if(methodName.equals("nextPlayer")){
+            control.nextPlayer();
         }
 
 
