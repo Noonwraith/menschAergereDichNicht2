@@ -71,7 +71,7 @@ public class GameManager {
 
                     control.removeAllX();
                     System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
-                    sendMessageToPlayer("choose another piece", currentPlayer);
+                    sendMessageToPlayer("choose a different piece", currentPlayer);
 
                     /*if(playerCanMove()) {
                         control.removeAllX();
@@ -87,7 +87,7 @@ public class GameManager {
             else {
                 if(color == currentPlayer){
                     System.out.println("GM: Not yet rolled");
-                    sendMessageToPlayer("not yet rolled", currentPlayer);
+                    sendMessageToPlayer("you didn't throw yet", currentPlayer);
                 }
                 else {
                     System.out.println("Gamemanager: Wrong color");
@@ -125,7 +125,7 @@ public class GameManager {
                         }
                     }
                     System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
-                    sendMessageToPlayer("This player starts.", currentPlayer);
+                    sendMessageToPlayer("You start", currentPlayer);
                     control.playerTurn(currentPlayer);
                     //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;
@@ -165,7 +165,7 @@ public class GameManager {
                     control.removeAllX();
                     playerRoll3Times--;
                     System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
-                    sendMessageToPlayer("You have "+playerRoll3Times+" rolls left", currentPlayer);
+                    sendMessageToPlayer("You have "+playerRoll3Times+" throws left", currentPlayer);
                 }
 
 
@@ -183,7 +183,7 @@ public class GameManager {
 
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
-                sendMessageToPlayer("No piece can move.", currentPlayer);
+                sendMessageToPlayer("you can't move a piece", currentPlayer);
                 control.setDice(steps);
                 waitTime(100);
                 control.clearDice();
@@ -194,7 +194,7 @@ public class GameManager {
         }
         else {
             System.out.println("Gamemanager: This player has already rolled the dice");
-            sendMessageToPlayer("Have already rolled.", currentPlayer);
+            sendMessageToPlayer("you already threw the dice", currentPlayer);
         }
 
         return steps;
@@ -241,7 +241,7 @@ public class GameManager {
             dice.unlockDice();
             control.removeAllX();
             System.out.println("Gamemanager(nextplayer): Throw again");
-            sendMessageToPlayer("Throw again", currentPlayer);
+            sendMessageToPlayer("throw again", currentPlayer);
         }
     }
 

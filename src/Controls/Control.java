@@ -31,7 +31,7 @@ public class Control {
         }
 
 
-        sendMessageToPlayer("Have already rolled.", 0);
+        sendMessageToPlayer("you already threw the dice.", 0);
 
     }
 
@@ -98,10 +98,13 @@ public class Control {
 
     public void playerWin(int player, int place){
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" has the "+place+" place!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        /*
         if(place == 1){
             sendMessageToPlayer("Player win", player);
         }
         sendMessageToPlayer("Place: "+place, player);
+         */
+        sendMessageToPlayer("You got "+place+" place", player);
     }
 
     public void saveDiceNumberInDebug(int number){
