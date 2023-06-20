@@ -33,6 +33,7 @@ public class MyPanel extends JPanel {
     private static final int dice = 60;
 
     private JLabel[] lastDiceThrowJLabel = new JLabel[4];
+    private JLabel[] messageToPlayerLabel = new JLabel[4];
 
     public MyPanel(Control control){
         this.control = control;
@@ -46,7 +47,9 @@ public class MyPanel extends JPanel {
         this.setBackground(Color.LIGHT_GRAY);
 
         setUpButtons();
-        setUpLastDiceThrowJLabel();
+        setUpLastDiceThrowJLabel("Last Throw: 0");
+        setUpMessageToPlayerLabel(" no Message inbox");
+        sendMessageToPlayer("Fische", 0);
     }
 
     /**
@@ -317,7 +320,33 @@ public class MyPanel extends JPanel {
         }
     }
 
-    private void setUpLastDiceThrowJLabel(){
+    private void setUpLastDiceThrowJLabel(String firstLabelText){
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.gridwidth = 2;
+        gbc.weightx = buttonGab;
+        gbc.weighty = buttonGab;
+
+        gbc.gridx = 2;
+        gbc.gridy = 0;
+        lastDiceThrowJLabel[0] = createJLabel(firstLabelText, SwingConstants.CENTER);
+        this.add(lastDiceThrowJLabel[0], gbc);
+
+        gbc.gridx = 7;
+        lastDiceThrowJLabel[1] = createJLabel(firstLabelText, SwingConstants.CENTER);
+        this.add(lastDiceThrowJLabel[1], gbc);
+
+        gbc.gridx = 2;
+        gbc.gridy = 10;
+        lastDiceThrowJLabel[3] = createJLabel(firstLabelText, SwingConstants.CENTER);
+        this.add(lastDiceThrowJLabel[3], gbc);
+
+        gbc.gridx = 7;
+        lastDiceThrowJLabel[2] = createJLabel(firstLabelText, SwingConstants.CENTER);
+        this.add(lastDiceThrowJLabel[2], gbc);
+
+    }
+
+    private void setUpMessageToPlayerLabel(String firstLabelMessage){
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 3;
         gbc.weightx = buttonGab;
@@ -325,33 +354,36 @@ public class MyPanel extends JPanel {
 
         gbc.gridx = 1;
         gbc.gridy = 2;
-        lastDiceThrowJLabel[0] = createJTextArea(false);
-        this.add(lastDiceThrowJLabel[0], gbc);
+        messageToPlayerLabel[0] = createJLabel(firstLabelMessage, SwingConstants.RIGHT);
+        this.add(messageToPlayerLabel[0], gbc);
 
         gbc.gridx = 7;
-        lastDiceThrowJLabel[1] = createJTextArea(true);
-        this.add(lastDiceThrowJLabel[1], gbc);
+        messageToPlayerLabel[1] = createJLabel(firstLabelMessage, SwingConstants.LEFT);
+        this.add(messageToPlayerLabel[1], gbc);
 
         gbc.gridx = 1;
-        gbc.gridy = 7;
-        lastDiceThrowJLabel[2] = createJTextArea(false);
-        this.add(lastDiceThrowJLabel[2], gbc);
+        gbc.gridy = 8;
+        messageToPlayerLabel[3] = createJLabel(firstLabelMessage, SwingConstants.RIGHT);
+        this.add(messageToPlayerLabel[3], gbc);
 
         gbc.gridx = 7;
-        lastDiceThrowJLabel[3] = createJTextArea(true);
-        this.add(lastDiceThrowJLabel[3], gbc);
+        messageToPlayerLabel[2] = createJLabel(firstLabelMessage, SwingConstants.LEFT);
+        this.add(messageToPlayerLabel[2], gbc);
 
     }
 
-    private JLabel createJTextArea(boolean rightAlignment){
+    public void sendMessageToPlayer(String message, int player){
+        if(player == -1)
+            return;
+        messageToPlayerLabel[player].setText(message);
+    }
+
+    private JLabel createJLabel(String labelText, int horizontalAlignment){
         JLabel jLabel = new JLabel();
-        if (rightAlignment)
-            jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-        else
-            jLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        jLabel.setHorizontalAlignment(horizontalAlignment);
         jLabel.setVerticalAlignment(SwingConstants.CENTER);
         jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, 20));
-        jLabel.setText("Last Throw: 0");
+        jLabel.setText(labelText);
         return jLabel;
     }
 }
