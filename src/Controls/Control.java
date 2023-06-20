@@ -26,9 +26,12 @@ public class Control {
         //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {
-            System.out.println("Control: Game is simulated\n");
+            System.out.println("Control: Game is simulated");
             debug.simulateGame();
         }
+
+
+        sendMessageToPlayer("Have already rolled.", 0);
 
     }
 
@@ -60,6 +63,7 @@ public class Control {
     public void playerTurn(int color){
         System.out.println("Control: --------------------------------------next Player------------------");
         System.out.println("Control: currentPlayer: "+color);
+
         panel.playerTurn(color);
     }
 
@@ -94,6 +98,10 @@ public class Control {
 
     public void playerWin(int player, int place){
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" has the "+place+" place!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        if(place == 1){
+            sendMessageToPlayer("Player win", player);
+        }
+        sendMessageToPlayer("Place: "+place, player);
     }
 
     public void saveDiceNumberInDebug(int number){
@@ -106,15 +114,20 @@ public class Control {
     }
 
     public void setDice(int steps){
-        System.out.println("Control: setDice: "+steps);
+        //System.out.println("Control: setDice: "+steps);
         panel.setDiceNumber(steps);
     }
 
 
     public void removeAllX(){
-        System.out.println("Control: Remove all X");
+        //System.out.println("Control: Remove all X");
         panel.removeAllX();
     }
+
+    public void sendMessageToPlayer(String msg, int player){
+        panel.sendMessageToPlayer(msg, player);
+    }
+
 
     public boolean isDebugOn(){
         return debugOn;

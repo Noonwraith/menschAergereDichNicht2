@@ -56,7 +56,7 @@ public class GameManager {
                 if (code == 1) {
                     if(playerWin()){
                         int place = 0;
-                        System.out.println("Control: winningSequence: "+ Arrays.toString(winningSequence));
+                        //System.out.println("Control: winningSequence: "+ Arrays.toString(winningSequence));
                         for(int i=0;i< winningSequence.length;i++){
                             if(winningSequence[i] == currentPlayer){
                                 place = i+1;
@@ -71,6 +71,7 @@ public class GameManager {
 
                     control.removeAllX();
                     System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
+                    sendMessageToPlayer("choose another piece", currentPlayer);
 
                     /*if(playerCanMove()) {
                         control.removeAllX();
@@ -84,11 +85,19 @@ public class GameManager {
                 }
             }
             else {
-                System.out.println("Gamemanager: Wrong color or not yet rolled.");
+                if(color == currentPlayer){
+                    System.out.println("GM: Not yet rolled");
+                    sendMessageToPlayer("not yet rolled", currentPlayer);
+                }
+                else {
+                    System.out.println("Gamemanager: Wrong color");
+                    sendMessageToPlayer("wrong color", currentPlayer);
+                }
             }
         }
         else {
             System.out.println("Gamemanager: No Piece selected");
+            sendMessageToPlayer("no piece selected", currentPlayer);
         }
 
         return false;
@@ -116,6 +125,7 @@ public class GameManager {
                         }
                     }
                     System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
+                    sendMessageToPlayer("This player starts.", currentPlayer);
                     control.playerTurn(currentPlayer);
                     //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;
@@ -155,6 +165,7 @@ public class GameManager {
                     control.removeAllX();
                     playerRoll3Times--;
                     System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
+                    sendMessageToPlayer("You have "+playerRoll3Times+" rolls left", currentPlayer);
                 }
 
 
@@ -172,6 +183,7 @@ public class GameManager {
 
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
+                sendMessageToPlayer("No piece can move.", currentPlayer);
                 control.setDice(steps);
                 waitTime(100);
                 control.clearDice();
@@ -182,6 +194,7 @@ public class GameManager {
         }
         else {
             System.out.println("Gamemanager: This player has already rolled the dice");
+            sendMessageToPlayer("Have already rolled.", currentPlayer);
         }
 
         return steps;
@@ -228,6 +241,7 @@ public class GameManager {
             dice.unlockDice();
             control.removeAllX();
             System.out.println("Gamemanager(nextplayer): Throw again");
+            sendMessageToPlayer("Throw again", currentPlayer);
         }
     }
 
@@ -273,10 +287,13 @@ public class GameManager {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
-
     }
+
+
+    public void sendMessageToPlayer(String msg, int player){
+        control.sendMessageToPlayer(msg, player);
+    }
+
 
     public int getCurrentPlayer() {
         return currentPlayer;
