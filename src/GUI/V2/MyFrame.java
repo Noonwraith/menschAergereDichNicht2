@@ -1,6 +1,7 @@
 package GUI.V2;
 import Controls.Control;
-import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.themes.FlatMacLightLaf;
+
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
@@ -20,7 +21,7 @@ public class MyFrame extends JFrame {
         this.setJMenuBar(setUpMenuBar());
         this.add(panel);
         pack();
-        //this.setResizable(false);
+        this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
@@ -62,7 +63,7 @@ public class MyFrame extends JFrame {
 
     private void setUpLookAndFeel(){
         try {
-            UIManager.setLookAndFeel(new FlatDarculaLaf());
+            UIManager.setLookAndFeel(new FlatMacLightLaf());
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }

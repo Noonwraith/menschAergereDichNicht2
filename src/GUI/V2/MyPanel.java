@@ -10,8 +10,7 @@ import java.awt.event.ActionListener;
 public class MyPanel extends JPanel {
 
     private final Control control;
-    private final GridBagLayout gridBagLayout;
-    private final GridBagConstraints gbc;
+    private final GridBagConstraints gbc = new GridBagConstraints();
 
     private static final int rows = 11;
     private static final int cols = rows;
@@ -41,9 +40,7 @@ public class MyPanel extends JPanel {
         preferredSize = (int) (calculateScreenHeight()-(calculateScreenHeight()*0.15));
         buttonSize = (preferredSize/rows)-buttonGab;
 
-        gridBagLayout = new GridBagLayout();
-        this.setLayout(gridBagLayout);
-        gbc = new GridBagConstraints();
+        this.setLayout(new GridBagLayout());
         this.setBackground(Color.LIGHT_GRAY);
 
         setUpButtons();
@@ -65,43 +62,6 @@ public class MyPanel extends JPanel {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         return screenSize.getHeight();
     }
-
-
-    /*
-    @Override
-    public final Dimension getPreferredSize() {
-        Dimension d = super.getPreferredSize();
-        Dimension prefSize = null;
-        Component c = getParent();
-        if (c == null) {
-            prefSize = new Dimension(
-                    (int)d.getWidth(),(int)d.getHeight());
-        } else if (c!=null &&
-                c.getWidth()>d.getWidth() &&
-                c.getHeight()>d.getHeight()) {
-            prefSize = c.getSize();
-        } else {
-            prefSize = d;
-        }
-        int w = (int) prefSize.getWidth();
-        int h = (int) prefSize.getHeight();
-        // the smaller of the two sizes
-        int s = (w>h ? h : w);
-        return new Dimension(s,s);
-    }
-
-    /*
-    @Override
-    public void paint(Graphics g) {
-        Dimension d = this.getSize();
-        if(d.height > d.width){
-            this.setSize(dA.width, d.width);
-        } else {
-            this.setSize(d.height, d.height);
-        }
-        super.paint(g);
-    }
-     */
 
     /**
      * Sets a Button on every field
@@ -136,15 +96,6 @@ public class MyPanel extends JPanel {
         setUpDice(Color.BLACK);
         addActionListenerToSelectableFields();
     }
-
-    /*
-    private void fillGrid(){
-        for(int i=0; i<allFields.length; i++){
-            allFields[i] = new JButton();
-            this.add(allFields[i]);
-        }
-    }
-     */
 
     /**
      * removes Buttons form coordinates {@link #fieldsWithoutButton}
@@ -199,7 +150,6 @@ public class MyPanel extends JPanel {
                     allButtons[entryFields[i][j]].setBackground(backgroundColor);
                 }
                 allButtons[entryFields[i][j]].setBorder(new LineBorder(playerColors[i], borderThickness));
-
             }
         }
     }
@@ -323,6 +273,7 @@ public class MyPanel extends JPanel {
     private void setUpLastDiceThrowJLabel(String firstLabelText){
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 2;
+        gbc.gridheight = 2;
         gbc.weightx = buttonGab;
         gbc.weighty = buttonGab;
 
@@ -343,33 +294,32 @@ public class MyPanel extends JPanel {
         gbc.gridx = 7;
         lastDiceThrowJLabel[2] = createJLabel(firstLabelText, SwingConstants.CENTER);
         this.add(lastDiceThrowJLabel[2], gbc);
-
     }
 
     private void setUpMessageToPlayerLabel(String firstLabelMessage){
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridwidth = 3;
+        gbc.gridwidth = 4;
+        gbc.gridheight = 2;
         gbc.weightx = buttonGab;
         gbc.weighty = buttonGab;
 
-        gbc.gridx = 1;
+        gbc.gridx = 0;
         gbc.gridy = 2;
-        messageToPlayerLabel[0] = createJLabel(firstLabelMessage, SwingConstants.RIGHT);
+        messageToPlayerLabel[0] = createJLabel(firstLabelMessage, SwingConstants.CENTER);
         this.add(messageToPlayerLabel[0], gbc);
 
         gbc.gridx = 7;
-        messageToPlayerLabel[1] = createJLabel(firstLabelMessage, SwingConstants.LEFT);
+        messageToPlayerLabel[1] = createJLabel(firstLabelMessage, SwingConstants.CENTER);
         this.add(messageToPlayerLabel[1], gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 8;
-        messageToPlayerLabel[3] = createJLabel(firstLabelMessage, SwingConstants.RIGHT);
+        gbc.gridx = 0;
+        gbc.gridy = 7;
+        messageToPlayerLabel[3] = createJLabel(firstLabelMessage, SwingConstants.CENTER);
         this.add(messageToPlayerLabel[3], gbc);
 
         gbc.gridx = 7;
-        messageToPlayerLabel[2] = createJLabel(firstLabelMessage, SwingConstants.LEFT);
+        messageToPlayerLabel[2] = createJLabel(firstLabelMessage, SwingConstants.CENTER);
         this.add(messageToPlayerLabel[2], gbc);
-
     }
 
     public void sendMessageToPlayer(String message, int player){
@@ -386,4 +336,40 @@ public class MyPanel extends JPanel {
         jLabel.setText(labelText);
         return jLabel;
     }
+
+    /*
+    @Override
+    public final Dimension getPreferredSize() {
+        Dimension d = super.getPreferredSize();
+        Dimension prefSize = null;
+        Component c = getParent();
+        if (c == null) {
+            prefSize = new Dimension(
+                    (int)d.getWidth(),(int)d.getHeight());
+        } else if (c!=null &&
+                c.getWidth()>d.getWidth() &&
+                c.getHeight()>d.getHeight()) {
+            prefSize = c.getSize();
+        } else {
+            prefSize = d;
+        }
+        int w = (int) prefSize.getWidth();
+        int h = (int) prefSize.getHeight();
+        // the smaller of the two sizes
+        int s = (w>h ? h : w);
+        return new Dimension(s,s);
+    }
+
+    /*
+    @Override
+    public void paint(Graphics g) {
+        Dimension d = this.getSize();
+        if(d.height > d.width){
+            this.setSize(dA.width, d.width);
+        } else {
+            this.setSize(d.height, d.height);
+        }
+        super.paint(g);
+    }
+     */
 }
