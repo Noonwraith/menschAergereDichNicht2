@@ -31,7 +31,7 @@ public class Control {
         }
 
 
-        sendMessageToPlayer("Have already rolled.", 0);
+        //sendMessageToPlayer("Have already rolled.", 0);
 
     }
 
