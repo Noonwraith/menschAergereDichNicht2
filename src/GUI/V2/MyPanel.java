@@ -270,6 +270,10 @@ public class MyPanel extends JPanel {
         }
     }
 
+    /**
+     * adds a Label to each player that is 2 by 2 in size
+     * @param firstLabelText
+     */
     private void setUpLastDiceThrowJLabel(String firstLabelText){
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 2;
@@ -296,6 +300,10 @@ public class MyPanel extends JPanel {
         this.add(lastDiceThrowJLabel[2], gbc);
     }
 
+    /**
+     * adds a Label to each player that is 4 by 2 in size
+     * @param firstLabelMessage
+     */
     private void setUpMessageToPlayerLabel(String firstLabelMessage){
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 4;
@@ -322,12 +330,23 @@ public class MyPanel extends JPanel {
         this.add(messageToPlayerLabel[2], gbc);
     }
 
+    /**
+     * call method to write a message to a player that will appear in a Label
+     * @param message
+     * @param player
+     */
     public void sendMessageToPlayer(String message, int player){
         if(player == -1)
             return;
         messageToPlayerLabel[player].setText(message);
     }
 
+    /**
+     * creates a JLabel
+     * @param labelText
+     * @param horizontalAlignment
+     * @return
+     */
     private JLabel createJLabel(String labelText, int horizontalAlignment){
         JLabel jLabel = new JLabel();
         jLabel.setHorizontalAlignment(horizontalAlignment);

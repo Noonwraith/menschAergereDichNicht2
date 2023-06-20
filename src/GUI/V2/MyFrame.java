@@ -25,6 +25,7 @@ public class MyFrame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
+
     /*
     @Override
     public final Dimension getPreferredSize() {
@@ -99,10 +100,6 @@ public class MyFrame extends JFrame {
         jMenuItem.addActionListener(e -> control.nextPlayer());
         return jMenuItem;
     }
-
-
-
-
 
     public MyPanel getPanel() {
         return panel;
