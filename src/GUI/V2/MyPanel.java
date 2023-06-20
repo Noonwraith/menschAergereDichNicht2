@@ -5,14 +5,13 @@ import Controls.Control;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
 
     private Control control;
     private GridBagLayout gridBagLayout;
-    GridBagConstraints gbc;
+    private GridBagConstraints gbc;
 
     private static final int rows = 11;
     private static final int cols = rows;
@@ -33,6 +32,8 @@ public class MyPanel extends JPanel {
     private static final int[] selectableFields = {56,57,58,59,16,27,38,49,61,62,63,64,71,82,93,104,44,6,76,114,45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int dice = 60;
 
+    private JLabel[] lastDiceThrowJLabel = new JLabel[4];
+
     public MyPanel(Control control){
         this.control = control;
 
@@ -45,6 +46,7 @@ public class MyPanel extends JPanel {
         this.setBackground(Color.LIGHT_GRAY);
 
         setUpButtons();
+        setUpLastDiceThrowJLabel();
     }
 
     /**
@@ -312,5 +314,43 @@ public class MyPanel extends JPanel {
             //System.out.println("Panel: set Dice");
             allButtons[dice].setText(String.valueOf(number));
         }
+    }
+
+    private void setUpLastDiceThrowJLabel(){
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.gridwidth = 3;
+        gbc.weightx = buttonGab;
+        gbc.weighty = buttonGab;
+
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        lastDiceThrowJLabel[0] = createJTextArea(false);
+        this.add(lastDiceThrowJLabel[0], gbc);
+
+        gbc.gridx = 7;
+        lastDiceThrowJLabel[1] = createJTextArea(true);
+        this.add(lastDiceThrowJLabel[1], gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 7;
+        lastDiceThrowJLabel[2] = createJTextArea(false);
+        this.add(lastDiceThrowJLabel[2], gbc);
+
+        gbc.gridx = 7;
+        lastDiceThrowJLabel[3] = createJTextArea(true);
+        this.add(lastDiceThrowJLabel[3], gbc);
+
+    }
+
+    private JLabel createJTextArea(boolean rightAlignment){
+        JLabel jLabel = new JLabel();
+        if (rightAlignment)
+            jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        else
+            jLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        jLabel.setVerticalAlignment(SwingConstants.CENTER);
+        jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, 20));
+        jLabel.setText("Fische");
+        return jLabel;
     }
 }
