@@ -117,6 +117,7 @@ public class GameManager {
 
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
+            control.setLastDiceThrow(currentPlayer, steps);
 
             if(!startGame){ //Start: Looks which of the players rolls the highest number
                 startNumbers[currentPlayer] = steps;
@@ -160,15 +161,16 @@ public class GameManager {
                 //playerRoll3Times = 1;
 
                 System.out.println("GM: PlayerRoll3Times: "+playerRoll3Times);
-                /*if(playerRoll3Times == 1) {
-                    nextPlayer(false);
-                }*/
+
                 if(playerRoll3Times != 1){
                     dice.unlockDice();
                     control.removeAllX();
                     playerRoll3Times--;
                     System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
                     sendMessageToPlayer("You have "+playerRoll3Times+" throws left", currentPlayer);
+                }
+                else if(playerRoll3Times == 1) {
+                    nextPlayer(false);
                 }
 
 

@@ -122,6 +122,10 @@ public class Control {
         panel.setDiceNumber(steps);
     }
 
+    public void setLastDiceThrow(int player, int number){
+        panel.setLastDiceThrow(player, number);
+    }
+
 
     public void removeAllX(){
         //System.out.println("Control: Remove all X");

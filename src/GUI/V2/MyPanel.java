@@ -266,7 +266,7 @@ public class MyPanel extends JPanel {
         else {
             //System.out.println("Panel: set Dice");
             allButtons[dice].setText(String.valueOf(number));
-            lastDiceThrowJLabel[control.getCurrentPlayerFromGameManager()].setText("Last Throw: "+number);
+            //lastDiceThrowJLabel[control.getCurrentPlayerFromGameManager()].setText("Last Throw: "+number);
         }
     }
 
@@ -299,6 +299,12 @@ public class MyPanel extends JPanel {
         lastDiceThrowJLabel[2] = createJLabel(firstLabelText, SwingConstants.CENTER);
         this.add(lastDiceThrowJLabel[2], gbc);
     }
+
+    public void setLastDiceThrow(int player, int number){
+        lastDiceThrowJLabel[player].setText("Last Throw: "+number);
+    }
+
+
 
     /**
      * adds a Label to each player that is 4 by 2 in size
