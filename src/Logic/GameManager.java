@@ -159,12 +159,11 @@ public class GameManager {
                 //--------------------------------------For test with old Issues comment next out--------------------------------
                 //playerRoll3Times = 1;
 
-
-                if(playerRoll3Times == 1) {
-                    playerRoll3Times = 3;
+                System.out.println("GM: PlayerRoll3Times: "+playerRoll3Times);
+                /*if(playerRoll3Times == 1) {
                     nextPlayer(false);
-                }
-                else{
+                }*/
+                if(playerRoll3Times != 1){
                     dice.unlockDice();
                     control.removeAllX();
                     playerRoll3Times--;
@@ -238,6 +237,7 @@ public class GameManager {
     public void nextPlayer(boolean inAnyCase){
         if(dice.getSteps() != 6 || !startGame || inAnyCase) {
             currentPlayer++;
+            playerRoll3Times = 3;
             dice.unlockDice();
             if (currentPlayer == 4) {
                 currentPlayer = 0;

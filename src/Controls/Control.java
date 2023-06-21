@@ -31,7 +31,7 @@ public class Control {
         }
 
 
-        sendMessageToPlayer("you already threw the dice.", 0);
+        //sendMessageToPlayer("you already threw the dice.", 0);
 
     }
 
