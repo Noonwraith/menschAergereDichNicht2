@@ -47,6 +47,8 @@ public class MyPanel extends JPanel {
         setUpLastDiceThrowJLabel("Last Throw: 0");
         setUpMessageToPlayerLabel(" no Message inbox");
         sendMessageToPlayer("Fische", 0);
+
+        System.out.println(calculateScreenHeight());
     }
 
     /**
@@ -357,7 +359,7 @@ public class MyPanel extends JPanel {
         JLabel jLabel = new JLabel();
         jLabel.setHorizontalAlignment(horizontalAlignment);
         jLabel.setVerticalAlignment(SwingConstants.CENTER);
-        jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, 20));
+        jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, (int) (calculateScreenHeight()/60)));
         jLabel.setText(labelText);
         return jLabel;
     }
