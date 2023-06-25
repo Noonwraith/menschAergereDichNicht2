@@ -90,9 +90,15 @@ public class MyFrame extends JFrame {
 
     private JMenu setUpMenuGame(){
         JMenu jMenu = new JMenu("Game");
-        jMenu.add(new JMenuItem("New Game"));
+        jMenu.add(addJMenuItemNewGame());
         jMenu.add(addJMenuItemNextPlayer());
         return jMenu;
+    }
+
+    private JMenuItem addJMenuItemNewGame(){
+        JMenuItem jMenuItem = new JMenuItem("New Game");
+        jMenuItem.addActionListener(e -> control.newGame());
+        return jMenuItem;
     }
 
     private JMenuItem addJMenuItemNextPlayer(){

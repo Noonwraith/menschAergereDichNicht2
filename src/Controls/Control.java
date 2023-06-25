@@ -14,14 +14,17 @@ public class Control {
 
 
 
-    private final MyFrame gui = new MyFrame(this);
+    private final MyFrame gui;
     private GameManager gameManager;
-    private final MyPanel panel = gui.getPanel();
+    private final MyPanel panel;
     private final Translate translate = new Translate(this);
 
 
     public Control(boolean debugOn){
+        System.out.println("Start game");
         this.debugOn = debugOn;
+        this.gui = new MyFrame(this);
+        panel = gui.getPanel();
         debug  = new Debug(this);
         //panel.playerTurn(3);
         startGame(4);
@@ -29,11 +32,22 @@ public class Control {
             System.out.println("Control: Game is simulated");
             debug.simulateGame();
         }
-
-
-        //sendMessageToPlayer("you already threw the dice.", 0);
-
     }
+
+    public Control(boolean debugOn, MyFrame gui){
+        System.out.println("Start new game");
+        this.debugOn = debugOn;
+        this.gui = gui;
+        panel = gui.getPanel();
+        debug  = new Debug(this);
+        //panel.playerTurn(3);
+        startGame(4);
+        if(debugOn) {
+            System.out.println("Control: Game is simulated");
+            debug.simulateGame();
+        }
+    }
+
 
     /**
      * Called by Human to give the GUI the future position.
@@ -112,6 +126,10 @@ public class Control {
         debug.addMethode("throwDice", number);
     }
 
+
+    public void newGame(){
+        Control control = new Control(debugOn, gui);
+    }
 
     public void clearDice(){
         panel.setDiceNumber(0);
