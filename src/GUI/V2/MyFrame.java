@@ -7,7 +7,7 @@ import javax.swing.*;
 public class MyFrame extends JFrame {
 
     private final MyPanel panel;
-    private final Control control;
+    private Control control;
 
     public MyFrame(Control control){
         this.control = control;
@@ -110,4 +110,9 @@ public class MyFrame extends JFrame {
     public MyPanel getPanel() {
         return panel;
     }
+
+    public void setControl(Control control){
+        this.control = control;
+    }
+
 }

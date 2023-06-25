@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
 
-    private final Control control;
+    private Control control;
     private final GridBagConstraints gbc = new GridBagConstraints();
 
     private static final int rows = 11;
@@ -362,6 +362,10 @@ public class MyPanel extends JPanel {
         jLabel.setFont(new Font("Bodoni MT Black", Font.PLAIN, (int) (calculateScreenHeight()/60)));
         jLabel.setText(labelText);
         return jLabel;
+    }
+
+    public void setControl(Control control){
+        this.control = control;
     }
 
     /*

@@ -14,7 +14,7 @@ public class Control {
 
 
 
-    private final MyFrame gui;
+    private MyFrame gui;
     private GameManager gameManager;
     private final MyPanel panel;
     private final Translate translate = new Translate(this);
@@ -39,6 +39,9 @@ public class Control {
         this.debugOn = debugOn;
         this.gui = gui;
         panel = gui.getPanel();
+        gui.setControl(this);
+        panel.setControl(this);
+
         debug  = new Debug(this);
         //panel.playerTurn(3);
         startGame(4);
@@ -46,6 +49,10 @@ public class Control {
             System.out.println("Control: Game is simulated");
             debug.simulateGame();
         }
+        resetGuiBoard();
+
+        System.out.println("Control: Board: "+gameManager.getBoard());
+        //updateBoard(gameManager.getBoard());
     }
 
 
@@ -166,6 +173,20 @@ public class Control {
     public void nextPlayer(){
         debug.addMethode("nextPlayer");
         gameManager.nextPlayer(true);
+    }
+
+    public void resetGuiBoard(){
+        for(int i=0;i<gameManager.getBoard().getField().length;i++){
+            panel.updateField(translate.boardPositionToGuiPosition(i), -1);
+        }
+        for(int i=0;i<gameManager.getBoard().getHouse().length;i++){
+            panel.updateField(translate.boardPositionToGuiPosition(i), -1);
+        }
+        for(int i=0; i<4; i++){
+            panel.sendMessageToPlayer("", i);
+            panel.setLastDiceThrow(i, 0);
+        }
+
     }
 
     public int getCurrentPlayerFromGameManager(){
