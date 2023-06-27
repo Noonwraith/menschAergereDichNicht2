@@ -45,8 +45,7 @@ public class MyPanel extends JPanel {
 
         setUpButtons();
         setUpLastDiceThrowJLabel("Last Throw: 0");
-        setUpMessageToPlayerLabel(" no Message inbox");
-        sendMessageToPlayer("Fische", 0);
+        setUpMessageToPlayerLabel("no Message inbox");
 
         System.out.println(calculateScreenHeight());
     }

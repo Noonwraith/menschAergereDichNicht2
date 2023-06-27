@@ -183,7 +183,7 @@ public class Control {
             panel.updateField(translate.boardPositionToGuiPosition(i), -1);
         }
         for(int i=0; i<4; i++){
-            panel.sendMessageToPlayer("", i);
+            panel.sendMessageToPlayer("no Message inbox", i);
             panel.setLastDiceThrow(i, 0);
         }
 
