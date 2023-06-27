@@ -33,19 +33,7 @@ public class MyFrame extends JFrame {
     private JMenuBar setUpMenuBar(){
         JMenuBar jMenuBar = new JMenuBar();
         jMenuBar.add(setUpMenuGame());
-        jMenuBar.add(setUpMenuFile());
-        jMenuBar.add(setUpJMenuView());
         return jMenuBar;
-    }
-
-    private JMenu setUpMenuFile(){
-        return new JMenu("File");
-    }
-
-    private JMenu setUpJMenuView(){
-        JMenu jMenu = new JMenu("View");
-        jMenu.add(new JMenuItem("Colors"));
-        return jMenu;
     }
 
     private JMenu setUpMenuGame(){
