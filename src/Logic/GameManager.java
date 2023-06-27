@@ -14,12 +14,9 @@ public class GameManager {
     private Dice dice = new Dice();
     private Board board = new Board();
     private Human players[] = new Human[4];
-
     private int currentPlayer = 0;
     private int numbersOfPlayer;
-
     private int playerRoll3Times = 3;
-
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
     private int[] winningSequence = new int[4];
@@ -27,7 +24,7 @@ public class GameManager {
     public GameManager(int numbersOfPlayer, Control control){
         this.numbersOfPlayer = numbersOfPlayer;
         this.control = control;
-        for(int i=0; i<numbersOfPlayer;i++){
+        for(int i=0; i<numbersOfPlayer; i++){
             players[i] = new Logic.Human(i, board, control);
         }
         control.playerTurn(currentPlayer);
@@ -50,10 +47,9 @@ public class GameManager {
                     if(playerWin()){
                         int place = 0;
                         //System.out.println("Control: winningSequence: "+ Arrays.toString(winningSequence));
-                        for(int i=0;i< winningSequence.length;i++){
-                            if(winningSequence[i] == currentPlayer){
+                        for(int i=0; i< winningSequence.length; i++){
+                            if(winningSequence[i] == currentPlayer)
                                 place = i+1;
-                            }
                         }
                         control.playerWin(currentPlayer, place);
                     }
@@ -63,7 +59,6 @@ public class GameManager {
                     control.removeAllX();
                     System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
                     sendMessageToPlayer("choose a different piece", currentPlayer);
-
                     /*if(playerCanMove()) {
                         control.removeAllX();
                         System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
@@ -111,10 +106,9 @@ public class GameManager {
                 if(currentPlayer == 3){
                     currentPlayer = 0;
                     System.out.println(Arrays.toString(startNumbers));
-                    for(int i=0;i<startNumbers.length;i++){
-                        if(startNumbers[i] > startNumbers[currentPlayer]){
+                    for(int i=0; i<startNumbers.length; i++){
+                        if(startNumbers[i] > startNumbers[currentPlayer])
                             currentPlayer = i;
-                        }
                     }
                     System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
                     sendMessageToPlayer("you have to start", currentPlayer);
@@ -123,9 +117,8 @@ public class GameManager {
                     startGame = true;
                     dice.unlockDice();
                 }
-                else {
+                else
                     nextPlayer(false);
-                }
                 return steps;
             }//End: Looks which of the players rolls the highest number
             players[currentPlayer].setSteps(steps);
@@ -144,16 +137,14 @@ public class GameManager {
                     System.out.println("Gamemanager: Throw again. You have "+playerRoll3Times+" left.");
                     sendMessageToPlayer("You have "+playerRoll3Times+" throws left", currentPlayer);
                 }
-                else if(playerRoll3Times == 1) {
+                else if(playerRoll3Times == 1)
                     nextPlayer(false);
-                }
             }
             else if (goOutPosition != 0) {
                 System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
                 clickOnPiece(goOutPosition);//is called twice, so that it is marked once and then moved.
-                if(clickOnPiece(goOutPosition)) {//Only if it could be moved
+                if(clickOnPiece(goOutPosition))//Only if it could be moved
                     return -1;
-                }
             }
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
@@ -182,15 +173,12 @@ public class GameManager {
      */
     public int playerCanGoOut(){
         int code = -1;
-
-        for(int i=0;i<4;i++){
+        for(int i=0; i<4; i++){
             Piece piece = board.getStart()[currentPlayer*4+i];
-            if(piece != null && dice.getSteps() == 6){ //A Piece is in the start and it was rolled a 6
+            if(piece != null && dice.getSteps() == 6) //A Piece is in the start and it was rolled a 6
                 return board.getPositionOfPiece(piece);
-            }
-            if(piece == null){
+            if(piece == null)
                 code = 0;//If no piece can go out, will end up giving back 0
-            }
         }
         return code;
     }
@@ -205,9 +193,8 @@ public class GameManager {
             currentPlayer++;
             playerRoll3Times = 3;
             dice.unlockDice();
-            if (currentPlayer == 4) {
+            if (currentPlayer == 4)
                 currentPlayer = 0;
-            }
             //System.out.println(currentPlayer);
             control.playerTurn(currentPlayer);
         }
@@ -227,9 +214,8 @@ public class GameManager {
         Piece[] field = board.getField();
         for(int i=0; i<field.length; i++){
             if(field[i] != null) {
-                if (field[i].getColor() == currentPlayer) {
+                if (field[i].getColor() == currentPlayer)
                     return true;
-                }
             }
         }
         return false;
@@ -237,9 +223,8 @@ public class GameManager {
     public boolean playerWin(){
         for (int i=0; i<4;i++){
             //System.out.println("GM: Piece: "+board.getHouse()[currentPlayer*4+i]);
-            if(board.getHouse()[currentPlayer*4+i] == null){
+            if(board.getHouse()[currentPlayer*4+i] == null)
                 return false;
-            }
         }
         for(int i=0;i<winningSequence.length;i++){
             if(winningSequence[i] == 0){
