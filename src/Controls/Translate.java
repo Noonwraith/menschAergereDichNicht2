@@ -23,7 +23,11 @@ public class Translate {
     private Piece[] start = new Piece[16];//positions between 40-56 -> Team 0: 40-43 -> Team 1: 44-47 -> Team 2: 48-51 -> Team 3: 52-55
     private Piece[] house = new Piece[16];//positions between 56-72 -> Team 0: 56-59 -> Team 1: 60-63 -> Team 2: 64-67 -> Team 3: 68-71
 
-
+    /**
+     * Look of differences and update them in the GUI
+     * @param panel
+     * @param board
+     */
     public void updateBoard(MyPanel panel, Board board){
         for(int i=0; i<field.length; i++){
             if(field[i] != board.getField()[i]){
@@ -44,6 +48,11 @@ public class Translate {
         house = board.getHouse();
     }
 
+    /**
+     * converts the logic poistion to the GUIposition
+     * @param position
+     * @return
+     */
     public int boardPositionToGuiPosition(int position){
         for(int i=0; i<translateField.length; i++){
             if(translateField[i] == position)

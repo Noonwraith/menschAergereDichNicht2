@@ -24,6 +24,12 @@ public class Board {
         return -1;
     }
 
+    /**
+     * sets the new position and deletes the old one
+     * @param piece
+     * @param currentPosition
+     * @param futurePosition
+     */
     public void setPiecePosition(Piece piece, int currentPosition, int futurePosition){
         if(futurePosition < 40)
             field[futurePosition] = piece;
@@ -39,6 +45,11 @@ public class Board {
             house[currentPosition-56] = null;
     }
 
+    /**
+     * returns the positon of a piece
+     * @param piece
+     * @return
+     */
     public int getPositionOfPiece(Piece piece) {
         for (int i = 0; i < field.length; i++) {
             if (field[i] == piece)
@@ -55,6 +66,11 @@ public class Board {
         return -1;
     }
 
+    /**
+     * returns a piece standing on a position
+     * @param position
+     * @return
+     */
     public Piece getPieceOfPosition(int position){
         if(position <= 39)
             return field[position];

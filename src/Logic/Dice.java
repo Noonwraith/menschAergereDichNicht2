@@ -10,6 +10,12 @@ public class Dice {
     int steps;
     boolean lock;
 
+    /**
+     * generate random number between 1-6 or sets the number of debug
+     * @param debugSteps
+     * @param control
+     * @return
+     */
     public int throwsDice(int debugSteps, Control control){
         if(!lock) {
             lock = true;

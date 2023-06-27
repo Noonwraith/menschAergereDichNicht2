@@ -98,7 +98,9 @@ public class Piece {
     }
 
     /**
-     * Return if it is selected. If it is selected it can move. Else it would be selected.
+     * Return if it is selected.
+     * If it is selected it can move.
+     * Else it would be selected.
      * @return
      */
     public boolean isSelected() {

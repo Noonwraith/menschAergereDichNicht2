@@ -63,14 +63,14 @@ public class GameManager {
                     sendMessageToPlayer("you didn't throw yet", currentPlayer);
                 }
                 else {
-                    players[currentPlayer].restAllSelects();
+                    players[currentPlayer].resetAllSelects();
                     System.out.println("Gamemanager: Wrong color");
                     sendMessageToPlayer("wrong color", currentPlayer);
                 }
             }
         }
         else {
-            players[currentPlayer].restAllSelects();
+            players[currentPlayer].resetAllSelects();
             System.out.println("Gamemanager: No Piece selected");
             sendMessageToPlayer("no piece selected", currentPlayer);
         }
@@ -78,7 +78,7 @@ public class GameManager {
     }
 
     /**
-     * Comes from the GUI. Throw the Dice and select the current Player.
+     * Throw the Dice and select the current Player.
      * Checks if the player has thrown the dice before
      * Looks which player can start.
      */
@@ -201,6 +201,11 @@ public class GameManager {
         }
         return false;
     }
+
+    /**
+     * Checks if a player win
+     * @return
+     */
     public boolean playerWin(){
         for (int i=0; i<4;i++){
             if(board.getHouse()[currentPlayer*4+i] == null)

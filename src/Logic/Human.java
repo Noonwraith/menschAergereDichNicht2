@@ -26,14 +26,14 @@ public class Human extends Player{
             return -1;
         }
         else {
-            restAllSelects();
+            resetAllSelects();
             piece.setSelected(true);
             this.getControl().displayFuturePiecePosition(piece.futureMove(this.getSteps()));
             return 0;
         }
     }
 
-    public void restAllSelects(){
+    public void resetAllSelects(){
         for(int i=0; i<this.getPieces().length;i++){//Set all Piece to not selected
             this.getPieces()[i].setSelected(false);
         }

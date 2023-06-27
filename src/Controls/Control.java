@@ -14,6 +14,10 @@ public class Control {
     private final MyPanel panel;
     private final Translate translate = new Translate();
 
+    /**
+     * Constructor for first Start
+     * @param debugOn
+     */
     public Control(boolean debugOn){
         System.out.println("Start game");
         this.debugOn = debugOn;
@@ -27,6 +31,10 @@ public class Control {
         }
     }
 
+    /**
+     * Constructor for new Game
+     * @param debugOn
+     */
     public Control(boolean debugOn, MyFrame gui){
         System.out.println("Start new game");
         this.debugOn = debugOn;
@@ -143,6 +151,9 @@ public class Control {
         gameManager.nextPlayer(true);
     }
 
+    /**
+     * Reset the GUI on a New Game
+     */
     public void resetGuiBoard(){
         for(int i=0;i<gameManager.getBoard().getField().length;i++){
             panel.updateField(translate.boardPositionToGuiPosition(i), -1);
