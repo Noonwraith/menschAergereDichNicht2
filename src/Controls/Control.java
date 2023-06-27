@@ -8,15 +8,12 @@ import Logic.GameManager;
 import Logic.Player;
 
 public class Control {
-
     private boolean debugOn;
     private Debug debug;
-
     private MyFrame gui;
     private GameManager gameManager;
     private final MyPanel panel;
     private final Translate translate = new Translate(this);
-
 
     public Control(boolean debugOn){
         System.out.println("Start game");
