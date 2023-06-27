@@ -5,7 +5,6 @@ import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
-
     private final MyPanel panel;
     private Control control;
 
@@ -13,11 +12,8 @@ public class MyFrame extends JFrame {
         this.control = control;
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new MyPanel(control);
-
         setUpLookAndFeel();
-
         this.setTitle("Mensch ärgere Dich nicht");
-
         this.setJMenuBar(setUpMenuBar());
         this.add(panel);
         pack();
