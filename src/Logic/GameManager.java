@@ -1,11 +1,7 @@
 package Logic;
 
 import Controls.Control;
-import Controls.Receive;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -34,10 +30,8 @@ public class GameManager {
         for(int i=0; i<numbersOfPlayer;i++){
             players[i] = new Logic.Human(i, board, control);
         }
-
         control.playerTurn(currentPlayer);
         control.updateBoard(board);
-
     }
 
     /**
@@ -47,12 +41,10 @@ public class GameManager {
      */
     public boolean clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
-
         //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
             int color = piece.getColor();
             if (color == currentPlayer && dice.isLock()) {
-
                 int code = players[color].clickOnPiece(piece);
                 if (code == 1) {
                     if(playerWin()){
@@ -68,8 +60,6 @@ public class GameManager {
                     nextPlayer(false);
                     return true;
                 } else if (code == -1) {
-
-
                     control.removeAllX();
                     System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
                     sendMessageToPlayer("choose a different piece", currentPlayer);
@@ -102,7 +92,6 @@ public class GameManager {
             System.out.println("Gamemanager: No Piece selected");
             sendMessageToPlayer("no piece selected", currentPlayer);
         }
-
         return false;
     }
 
@@ -114,11 +103,9 @@ public class GameManager {
     public int throwsDice(int debugSteps){
         int steps = dice.throwsDice(debugSteps, control);;
         System.out.println("Gamemanager: Dice throw: "+steps);
-
         if(steps != -1) {
             //System.out.println("Dice throw: " + steps);
             control.setLastDiceThrow(currentPlayer, steps);
-
             if(!startGame){ //Start: Looks which of the players rolls the highest number
                 startNumbers[currentPlayer] = steps;
                 if(currentPlayer == 3){
@@ -136,32 +123,20 @@ public class GameManager {
                     startGame = true;
                     dice.unlockDice();
                 }
-
                 else {
                     nextPlayer(false);
                 }
                 return steps;
             }//End: Looks which of the players rolls the highest number
-
-
-
-
-
             players[currentPlayer].setSteps(steps);
-
             int goOutPosition = playerCanGoOut();
             if(goOutPosition == -1) { //If no piece can leave the start and there is no piece in the field.
-
                 /*control.clearDice();
                 System.out.println("Wait");
                 waitTime(1000);*/
-
-
                 //--------------------------------------For test with old Issues comment next out--------------------------------
                 //playerRoll3Times = 1;
-
                 System.out.println("GM: PlayerRoll3Times: "+playerRoll3Times);
-
                 if(playerRoll3Times != 1){
                     dice.unlockDice();
                     control.removeAllX();
@@ -172,8 +147,6 @@ public class GameManager {
                 else if(playerRoll3Times == 1) {
                     nextPlayer(false);
                 }
-
-
             }
             else if (goOutPosition != 0) {
                 System.out.println("Gamemanager: Can go out of the house: " + goOutPosition);
@@ -181,11 +154,7 @@ public class GameManager {
                 if(clickOnPiece(goOutPosition)) {//Only if it could be moved
                     return -1;
                 }
-
             }
-
-
-
             else if(!playerCanMove()){ //When there is no player on the field. If a previous operation was true, it must not be true as well.
                 System.out.println("Gamemanager: This player has no Piece that can be moved.");
                 sendMessageToPlayer("you can't move a piece", currentPlayer);
@@ -195,22 +164,17 @@ public class GameManager {
                 nextPlayer(false);
                 return -1;
             }
-
         }
         else {
             System.out.println("Gamemanager: This player has already rolled the dice");
             sendMessageToPlayer("you already threw the dice", currentPlayer);
         }
-
         return steps;
-
     }
-
 
     /**
      * Checks if a piece can leave the start.
      * If not, it checks if another player on the field can move it.
-     *
      * If a Piece can leave the start, it returns the position in the start.
      * If it has a Piece on the field, it returns 0.
      * If not, it returns -1.
@@ -244,7 +208,6 @@ public class GameManager {
             if (currentPlayer == 4) {
                 currentPlayer = 0;
             }
-
             //System.out.println(currentPlayer);
             control.playerTurn(currentPlayer);
         }
@@ -255,7 +218,6 @@ public class GameManager {
             sendMessageToPlayer("throw again", currentPlayer);
         }
     }
-
 
     /**
      * See if a player has a Piece to move.
@@ -272,7 +234,6 @@ public class GameManager {
         }
         return false;
     }
-
     public boolean playerWin(){
         for (int i=0; i<4;i++){
             //System.out.println("GM: Piece: "+board.getHouse()[currentPlayer*4+i]);
@@ -289,8 +250,6 @@ public class GameManager {
         return false;
     }
 
-
-
     public void waitTime(int time){
         try {
             //Thread.sleep(time);
@@ -300,17 +259,13 @@ public class GameManager {
         }
     }
 
-
     public void sendMessageToPlayer(String msg, int player){
         control.sendMessageToPlayer(msg, player);
     }
 
-
     public int getCurrentPlayer() {
         return currentPlayer;
     }
-
-
 
     public Board getBoard() {
         return board;

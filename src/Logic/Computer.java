@@ -1,7 +1,6 @@
 package Logic;
 
 import Controls.Control;
-import Controls.Receive;
 
 /**
  * Calculates best move

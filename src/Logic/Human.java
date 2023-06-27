@@ -2,7 +2,6 @@ package Logic;
 
 
 import Controls.Control;
-import Controls.Receive;
 
 /**
  * requests to show future piece position

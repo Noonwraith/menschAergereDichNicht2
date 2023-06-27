@@ -12,8 +12,6 @@ public class Control {
     private boolean debugOn;
     private Debug debug;
 
-
-
     private MyFrame gui;
     private GameManager gameManager;
     private final MyPanel panel;
@@ -55,7 +53,6 @@ public class Control {
         //updateBoard(gameManager.getBoard());
     }
 
-
     /**
      * Called by Human to give the GUI the future position.
      * @param player
@@ -72,9 +69,7 @@ public class Control {
     public void movePiece(int position, int color){
         System.out.println("Control: move to position: "+position+" with color: "+color);
         panel.updateField(translate.boardPositionToGuiPosition(position), color);
-
         panel.setDiceNumber(0);
-
         if(debugOn) {
             panel.removeAllX();
         }
@@ -84,10 +79,8 @@ public class Control {
     public void playerTurn(int color){
         System.out.println("Control: --------------------------------------next Player------------------");
         System.out.println("Control: currentPlayer: "+color);
-
         panel.playerTurn(color);
     }
-
 
    /**
      * Called by the GUI when the game is started.
@@ -103,11 +96,8 @@ public class Control {
     public void throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
         //System.out.println("Control: Dice throw: "+steps);
-
         //debug.addMethode("throwDice", steps);
-
         panel.setDiceNumber(steps);
-
     }
 
     public void fieldSelected(int field){
@@ -125,14 +115,12 @@ public class Control {
         }
         sendMessageToPlayer("Place: "+place, player);
          */
-
         sendMessageToPlayer("You got "+place+" place", player);
     }
 
     public void saveDiceNumberInDebug(int number){
         debug.addMethode("throwDice", number);
     }
-
 
     public void newGame(){
         Control control = new Control(debugOn, gui);
@@ -151,7 +139,6 @@ public class Control {
         panel.setLastDiceThrow(player, number);
     }
 
-
     public void removeAllX(){
         //System.out.println("Control: Remove all X");
         panel.removeAllX();
@@ -160,7 +147,6 @@ public class Control {
     public void sendMessageToPlayer(String msg, int player){
         panel.sendMessageToPlayer(msg, player);
     }
-
 
     public boolean isDebugOn(){
         return debugOn;

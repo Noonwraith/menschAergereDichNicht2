@@ -2,8 +2,6 @@ package Logic;
 
 import Controls.Control;
 
-import java.util.concurrent.FutureTask;
-
 /**
  * moves
  * gets kicked
@@ -12,13 +10,9 @@ public class Piece {
     private Board board;
     private Control control;
     private int color;
-
     private static int zaehler = 0;
     private int nr = 0; // For Debugging
-
-
     private boolean isSelected = false;
-
 
     public Piece(Board board, Control control, int color){
         this.board = board;
@@ -47,7 +41,6 @@ public class Piece {
         }else {//Piece is in House
             pieceOnFuturePosition = board.getHouse()[futurePosition-56];
         }
-
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
             //System.out.println("Piece: Piece move to: "+ futurePosition);
@@ -55,8 +48,6 @@ public class Piece {
             //System.out.println(board.toString());
             control.movePiece(currentPosition, -1);
             control.movePiece(futurePosition, color);
-
-
         }
         else{
             if(pieceOnFuturePosition.getColor() == this.color){ //On this Position stands Piece from the same Color
@@ -65,17 +56,12 @@ public class Piece {
             else{//There stand another Player
                 board.setPiecePosition(this, currentPosition, futurePosition);
                 int cickPieceBoardPosition = board.setPieceToStart(pieceOnFuturePosition);
-
                 System.out.println("Piece: Piece come from: "+currentPosition);
                 System.out.println("Piece: Piece move to: "+ futurePosition);
                 System.out.println("Piece: Kick Piece from: "+ futurePosition);
-
-
-
                 control.movePiece(currentPosition, -1);
                 control.movePiece(futurePosition, color);
                 control.movePiece(cickPieceBoardPosition, pieceOnFuturePosition.getColor());
-
                 //return true;
             }
         }
@@ -145,9 +131,11 @@ public class Piece {
         isSelected = selected;
     }
 
-    /*public void selected() {
+    /*
+    public void selected() {
         isSelected = true;
-    }*/
+    }
+    */
 
     public int getColor() {
         return color;

@@ -1,7 +1,7 @@
 package GUI.V2;
+
 import Controls.Control;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
-
 import javax.swing.*;
 
 public class MyFrame extends JFrame {
@@ -25,42 +25,6 @@ public class MyFrame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
-
-    /*
-    @Override
-    public final Dimension getPreferredSize() {
-        Dimension d = super.getPreferredSize();
-        Dimension prefSize = null;
-        Component c = getParent();
-        if (c == null) {
-            prefSize = new Dimension(
-                    (int)d.getWidth(),(int)d.getHeight());
-        } else if (c!=null &&
-                c.getWidth()>d.getWidth() &&
-                c.getHeight()>d.getHeight()) {
-            prefSize = c.getSize();
-        } else {
-            prefSize = d;
-        }
-        int w = (int) prefSize.getWidth();
-        int h = (int) prefSize.getHeight();
-        // the smaller of the two sizes
-        int s = (w>h ? h : w);
-        return new Dimension(s,s);
-    }
-
-    /*
-    @Override
-    public void paint(Graphics g) {
-        Dimension d = this.getSize();
-        if(d.height > d.width){
-            this.setSize(d.width, d.width);
-        } else {
-            this.setSize(d.height, d.height);
-        }
-        super.paint(g);
-    }
-    */
 
     private void setUpLookAndFeel(){
         try {
@@ -114,5 +78,4 @@ public class MyFrame extends JFrame {
     public void setControl(Control control){
         this.control = control;
     }
-
 }

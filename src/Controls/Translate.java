@@ -4,13 +4,8 @@ import GUI.V2.MyPanel;
 import Logic.Board;
 import Logic.Piece;
 
-import java.awt.*;
-import java.util.Arrays;
-
 public class Translate {
     private Control control;
-
-
     private int[] translateField = {
             40, 41, -1, -1, 8, 9, 10, -1, -1, 44, 45,
             42, 43, -1, -1, 7, 60, 11, -1, -1, 46, 47,
@@ -33,8 +28,6 @@ public class Translate {
         this.control = control;
     }
 
-
-
     public void updateBoard(MyPanel panel, Board board){
         //System.out.println("Suche nach unterschieden im board");
         for(int i=0; i<field.length;i++){
@@ -55,18 +48,13 @@ public class Translate {
                 panel.updateField(boardPositionToGuiPosition(i+55), board.getHouse()[i].getColor());
             }
         }
-
         //System.out.println("start-----"+ Arrays.toString(start));
         //System.out.println("Board start"+Arrays.toString(board.getStart()));
-
         field = board.getField();
         start = board.getStart();
         house = board.getHouse();
-
-
         //System.out.println("start-----"+ Arrays.toString(start));
     }
-
 
     public int boardPositionToGuiPosition(int position){
         for(int i=0; i< translateField.length;i++){
@@ -82,6 +70,4 @@ public class Translate {
         //System.out.println("Translate: -----------------Click on Position"+ position);
         return translateField[position];
     }
-
-
 }

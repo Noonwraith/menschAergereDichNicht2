@@ -1,7 +1,6 @@
 package GUI.V2;
 
 import Controls.Control;
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -305,8 +304,6 @@ public class MyPanel extends JPanel {
         lastDiceThrowJLabel[player].setText("Last Throw: "+number);
     }
 
-
-
     /**
      * adds a Label to each player that is 4 by 2 in size
      * @param firstLabelMessage
@@ -366,40 +363,4 @@ public class MyPanel extends JPanel {
     public void setControl(Control control){
         this.control = control;
     }
-
-    /*
-    @Override
-    public final Dimension getPreferredSize() {
-        Dimension d = super.getPreferredSize();
-        Dimension prefSize = null;
-        Component c = getParent();
-        if (c == null) {
-            prefSize = new Dimension(
-                    (int)d.getWidth(),(int)d.getHeight());
-        } else if (c!=null &&
-                c.getWidth()>d.getWidth() &&
-                c.getHeight()>d.getHeight()) {
-            prefSize = c.getSize();
-        } else {
-            prefSize = d;
-        }
-        int w = (int) prefSize.getWidth();
-        int h = (int) prefSize.getHeight();
-        // the smaller of the two sizes
-        int s = (w>h ? h : w);
-        return new Dimension(s,s);
-    }
-
-    /*
-    @Override
-    public void paint(Graphics g) {
-        Dimension d = this.getSize();
-        if(d.height > d.width){
-            this.setSize(dA.width, d.width);
-        } else {
-            this.setSize(d.height, d.height);
-        }
-        super.paint(g);
-    }
-     */
 }

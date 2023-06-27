@@ -1,6 +1,5 @@
 package Logic;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -10,7 +9,6 @@ public class Board {
     private Piece[] field = new Piece[40];//positions between 0-39
     private Piece[] start = new Piece[16];//positions between 40-56 -> Team 0: 40-43 -> Team 1: 44-47 -> Team 2: 48-51 -> Team 3: 52-55
     private Piece[] house = new Piece[16];//positions between 56-72 -> Team 0: 56-59 -> Team 1: 60-63 -> Team 2: 64-67 -> Team 3: 68-71
-
 
     public Board(){
     }
@@ -45,7 +43,6 @@ public class Board {
         else if(currentPosition < 72){
             house[currentPosition-56] = null;
         }
-
     }
 
     public int getPositionOfPiece(Piece piece) {
