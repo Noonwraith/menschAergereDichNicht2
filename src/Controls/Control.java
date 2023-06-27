@@ -21,7 +21,6 @@ public class Control {
         this.gui = new MyFrame(this);
         panel = gui.getPanel();
         debug  = new Debug(this);
-        //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {
             System.out.println("Control: Game is simulated");
@@ -38,7 +37,6 @@ public class Control {
         panel.setControl(this);
 
         debug  = new Debug(this);
-        //panel.playerTurn(3);
         startGame(4);
         if(debugOn) {
             System.out.println("Control: Game is simulated");

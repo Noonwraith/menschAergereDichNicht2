@@ -31,7 +31,7 @@ public class Debug {
                         Scanner scanner = new Scanner(System.in);
                         int x = scanner.nextInt();
                     } else {
-                        //Waits 500 ms for the next move
+                        //Waits 10 ms for the next move
                         try {
                             TimeUnit.MILLISECONDS.sleep(10);
                         } catch (InterruptedException e) {

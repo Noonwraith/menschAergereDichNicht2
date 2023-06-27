@@ -11,7 +11,7 @@ public class Piece {
     private Control control;
     private int color;
     private static int zaehler = 0;
-    private int nr = 0; // for Debugging
+    private int nr = 0;
     private boolean isSelected = false;
 
     public Piece(Board board, Control control, int color){
@@ -66,24 +66,18 @@ public class Piece {
      */
     public int futureMove(int steps){
         int currentPosition = board.getPositionOfPiece(this);
-        //System.out.println("Piece -> futureMove: Piece: "+this);
-        //System.out.println("Piece -> futureMove: currentPosition of Piece: "+currentPosition);
         int futurePosition = -1;
         if(currentPosition <= 39) {
             futurePosition = currentPosition + steps;
             if (futurePosition > board.getField().length-1)
                 futurePosition -= board.getField().length;
             if(color != 0 && futurePosition > color*10-1 && currentPosition <= color*10-1 || color == 0 && futurePosition <= 10 && currentPosition >= 32){
-                //(steps-(currentPosition-(color*10-1))) -> gibt an wie viele Felder in das Haus gegangen werden.
                 int stepsInHouse = (steps-((color*10-1)-currentPosition));
                 if(color == 0)
                     stepsInHouse -= 40;
                 System.out.println("Piece: steps in House: "+stepsInHouse);
                 if(stepsInHouse <= 4){
-                    //System.out.println("Piece: Piece can go in house: "+stepsInHouse);
                     futurePosition = color*4+55+stepsInHouse;
-                    //System.out.println("Piece: last Position : "+currentPosition);
-                    //System.out.println("Piece: nextPosition: "+futurePosition);
                 }
                 else{
                     futurePosition = -1;
@@ -100,7 +94,6 @@ public class Piece {
                 futurePosition = -1;
             }
         }
-        //System.out.println("Piece: future Position: "+futurePosition);
         return futurePosition;
     }
 
@@ -115,12 +108,6 @@ public class Piece {
     public void setSelected(boolean selected) {
         isSelected = selected;
     }
-
-    /*
-    public void selected() {
-        isSelected = true;
-    }
-    */
 
     public int getColor() {
         return color;

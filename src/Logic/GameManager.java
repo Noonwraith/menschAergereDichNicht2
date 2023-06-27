@@ -101,7 +101,6 @@ public class GameManager {
                     System.out.println("Gamemanager: player "+(currentPlayer)+" starts");
                     sendMessageToPlayer("you have to start", currentPlayer);
                     control.playerTurn(currentPlayer);
-                    //currentPlayer--;//-1 because at the end nextPlayer() is called
                     startGame = true;
                     dice.unlockDice();
                 }
@@ -180,7 +179,6 @@ public class GameManager {
             dice.unlockDice();
             if (currentPlayer == 4)
                 currentPlayer = 0;
-            //System.out.println(currentPlayer);
             control.playerTurn(currentPlayer);
         }
         else{
@@ -221,7 +219,6 @@ public class GameManager {
 
     public void waitTime(int time){
         try {
-            //Thread.sleep(time);
             TimeUnit.MILLISECONDS.sleep(time);
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -15,11 +15,6 @@ public class JsonHandler {
 
     public JsonHandler() {
         methodCalls = loadMethodCallsFromJson();
-        /*if(methodCalls == null){
-            File file = new File(fileName);
-            if (file.exists())
-                file.delete();
-        }*/
     }
 
     public void addMethod(String methodName, Object... params) {
