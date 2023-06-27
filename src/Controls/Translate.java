@@ -29,16 +29,13 @@ public class Translate {
     }
 
     public void updateBoard(MyPanel panel, Board board){
-        //System.out.println("Suche nach unterschieden im board");
         for(int i=0; i<field.length; i++){
             if(field[i] != board.getField()[i]){
-                System.out.println("Feld wird an der Psoition: "+i);
                 panel.updateField(boardPositionToGuiPosition(i), board.getField()[i].getColor());
             }
         }
         for(int i=0; i<start.length; i++){
             if(start[i] != board.getStart()[i]){
-                System.out.println("Start wird an der Psoition: "+(i+40));
                 panel.updateField(boardPositionToGuiPosition(i+40), board.getStart()[i].getColor());
             }
         }
@@ -46,12 +43,9 @@ public class Translate {
             if(house[i] != board.getHouse()[i])
                 panel.updateField(boardPositionToGuiPosition(i+55), board.getHouse()[i].getColor());
         }
-        //System.out.println("start-----"+ Arrays.toString(start));
-        //System.out.println("Board start"+Arrays.toString(board.getStart()));
         field = board.getField();
         start = board.getStart();
         house = board.getHouse();
-        //System.out.println("start-----"+ Arrays.toString(start));
     }
 
     public int boardPositionToGuiPosition(int position){
@@ -64,7 +58,6 @@ public class Translate {
     }
 
     public int GuiPositionToBoardPosition(int position){
-        //System.out.println("Translate: -----------------Click on Position"+ position);
         return translateField[position];
     }
 }

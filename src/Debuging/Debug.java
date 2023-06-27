@@ -20,22 +20,23 @@ public class Debug {
         if (control.isDebugOn()) {
             List<MethodCall> methodCalls = jsonHandler.loadMethodCallsFromJson();
             System.out.println(methodCalls);
-            for (MethodCall methodCall : methodCalls) {
-                String methodName = methodCall.getMethodName();
-                Object[] params = methodCall.getParams();
-                simulateMethodCall(methodName, params);
-                //Wait for an input with the next move
-                if(manuel) {
-                    System.out.println("wait on input...");
-                    Scanner scanner = new Scanner(System.in);
-                    int x = scanner.nextInt();
-                }
-                else {
-                    //Waits 500 ms for the next move
-                    try {
-                        TimeUnit.MILLISECONDS.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+            if(methodCalls != null) {
+                for (MethodCall methodCall : methodCalls) {
+                    String methodName = methodCall.getMethodName();
+                    Object[] params = methodCall.getParams();
+                    simulateMethodCall(methodName, params);
+                    //Wait for an input with the next move
+                    if (manuel) {
+                        System.out.println("wait on input...");
+                        Scanner scanner = new Scanner(System.in);
+                        int x = scanner.nextInt();
+                    } else {
+                        //Waits 500 ms for the next move
+                        try {
+                            TimeUnit.MILLISECONDS.sleep(10);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

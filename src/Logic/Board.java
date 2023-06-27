@@ -28,7 +28,7 @@ public class Board {
         if(futurePosition < 40)
             field[futurePosition] = piece;
         else if(futurePosition < 56)
-            start[futurePosition-40] = piece;//---------------------------------Hier stand mal 39, Muss noch gestest werden was richtig ist.
+            start[futurePosition-40] = piece;
         else if(futurePosition < 72)
             house[futurePosition-56] = piece;
         if(currentPosition < 40)
@@ -40,15 +40,11 @@ public class Board {
     }
 
     public int getPositionOfPiece(Piece piece) {
-        //System.out.println("Borad: field Array: "+ Arrays.toString(field));
-        //System.out.println("Borad: Startd Array: "+ Arrays.toString(start));
-        //System.out.println("Borad: haous Array: "+ Arrays.toString(house));
         for (int i = 0; i < field.length; i++) {
             if (field[i] == piece)
                 return i;
         }
         for(int i=0; i<start.length; i++){
-            //System.out.println("i: "+i);
             if(start[i] == piece)
                 return i+40;
         }

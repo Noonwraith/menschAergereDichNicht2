@@ -40,9 +40,6 @@ public class Piece {
             pieceOnFuturePosition = board.getHouse()[futurePosition-56];
         if(pieceOnFuturePosition == null){//Poition is free
             board.setPiecePosition(this, currentPosition, futurePosition);
-            //System.out.println("Piece: Piece move to: "+ futurePosition);
-            //System.out.println("Piece: Piece come from: "+currentPosition);
-            //System.out.println(board.toString());
             control.movePiece(currentPosition, -1);
             control.movePiece(futurePosition, color);
         }
@@ -52,16 +49,12 @@ public class Piece {
             else{//There stand another Player
                 board.setPiecePosition(this, currentPosition, futurePosition);
                 int cickPieceBoardPosition = board.setPieceToStart(pieceOnFuturePosition);
-                System.out.println("Piece: Piece come from: "+currentPosition);
-                System.out.println("Piece: Piece move to: "+ futurePosition);
-                System.out.println("Piece: Kick Piece from: "+ futurePosition);
                 control.movePiece(currentPosition, -1);
                 control.movePiece(futurePosition, color);
                 control.movePiece(cickPieceBoardPosition, pieceOnFuturePosition.getColor());
                 //return true;
             }
         }
-        //System.out.println("Piece: Set selected after Move to false.");
         isSelected = false;
         return true;
     }

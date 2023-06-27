@@ -38,7 +38,6 @@ public class GameManager {
      */
     public boolean clickOnPiece(int position){
         Piece piece = board.getPieceOfPosition(position);
-        //System.out.println("Gamemanager -> click on Piece: Piece: "+ piece);
         if(piece != null && startGame) {
             int color = piece.getColor();
             if (color == currentPlayer && dice.isLock()) {
@@ -46,7 +45,6 @@ public class GameManager {
                 if (code == 1) {
                     if(playerWin()){
                         int place = 0;
-                        //System.out.println("Control: winningSequence: "+ Arrays.toString(winningSequence));
                         for(int i=0; i< winningSequence.length; i++){
                             if(winningSequence[i] == currentPlayer)
                                 place = i+1;
@@ -59,15 +57,6 @@ public class GameManager {
                     control.removeAllX();
                     System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
                     sendMessageToPlayer("choose a different piece", currentPlayer);
-                    /*if(playerCanMove()) {
-                        control.removeAllX();
-                        System.out.println("Gamemanager: This place is already occupied by its own piece or the number is too high. Choose another piece");
-                    }
-                    else{
-                        System.out.println("Gamemanager: This player has no Piece that can be moved.");
-                        control.clearDice();
-                        nextPlayer();
-                    }*/
                 }
             }
             else {
@@ -99,13 +88,12 @@ public class GameManager {
         int steps = dice.throwsDice(debugSteps, control);;
         System.out.println("Gamemanager: Dice throw: "+steps);
         if(steps != -1) {
-            //System.out.println("Dice throw: " + steps);
             control.setLastDiceThrow(currentPlayer, steps);
             if(!startGame){ //Start: Looks which of the players rolls the highest number
                 startNumbers[currentPlayer] = steps;
                 if(currentPlayer == 3){
                     currentPlayer = 0;
-                    System.out.println(Arrays.toString(startNumbers));
+                    System.out.println("GM: Start number: "+Arrays.toString(startNumbers));
                     for(int i=0; i<startNumbers.length; i++){
                         if(startNumbers[i] > startNumbers[currentPlayer])
                             currentPlayer = i;
@@ -124,9 +112,6 @@ public class GameManager {
             players[currentPlayer].setSteps(steps);
             int goOutPosition = playerCanGoOut();
             if(goOutPosition == -1) { //If no piece can leave the start and there is no piece in the field.
-                /*control.clearDice();
-                System.out.println("Wait");
-                waitTime(1000);*/
                 //--------------------------------------For test with old Issues comment next out--------------------------------
                 //playerRoll3Times = 1;
                 System.out.println("GM: PlayerRoll3Times: "+playerRoll3Times);
@@ -222,7 +207,6 @@ public class GameManager {
     }
     public boolean playerWin(){
         for (int i=0; i<4;i++){
-            //System.out.println("GM: Piece: "+board.getHouse()[currentPlayer*4+i]);
             if(board.getHouse()[currentPlayer*4+i] == null)
                 return false;
         }

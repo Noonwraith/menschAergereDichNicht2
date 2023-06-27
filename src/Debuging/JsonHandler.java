@@ -16,10 +16,18 @@ public class JsonHandler {
 
     public JsonHandler() {
         methodCalls = loadMethodCallsFromJson();
-        //gson = new GsonBuilder().setPrettyPrinting().create();
+        /*if(methodCalls == null){
+            File file = new File(fileName);
+            if (file.exists())
+                file.delete();
+        }*/
     }
 
     public void addMethod(String methodName, Object... params) {
+        if (methodCalls == null) {
+            methodCalls = new ArrayList<>();
+        }
+
         MethodCall methodCall = new MethodCall(methodName, params);
         methodCalls.add(methodCall);
         saveMethodCallsToJson();
@@ -50,6 +58,8 @@ public class JsonHandler {
         File file = new File(fileName);
         if (file.exists())
             file.delete();
-        methodCalls.clear();
+        if (methodCalls != null) {
+            methodCalls.clear();
+        }
     }
 }

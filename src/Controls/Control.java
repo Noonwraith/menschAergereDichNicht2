@@ -49,8 +49,7 @@ public class Control {
         }
         resetGuiBoard();
 
-        System.out.println("Control: Board: "+gameManager.getBoard());
-        //updateBoard(gameManager.getBoard());
+
     }
 
     /**
@@ -95,8 +94,6 @@ public class Control {
 
     public void throwDice(int debugSteps){
         int steps = gameManager.throwsDice(debugSteps);
-        //System.out.println("Control: Dice throw: "+steps);
-        //debug.addMethode("throwDice", steps);
         panel.setDiceNumber(steps);
     }
 
@@ -109,12 +106,6 @@ public class Control {
 
     public void playerWin(int player, int place){
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Control: Player "+ player +" has the "+place+" place!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        /*
-        if(place == 1){
-            sendMessageToPlayer("Player win", player);
-        }
-        sendMessageToPlayer("Place: "+place, player);
-         */
         sendMessageToPlayer("You got "+place+" place", player);
     }
 
@@ -131,7 +122,6 @@ public class Control {
     }
 
     public void setDice(int steps){
-        //System.out.println("Control: setDice: "+steps);
         panel.setDiceNumber(steps);
     }
 
@@ -140,7 +130,6 @@ public class Control {
     }
 
     public void removeAllX(){
-        //System.out.println("Control: Remove all X");
         panel.removeAllX();
     }
 
