@@ -1,0 +1,74 @@
+[
+  {
+    "methodName": "throwDice",
+    "params": [
+      2
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      2
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      4
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      5
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      3
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6
+    ]
+  },
+  {
+    "methodName": "throwDice",
+    "params": [
+      6
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114
+    ]
+  },
+  {
+    "methodName": "fieldSelected",
+    "params": [
+      114
+    ]
+  }
+]
