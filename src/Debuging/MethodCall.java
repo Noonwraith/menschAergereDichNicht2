@@ -3,8 +3,6 @@ package Debuging;
 import java.util.Arrays;
 
 public class MethodCall {
-
-
     private String methodName;
     private Object[] params;
 
@@ -28,6 +26,4 @@ public class MethodCall {
                 ", params=" + Arrays.toString(params) +
                 '}';
     }
-
-
 }

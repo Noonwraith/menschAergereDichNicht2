@@ -12,7 +12,7 @@ public class MyPanel extends JPanel {
     private static final int rows = 11;
     private static final int cols = rows;
     private static final int buttonGab = 5;
-    private static int buttonSize ;
+    private static int buttonSize;
     private static int preferredSize;
     private final Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
     private final Color backgroundColor = Color.GRAY;
@@ -283,7 +283,7 @@ public class MyPanel extends JPanel {
         this.add(lastDiceThrowJLabel[1], gbc);
 
         gbc.gridx = 2;
-        gbc.gridy = 10;
+        gbc.gridy = 9;
         lastDiceThrowJLabel[3] = createJLabel(firstLabelText, SwingConstants.CENTER);
         this.add(lastDiceThrowJLabel[3], gbc);
 
