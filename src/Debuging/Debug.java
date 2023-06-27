@@ -1,8 +1,6 @@
 package Debuging;
 
 import Controls.Control;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -10,16 +8,13 @@ import java.util.concurrent.TimeUnit;
 public class Debug {
     private JsonHandler jsonHandler = new JsonHandler();
     private Control control;
-
     boolean manuel = false;
 
     public Debug(Control control){
         this.control = control;
-        if(!control.isDebugOn()){
+        if(!control.isDebugOn())
             jsonHandler.clearJsonFile();
-        }
     }
-
 
     public void simulateGame(){
         if (control.isDebugOn()) {
@@ -29,9 +24,7 @@ public class Debug {
                 String methodName = methodCall.getMethodName();
                 Object[] params = methodCall.getParams();
                 simulateMethodCall(methodName, params);
-
                 //Wait for an input with the next move
-
                 if(manuel) {
                     System.out.println("wait on input...");
                     Scanner scanner = new Scanner(System.in);
@@ -58,25 +51,18 @@ public class Debug {
         }else if(methodName.equals("fieldSelected")){
             int x = convertParamsToInt(params[0]);
             control.fieldSelected(x);
-        }else if(methodName.equals("nextPlayer")){
+        }else if(methodName.equals("nextPlayer"))
             control.nextPlayer();
-        }
-
-
     }
 
-
     public void addMethode(String methodName, Object... params){
-        if(!control.isDebugOn()) {
+        if(!control.isDebugOn())
             jsonHandler.addMethod(methodName, params);
-        }
     }
 
     private int convertParamsToInt(Object param) {
-        if (param instanceof Double) {
+        if (param instanceof Double)
             param = ((Double) param).intValue();
-        }
         return (int) param;
     }
-
 }
