@@ -10,7 +10,6 @@ public class MyPanel extends JPanel {
 
     private Control control;
     private final GridBagConstraints gbc = new GridBagConstraints();
-
     private static final int rows = 11;
     private static final int cols = rows;
     private static final int buttonGab = 5;
