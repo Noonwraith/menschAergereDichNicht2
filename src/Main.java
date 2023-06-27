@@ -2,6 +2,6 @@ import Controls.Control;
 
 public class Main {
     public static void main(String[] args) {
-        Control control = new Control(false);
+        Control control = new Control(true);
     }
 }
