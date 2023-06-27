@@ -7,7 +7,6 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class MyPanel extends JPanel {
-
     private Control control;
     private final GridBagConstraints gbc = new GridBagConstraints();
     private static final int rows = 11;
@@ -15,7 +14,6 @@ public class MyPanel extends JPanel {
     private static final int buttonGab = 5;
     private static int buttonSize ;
     private static int preferredSize;
-
     private final Color[] playerColors = {Color.RED.darker(), Color.BLUE.darker(), Color.GREEN.darker(), Color.YELLOW.darker()};
     private final Color backgroundColor = Color.GRAY;
     private final Color pathBoarderColor = Color.DARK_GRAY;
@@ -28,23 +26,18 @@ public class MyPanel extends JPanel {
     private static final int[] pathFields = {45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int[] selectableFields = {56,57,58,59,16,27,38,49,61,62,63,64,71,82,93,104,44,6,76,114,45,46,47,48,37,26,15,4,5,17,28,39,50,51,52,53,54,65,75,74,73,72,83,94,105,116,115,103,92,81,70,69,68,67,66,55};
     private static final int dice = 60;
-
     private final JLabel[] lastDiceThrowJLabel = new JLabel[4];
     private final JLabel[] messageToPlayerLabel = new JLabel[4];
 
     public MyPanel(Control control){
         this.control = control;
-
         preferredSize = (int) (calculateScreenHeight()-(calculateScreenHeight()*0.15));
         buttonSize = (preferredSize/rows)-buttonGab;
-
         this.setLayout(new GridBagLayout());
         this.setBackground(Color.LIGHT_GRAY);
-
         setUpButtons();
         setUpLastDiceThrowJLabel("Last Throw: 0");
         setUpMessageToPlayerLabel("no Message inbox");
-
         System.out.println(calculateScreenHeight());
     }
 
