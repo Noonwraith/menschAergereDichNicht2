@@ -8,7 +8,6 @@ import Controls.Control;
  */
 public class Computer extends Player{
 
-
     public Computer(int color, Board board, Control control) {
         super(color, board, control);
     }
