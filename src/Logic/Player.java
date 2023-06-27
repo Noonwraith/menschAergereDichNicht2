@@ -10,8 +10,6 @@ public abstract class Player{
     private Control control;
     private Piece pieces[] = new Piece[4];
     private Board board;
-
-
     private int color;
     private int steps;
 
@@ -32,7 +30,6 @@ public abstract class Player{
     public void setSteps(int steps) {
         this.steps = steps;
     }
-
 
     public Piece[] getPieces() {
         return pieces;
