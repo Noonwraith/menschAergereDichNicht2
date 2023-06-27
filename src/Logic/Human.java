@@ -7,7 +7,6 @@ import Controls.Control;
  * tells piece to move
  */
 public class Human extends Player{
-
     public Human(int color, Board board, Control control) {
         super(color, board, control);
     }

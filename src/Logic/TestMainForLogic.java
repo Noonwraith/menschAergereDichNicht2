@@ -18,11 +18,10 @@ public class TestMainForLogic {
             //gameManager.throwsDice();
             System.out.print("Input: ");
             input = scanner.nextInt();
-            if(input == 99){
+            if(input == 99)
                 gameManager.throwsDice(-1);
-            }else{
+            else
                 gameManager.clickOnPiece(input);
-            }
             System.out.println("-------------");
         }
     }

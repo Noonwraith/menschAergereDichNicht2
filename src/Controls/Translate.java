@@ -30,23 +30,21 @@ public class Translate {
 
     public void updateBoard(MyPanel panel, Board board){
         //System.out.println("Suche nach unterschieden im board");
-        for(int i=0; i<field.length;i++){
+        for(int i=0; i<field.length; i++){
             if(field[i] != board.getField()[i]){
                 System.out.println("Feld wird an der Psoition: "+i);
                 panel.updateField(boardPositionToGuiPosition(i), board.getField()[i].getColor());
             }
         }
-        for(int i=0; i<start.length;i++){
+        for(int i=0; i<start.length; i++){
             if(start[i] != board.getStart()[i]){
                 System.out.println("Start wird an der Psoition: "+(i+40));
                 panel.updateField(boardPositionToGuiPosition(i+40), board.getStart()[i].getColor());
             }
         }
-        for(int i=0; i<house.length;i++){
-            if(house[i] != board.getHouse()[i]){
-                //System.out.println("Haus wird an der Psoition: "+(i+55));
+        for(int i=0; i<house.length; i++){
+            if(house[i] != board.getHouse()[i])
                 panel.updateField(boardPositionToGuiPosition(i+55), board.getHouse()[i].getColor());
-            }
         }
         //System.out.println("start-----"+ Arrays.toString(start));
         //System.out.println("Board start"+Arrays.toString(board.getStart()));
@@ -57,10 +55,9 @@ public class Translate {
     }
 
     public int boardPositionToGuiPosition(int position){
-        for(int i=0; i< translateField.length;i++){
-            if(translateField[i] == position){
+        for(int i=0; i<translateField.length; i++){
+            if(translateField[i] == position)
                 return i;
-            }
         }
         System.out.println("Error: Translate: This Position dosn't exist: "+position);
         return -1;

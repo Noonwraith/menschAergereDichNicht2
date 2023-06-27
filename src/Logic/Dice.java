@@ -15,9 +15,8 @@ public class Dice {
             lock = true;
             Random random = new Random();
             steps = random.nextInt(6) + 1;
-            if(debugSteps != 0){// If it does not come from the GUI
+            if(debugSteps != 0)// If it does not come from the GUI
                 steps = debugSteps;
-            }
             control.saveDiceNumberInDebug(steps);
             return steps;
         }

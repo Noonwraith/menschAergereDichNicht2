@@ -25,24 +25,18 @@ public class Board {
     }
 
     public void setPiecePosition(Piece piece, int currentPosition, int futurePosition){
-        if(futurePosition < 40){
+        if(futurePosition < 40)
             field[futurePosition] = piece;
-        }
-        else if(futurePosition < 56){
+        else if(futurePosition < 56)
             start[futurePosition-40] = piece;//---------------------------------Hier stand mal 39, Muss noch gestest werden was richtig ist.
-        }
-        else if(futurePosition < 72){
+        else if(futurePosition < 72)
             house[futurePosition-56] = piece;
-        }
-        if(currentPosition < 40){
+        if(currentPosition < 40)
             field[currentPosition] = null;
-        }
-        else if(currentPosition < 56){
+        else if(currentPosition < 56)
             start[currentPosition-40] = null;
-        }
-        else if(currentPosition < 72){
+        else if(currentPosition < 72)
             house[currentPosition-56] = null;
-        }
     }
 
     public int getPositionOfPiece(Piece piece) {
@@ -50,36 +44,28 @@ public class Board {
         //System.out.println("Borad: Startd Array: "+ Arrays.toString(start));
         //System.out.println("Borad: haous Array: "+ Arrays.toString(house));
         for (int i = 0; i < field.length; i++) {
-            if (field[i] == piece) {
+            if (field[i] == piece)
                 return i;
-            }
         }
-        for(int i=0; i<start.length;i++){
+        for(int i=0; i<start.length; i++){
             //System.out.println("i: "+i);
-            if(start[i] == piece){
-                //System.out.println("Es kommt aus dem Start feld: "+i);
+            if(start[i] == piece)
                 return i+40;
-            }
         }
         for(int i=0; i< house.length;i++){
-            if(house[i] == piece){
+            if(house[i] == piece)
                 return i+56;
-            }
         }
         return -1;
     }
 
     public Piece getPieceOfPosition(int position){
-        if(position <= 39){
+        if(position <= 39)
             return field[position];
-        }
-        else if(position <= 55){
+        else if(position <= 55)
             return start[position-40];
-        }
-        else if(position <= 71){
-            //System.out.println("Board: getPiece: house: "+ Arrays.toString(house));
+        else if(position <= 71)
             return house[position-56];
-        }
         return null;
     }
 
