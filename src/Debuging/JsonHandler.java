@@ -35,7 +35,6 @@ public class JsonHandler {
 
     public List<MethodCall> loadMethodCallsFromJson() {
         List<MethodCall> loadedMethodCalls = new ArrayList<>();
-
         try (Reader reader = new FileReader(fileName)) {
             Type listType = new TypeToken<List<MethodCall>>() {}.getType();
             loadedMethodCalls = gson.fromJson(reader, listType);
@@ -44,15 +43,13 @@ public class JsonHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return loadedMethodCalls;
     }
 
     public void clearJsonFile() {
         File file = new File(fileName);
-        if (file.exists()) {
+        if (file.exists())
             file.delete();
-        }
         methodCalls.clear();
     }
 }
