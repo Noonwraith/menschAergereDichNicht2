@@ -5,8 +5,7 @@ import Logic.Board;
 import Logic.Piece;
 
 public class Translate {
-    private Control control;
-    private int[] translateField = {
+    private final int[] translateField = {
             40, 41, -1, -1, 8, 9, 10, -1, -1, 44, 45,
             42, 43, -1, -1, 7, 60, 11, -1, -1, 46, 47,
             -1, -1, -1, -1, 6, 61, 12, -1, -1, -1, -1,
@@ -24,9 +23,6 @@ public class Translate {
     private Piece[] start = new Piece[16];//positions between 40-56 -> Team 0: 40-43 -> Team 1: 44-47 -> Team 2: 48-51 -> Team 3: 52-55
     private Piece[] house = new Piece[16];//positions between 56-72 -> Team 0: 56-59 -> Team 1: 60-63 -> Team 2: 64-67 -> Team 3: 68-71
 
-    public Translate(Control control){
-        this.control = control;
-    }
 
     public void updateBoard(MyPanel panel, Board board){
         for(int i=0; i<field.length; i++){

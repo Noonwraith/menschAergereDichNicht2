@@ -28,7 +28,7 @@ public class Human extends Player{
         else {
             restAllSelects();
             piece.setSelected(true);
-            this.getControl().displayFuturePiecePosition(this, piece.futureMove(this.getSteps()));
+            this.getControl().displayFuturePiecePosition(piece.futureMove(this.getSteps()));
             return 0;
         }
     }

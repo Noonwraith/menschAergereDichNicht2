@@ -10,19 +10,17 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class GameManager {
-    private Control control;
-    private Dice dice = new Dice();
-    private Board board = new Board();
-    private Human players[] = new Human[4];
+    private final Control control;
+    private final Dice dice = new Dice();
+    private final Board board = new Board();
+    private Human[] players = new Human[4];
     private int currentPlayer = 0;
-    private int numbersOfPlayer;
     private int playerRoll3Times = 3;
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
     private int[] winningSequence = new int[4];
 
     public GameManager(int numbersOfPlayer, Control control){
-        this.numbersOfPlayer = numbersOfPlayer;
         this.control = control;
         for(int i=0; i<numbersOfPlayer; i++){
             players[i] = new Logic.Human(i, board, control);
@@ -85,7 +83,7 @@ public class GameManager {
      * Looks which player can start.
      */
     public int throwsDice(int debugSteps){
-        int steps = dice.throwsDice(debugSteps, control);;
+        int steps = dice.throwsDice(debugSteps, control);
         System.out.println("Gamemanager: Dice throw: "+steps);
         if(steps != -1) {
             control.setLastDiceThrow(currentPlayer, steps);
@@ -195,9 +193,9 @@ public class GameManager {
      */
     public boolean playerCanMove(){
         Piece[] field = board.getField();
-        for(int i=0; i<field.length; i++){
-            if(field[i] != null) {
-                if (field[i].getColor() == currentPlayer)
+        for (Piece piece : field) {
+            if (piece != null) {
+                if (piece.getColor() == currentPlayer)
                     return true;
             }
         }

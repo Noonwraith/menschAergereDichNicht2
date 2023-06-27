@@ -7,10 +7,10 @@ import Controls.Control;
  * knows dice throw
  */
 public abstract class Player{
-    private Control control;
-    private Piece pieces[] = new Piece[4];
-    private Board board;
-    private int color;
+    private final Control control;
+    private final Piece[] pieces = new Piece[4];
+    private final Board board;
+    private final int color;
     private int steps;
 
     public Player(int color,Board board, Control control){

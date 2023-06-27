@@ -6,8 +6,8 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Debug {
-    private JsonHandler jsonHandler = new JsonHandler();
-    private Control control;
+    private final JsonHandler jsonHandler = new JsonHandler();
+    private final Control control;
     boolean manuel = false;
 
     public Debug(Control control){
@@ -29,7 +29,7 @@ public class Debug {
                     if (manuel) {
                         System.out.println("wait on input...");
                         Scanner scanner = new Scanner(System.in);
-                        int x = scanner.nextInt();
+                        scanner.nextInt();
                     } else {
                         //Waits 10 ms for the next move
                         try {
@@ -46,14 +46,19 @@ public class Debug {
     }
 
     public void simulateMethodCall(String methodName, Object... params){
-        if(methodName.equals("throwDice")){
-            int x = convertParamsToInt(params[0]);
-            control.throwDice(x);
-        }else if(methodName.equals("fieldSelected")){
-            int x = convertParamsToInt(params[0]);
-            control.fieldSelected(x);
-        }else if(methodName.equals("nextPlayer"))
-            control.nextPlayer();
+        switch (methodName) {
+            case "throwDice" -> {
+                int x = convertParamsToInt(params[0]);
+                control.throwDice(x);
+                break;
+            }
+            case "fieldSelected" -> {
+                int x = convertParamsToInt(params[0]);
+                control.fieldSelected(x);
+                break;
+            }
+            case "nextPlayer" -> control.nextPlayer();
+        }
     }
 
     public void addMethode(String methodName, Object... params){

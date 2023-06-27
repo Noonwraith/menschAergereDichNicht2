@@ -5,15 +5,14 @@ import GUI.V2.MyFrame;
 import GUI.V2.MyPanel;
 import Logic.Board;
 import Logic.GameManager;
-import Logic.Player;
 
 public class Control {
     private boolean debugOn;
-    private Debug debug;
-    private MyFrame gui;
+    private final Debug debug;
+    private final MyFrame gui;
     private GameManager gameManager;
     private final MyPanel panel;
-    private final Translate translate = new Translate(this);
+    private final Translate translate = new Translate();
 
     public Control(boolean debugOn){
         System.out.println("Start game");
@@ -49,10 +48,9 @@ public class Control {
 
     /**
      * Called by Human to give the GUI the future position.
-     * @param player
      * @param futurePosition
      */
-    public void displayFuturePiecePosition(Player player, int futurePosition) {
+    public void displayFuturePiecePosition(int futurePosition) {
         panel.futureMovePosition(translate.boardPositionToGuiPosition(futurePosition));
     }
 
@@ -109,7 +107,7 @@ public class Control {
     }
 
     public void newGame(){
-        Control control = new Control(debugOn, gui);
+        new Control(debugOn, gui);
     }
 
     public void clearDice(){
@@ -157,9 +155,5 @@ public class Control {
             panel.setLastDiceThrow(i, 0);
         }
 
-    }
-
-    public int getCurrentPlayerFromGameManager(){
-        return gameManager.getCurrentPlayer();
     }
 }

@@ -35,7 +35,4 @@ public class Dice {
         return steps;
     }
 
-    public void setSteps(int steps) {
-        this.steps = steps;
-    }
 }

@@ -7,11 +7,11 @@ import Controls.Control;
  * gets kicked
  */
 public class Piece {
-    private Board board;
-    private Control control;
-    private int color;
+    private final Board board;
+    private final Control control;
+    private final int color;
     private static int zaehler = 0;
-    private int nr = 0;
+    private final int nr;
     private boolean isSelected = false;
 
     public Piece(Board board, Control control, int color){
@@ -111,10 +111,6 @@ public class Piece {
 
     public int getColor() {
         return color;
-    }
-
-    public int getNr() {
-        return nr;
     }
 
     @Override
