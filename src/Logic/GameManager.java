@@ -184,7 +184,6 @@ public class GameManager {
      */
     public void nextPlayer(boolean inAnyCase){
 
-        System.out.println("GM: ögjsfgalkgöasjgösjagösa"+inAnyCase);
 
         if(dice.getSteps() != 6 || !startGame || inAnyCase) {
             currentPlayer++;
@@ -204,7 +203,6 @@ public class GameManager {
         for(int i=0;i< winningSequence.length;i++){
             if(winningSequence[i] != -1) {
                 allFinish++;
-                System.out.println("GM: Allfinsh: " + allFinish);
             }
             if(winningSequence[i] == currentPlayer && allFinish != 4){
                 nextPlayer(true);
