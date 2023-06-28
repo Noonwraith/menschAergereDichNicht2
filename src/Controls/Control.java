@@ -159,7 +159,7 @@ public class Control {
             panel.updateField(translate.boardPositionToGuiPosition(i), -1);
         }
         for(int i=0;i<gameManager.getBoard().getHouse().length;i++){
-            panel.updateField(translate.boardPositionToGuiPosition(i), -1);
+            panel.updateField(translate.boardPositionToGuiPosition(i+56), -1);
         }
         for(int i=0; i<4; i++){
             panel.sendMessageToPlayer("no Message inbox", i);

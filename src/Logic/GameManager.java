@@ -184,9 +184,7 @@ public class GameManager {
      */
     public void nextPlayer(boolean inAnyCase){
 
-        if(currentPlayer == -2){
-            return;
-        }
+        System.out.println("GM: ögjsfgalkgöasjgösjagösa"+inAnyCase);
 
         if(dice.getSteps() != 6 || !startGame || inAnyCase) {
             currentPlayer++;
@@ -202,8 +200,13 @@ public class GameManager {
             System.out.println("Gamemanager(nextplayer): Throw again");
             sendMessageToPlayer("throw again", currentPlayer);
         }
+        int allFinish = 0;
         for(int i=0;i< winningSequence.length;i++){
-            if(winningSequence[i] == currentPlayer){
+            if(winningSequence[i] != -1) {
+                allFinish++;
+                System.out.println("GM: Allfinsh: " + allFinish);
+            }
+            if(winningSequence[i] == currentPlayer && allFinish != 4){
                 nextPlayer(true);
             }
         }
@@ -233,20 +236,12 @@ public class GameManager {
             if(board.getHouse()[currentPlayer*4+i] == null)
                 return false;
         }
-        int allFinish = 0;
         for(int i=0;i<winningSequence.length;i++){
             if(winningSequence[i] == -1){
                 winningSequence[i] = currentPlayer;
                 System.out.println("GM: winningSeq: "+ Arrays.toString(winningSequence));
                 return true;
             }
-            else {
-                allFinish++;
-            }
-        }
-
-        if(allFinish == 4){
-            currentPlayer = -2;
         }
 
         return false;
