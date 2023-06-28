@@ -18,7 +18,7 @@ public class GameManager {
     private int playerRoll3Times = 3;
     private boolean startGame = false;
     private int[] startNumbers = new int[4];
-    private int[] winningSequence = new int[4];
+    private int[] winningSequence = {-1,-1,-1,-1};
 
     public GameManager(int numbersOfPlayer, Control control){
         this.control = control;
@@ -166,11 +166,28 @@ public class GameManager {
     }
 
     /**
+     * If a piece is in the house and there is still a free field in front of it, true is returned
+     * @return
+     */
+    public boolean playerCanMoveInHouse(){
+        for (int i=3; i>=0;i--){
+            if(board.getHouse()[currentPlayer*4+i] == null)
+                return true;
+        }
+        return false;
+    }
+
+    /**
      * Reset the next player and the Dice.
      * inAnyCase is True when the player presses the next player button.
      * @param inAnyCase
      */
     public void nextPlayer(boolean inAnyCase){
+
+        if(currentPlayer == -2){
+            return;
+        }
+
         if(dice.getSteps() != 6 || !startGame || inAnyCase) {
             currentPlayer++;
             playerRoll3Times = 3;
@@ -184,6 +201,11 @@ public class GameManager {
             control.removeAllX();
             System.out.println("Gamemanager(nextplayer): Throw again");
             sendMessageToPlayer("throw again", currentPlayer);
+        }
+        for(int i=0;i< winningSequence.length;i++){
+            if(winningSequence[i] == currentPlayer){
+                nextPlayer(true);
+            }
         }
     }
 
@@ -211,12 +233,22 @@ public class GameManager {
             if(board.getHouse()[currentPlayer*4+i] == null)
                 return false;
         }
+        int allFinish = 0;
         for(int i=0;i<winningSequence.length;i++){
-            if(winningSequence[i] == 0){
+            if(winningSequence[i] == -1){
                 winningSequence[i] = currentPlayer;
+                System.out.println("GM: winningSeq: "+ Arrays.toString(winningSequence));
                 return true;
             }
+            else {
+                allFinish++;
+            }
         }
+
+        if(allFinish == 4){
+            currentPlayer = -2;
+        }
+
         return false;
     }
 
